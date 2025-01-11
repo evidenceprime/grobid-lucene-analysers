@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph
+END
+MorphException.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/MorphException.java
+END
+AnalysisOutput.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/AnalysisOutput.java
+END
+CompoundEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/CompoundEntry.java
+END
+WSOutput.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/WSOutput.java
+END
+PatternConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/PatternConstants.java
+END
+WSAOutput.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/WSAOutput.java
+END
+SpaceOutput.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/SpaceOutput.java
+END
+WSOuputComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/WSOuputComparator.java
+END
+WSCandidateComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/WSCandidateComparator.java
+END
+Status.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/Status.java
+END
+NounProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/NounProperty.java
+END
+MorphAnalyzerManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/MorphAnalyzerManager.java
+END
+CompoundNounAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/CompoundNounAnalyzer.java
+END
+MorphAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/MorphAnalyzer.java
+END
+AnalysisOutputComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/AnalysisOutputComparator.java
+END
+WordEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/WordEntry.java
+END
+WordSpaceAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/morph/WordSpaceAnalyzer.java
+END

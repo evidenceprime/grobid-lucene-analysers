@@ -1,0 +1,3012 @@
+﻿##############################
+#
+# Korean steming rules, supervised by Kihwan
+#
+# the program will only keep lines begining by "#,[KOREAN]" and that contain a suffix description ISUF/MSUF but not IGNORE
+#
+#
+## 하 means " do " (측정하기 meand " measure" -do-ing measure=측정)
+
+# FORMAT to use:
+#replace,suffix : number / TYPE / comment
+# where TYPE can be: ISUF(deleted) (MSUF(keep it but split!), JOSA, EOMI, COMP)
+#,된 : 357 / ISUF,      / -ed
+   ,ing : 60((preserv,preserving)[보존,보존된],(pattern,patterning)[패터닝,패터닝된],(color,coloring)[착색,착색된],(target,targeting)[표적화,표적화된],(compil,compiling)[컴파일,컴파일된],(segment,segmenting)[분할,분할된],(limit,limiting)[제한,제한된],(cach,caching)[캐싱,캐싱된],(stabilis,stabilising)[안정화,안정화된],(label,labeling)[표지,표지된],(control,controling)[제어,제어된],(report,reporting)[보고,보고된],(decod,decoding)[디코딩,디코딩된],(record,recording)[기록,기록된],(crosslink,crosslinking)[가교,가교된],(key,keying)[키잉,키잉된],(coat,coating)[코팅,코팅된],(protect,protecting)[보호,보호된],(weight,weighting)[가중,가중된],(reconstruct,reconstructing)[재구성,재구성된],(roam,roaming)[로밍,로밍된],(multiplex,multiplexing)[다중화,다중화된],(thicken,thickening)[증점,증점된],(select,selecting)[선택,선택된],(decompress,decompressing)[복원,복원된],(transcod,transcoding)[트랜스코딩,트랜스코딩된],(secret,secreting)[분비,분비된],(tunnel,tunneling)[터널링,터널링된],(sampl,sampling)[샘플링,샘플링된],(packag,packaging)[패키징,패키징된],(inflat,inflating)[팽창,팽창된],(nitrid,nitriding)[질화,질화된],(graft,grafting)[그래프팅,그래프팅된],(scrambl,scrambling)[스크램블링,스크램블링된],(author,authoring)[저작,저작된],(encrypt,encrypting)[암호화,암호화된],(extrud,extruding)[압출,압출된],(quantiz,quantizing)[양자화,양자화된],(cool,cooling)[냉각,냉각된],(colour,colouring)[착색,착색된],(structur,structuring)[구조화,구조화된],(forg,forging)[단조,단조된],(gell,gelling)[겔화,겔화된],(stream,streaming)[스트리밍,스트리밍된],(treat,treating)[처리,처리된],(compress,compressing)[압축,압축된],(induc,inducing)[유도,유도된],(emboss,embossing)[엠보싱,엠보싱된],(cast,casting)[주조,주조된],(preced,preceding)[선행,선행된],(assign,assigning)[할당,할당된],(sign,signing)[서명,서명된],(retriev,retrieving)[검색,검색된],(synchronis,synchronising)[동기화,동기화된],(filter,filtering)[필터링,필터링된],(deinterlac,deinterlacing)[디인터레이싱,디인터레이싱된],(promot,promoting)[촉진,촉진된])
+   ,ed : 51((reinforc,reinforced)[보강,보강된],(relat,related)[관련,관련된],(hydrat,hydrated)[수화,수화된],(multiplex,multiplexed)[다중화,다중화된],(compress,compressed)[압축,압축된],(color,colored)[착색,착색된],(modifi,modified)[변형,변형된],(emboss,embossed)[엠보싱,엠보싱된],(trisubstitut,trisubstituted)[삼치환,삼치환된],(distribut,distributed)[분산,분산된],(reinforc,reinforced)[강화,강화된],(promot,promoted)[촉진,촉진된],(distort,distorted)[왜곡,왜곡된],(constrain,constrained)[제한,제한된],(interleav,interleaved)[인터리브,인터리브된],(cool,cooled)[냉각,냉각된],(coextrud,coextruded)[공압출,공압출된],(encrypt,encrypted)[암호화,암호화된],(stabilis,stabilised)[안정화,안정화된],(sulfat,sulfated)[황산화,황산화된],(catalyz,catalyzed)[촉매화,촉매화된],(toughen,toughened)[강화,강화된],(modifi,modified)[개질,개질된],(disubstitut,disubstituted)[이치환,이치환된],(bridg,bridged)[가교,가교된],(trigger,triggered)[트리거,트리거된],(protect,protected)[보호,보호된],(delay,delayed)[지연,지연된],(crosslink,crosslinked)[가교,가교된],(strain,strained)[변형,변형된],(pigment,pigmented)[착색,착색된],(weight,weighted)[가중,가중된],(shield,shielded)[차폐,차폐된],(secret,secreted)[분비,분비된],(nitrid,nitrided)[질화,질화된],(mediat,mediated)[매개,매개된],(scrambl,scrambled)[스크램블,스크램블된],(induc,induced)[유도,유도된],(colour,coloured)[착색,착색된],(preserv,preserved)[보존,보존된],(branch,branched)[분지,분지된],(author,authored)[저작,저작된],(deriv,derived)[유래,유래된],(extrud,extruded)[압출,압출된],(structur,structured)[구조화,구조화된],(toughen,toughened)[강인화,강인화된],(recess,recessed)[리세스,리세스된],(silicid,silicided)[실리사이드화,실리사이드화된],(purifi,purified)[정제,정제된],(functionalis,functionalised)[관능화,관능화된],(substitut,substituted)[치환,치환된])
+   ,ation : 48((acyl,acylation)[아실화,아실화된],(activ,activation)[활성화,활성화된],(autom,automation)[자동화,자동화된],(fluorin,fluorination)[플루오르화,플루오르화된],(compil,compilation)[컴파일,컴파일된],(deriv,derivation)[유도,유도된],(segment,segmentation)[분할,분할된],(calcin,calcination)[하소,하소된],(encapsul,encapsulation)[캡슐화,캡슐화된],(impregn,impregnation)[함침,함침된],(differenti,differentiation)[분화,분화된],(contamin,contamination)[오염,오염된],(stabilis,stabilisation)[안정화,안정화된],(synchronis,synchronisation)[동기화,동기화된],(phosphoryl,phosphorylation)[인산화,인산화된],(segment,segmentation)[세그먼트화,세그먼트화된],(optimis,optimisation)[최적화,최적화된],(fragment,fragmentation)[단편화,단편화된],(anim,animation)[애니메이션,애니메이션된],(oxid,oxidation)[산화,산화된],(duplic,duplication)[이중화,이중화된],(modul,modulation)[변조,변조된],(isol,isolation)[분리,분리된],(attenu,attenuation)[감쇠,감쇠된],(glycosyl,glycosylation)[당화,당화된],(sublim,sublimation)[승화,승화된],(hydrogen,hydrogenation)[수소화,수소화된],(halogen,halogenation)[할로겐화,할로겐화된],(preserv,preservation)[보존,보존된],(regul,regulation)[조절,조절된],(quantiz,quantization)[양자화,양자화된],(compens,compensation)[보상,보상된],(orient,orientation)[배향,배향된],(precipit,precipitation)[침전,침전된],(limit,limitation)[제한,제한된],(nitrid,nitridation)[질화,질화된],(glycosyl,glycosylation)[글리코실화,글리코실화된],(collim,collimation)[시준,시준된],(coordin,coordination)[조정,조정된],(negoti,negotiation)[협상,협상된],(color,coloration)[착색,착색된],(polymeris,polymerisation)[중합,중합된],(silicid,silicidation)[실리사이드화,실리사이드화된],(design,designation)[지정,지정된],(dehydr,dehydration)[탈수,탈수된])
+   , : 22((record,record)[기록,기록된],(gate,gate)[게이트,게이트된],(cast,cast)[주조,주조된],(control,control)[제어,제어된],(vpp,vpp)[승압,승압된],(limit,limit)[제한,제한된],(delay,delay)[지연,지연된],(encrypt,encrypt)[암호화,암호화된],(spun,spun)[방사,방사된],(format,format)[포맷,포맷된],(assign,assign)[할당,할당된],(cure,cure)[경화,경화된],(graft,graft)[그래프트,그래프트된],(report,report)[보고,보고된],(trigger,trigger)[트리거,트리거된],(multiplex,multiplex)[다중화,다중화된],(tet,tet)[요청,요청된])
+   ,ated : 20((halogen,halogenated)[할로겐화,할로겐화된],(dehydr,dehydrated)[탈수,탈수된],(fluorin,fluorinated)[플루오르화,플루오르화된],(acyl,acylated)[아실화,아실화된],(sulfon,sulfonated)[술폰화,술폰화된],(pegyl,pegylated)[페길화,페길화된],(impregn,impregnated)[함침,함침된],(hydrogen,hydrogenated)[수소화,수소화된],(inactiv,inactivated)[불활성화,불활성화된],(precipit,precipitated)[침전,침전된],(autom,automated)[자동화,자동화된],(compens,compensated)[보상,보상된],(deuter,deuterated)[중수소화,중수소화된],(capsul,capsulated)[캡슐화,캡슐화된],(glycosyl,glycosylated)[글리코실화,글리코실화된],(modul,modulated)[변조,변조된],(polyunsatur,polyunsaturated)[다중불포화,다중불포화된],(microencapsul,microencapsulated)[마이크로캡슐화,마이크로캡슐화된],(phosphoryl,phosphorylated)[인산화,인산화된],(collim,collimated)[시준,시준된])
+   ,ion : 18((select,selection)[선택,선택된],(hydrat,hydration)[수화,수화된],(encrypt,encryption)[암호화,암호화된],(inflat,inflation)[팽창,팽창된],(promot,promotion)[촉진,촉진된],(decompress,decompression)[복원,복원된],(mutat,mutation)[돌연변이,돌연변이된],(compress,compression)[압축,압축된],(transfect,transfection)[형질감염,형질감염된],(secret,secretion)[분비,분비된],(infect,infection)[감염,감염된],(distort,distortion)[왜곡,왜곡된],(substitut,substitution)[치환,치환된],(protect,protection)[보호,보호된],(reconstruct,reconstruction)[재구성,재구성된])
+   ,ization : 17((modular,modularization)[모듈화,모듈화된],(polymer,polymerization)[중합,중합된],(channel,channelization)[채널화,채널화된],(solubil,solubilization)[가용화,가용화된],(packet,packetization)[패킷화,패킷화된],(normal,normalization)[정규화,정규화된],(synchron,synchronization)[동기화,동기화된],(standard,standardization)[표준화,표준화된],(sector,sectorization)[섹터화,섹터화된],(stabil,stabilization)[안정화,안정화된],(visual,visualization)[시각화,시각화된],(author,authorization)[인증,인증된],(optim,optimization)[최적화,최적화된],(immobil,immobilization)[고정화,고정화된],(neutral,neutralization)[중화,중화된])
+   ,izing : 14((solubil,solubilizing)[가용화,가용화된],(neutral,neutralizing)[중화,중화된],(packet,packetizing)[패킷화,패킷화된],(normal,normalizing)[정규화,정규화된],(synthes,synthesizing)[합성,합성된],(synchron,synchronizing)[동기화,동기화된],(stabil,stabilizing)[안정화,안정화된],(author,authorizing)[인증,인증된],(standard,standardizing)[표준화,표준화된],(optim,optimizing)[최적화,최적화된],(hydrophil,hydrophilizing)[친수화,친수화된],(polymer,polymerizing)[중합,중합된],(oxid,oxidizing)[산화,산화된],(visual,visualizing)[시각화,시각화된])
+   ,ating : 12((activ,activating)[활성화,활성화된],(attenu,attenuating)[감쇠,감쇠된],(isol,isolating)[분리,분리된],(hydrogen,hydrogenating)[수소화,수소화된],(coordin,coordinating)[조정,조정된],(modul,modulating)[변조,변조된],(differenti,differentiating)[분화,분화된],(negoti,negotiating)[협상,협상된],(compens,compensating)[보상,보상된],(autom,automating)[자동화,자동화된],(inactiv,inactivating)[불활성화,불활성화된],(duplic,duplicating)[이중화,이중화된])
+   ,ement : 11((enhanc,enhancement)[향상,향상된],(enhanc,enhancement)[강화,강화된],(enhanc,enhancement)[개선,개선된],(improv,improvement)[개선,개선된],(confin,confinement)[한정,한정된],(induc,inducement)[유도,유도된],(reinforc,reinforcement)[보강,보강된])
+   ,ized : 10((polymer,polymerized)[중합,중합된],(human,humanized)[인간화,인간화된],(oxid,oxidized)[산화,산화된],(hydrophil,hydrophilized)[친수화,친수화된],(general,generalized)[일반화,일반화된],(unit,unitized)[단위화,단위화된],(stabil,stabilized)[안정화,안정화된],(solubil,solubilized)[가용화,가용화된],(immobil,immobilized)[고정화,고정화된],(metal,metalized)[금속화,금속화된])
+   e,ing : 9((lose,losing)[분실,분실된],(dope,doping)[도핑,도핑된],(tile,tiling)[타일링,타일링된],(cure,curing)[경화,경화된],(code,coding)[부호화,부호화된],(scale,scaling)[스케일링,스케일링된],(save,saving)[저장,저장된],(fire,firing)[소성,소성된],(code,coding)[코딩,코딩된])
+   ,e : 7((scrambl,scramble)[스크램블,스크램블된],(compil,compile)[컴파일,컴파일된],(steril,sterile)[멸균,멸균된],(interlac,interlace)[인터레이스,인터레이스된],(synthes,synthese)[합성,합성된],(interleav,interleave)[인터리브,인터리브된],(fractur,fracture)[파단,파단된])
+   ,er : 5((induc,inducer)[유도,유도된],(record,recorder)[기록,기록된],(deinterlac,deinterlacer)[디인터레이싱,디인터레이싱된],(arbit,arbiter)[중재,중재된],(quantiz,quantizer)[양자화,양자화된])
+   ,d : 5((fuse,fused)[융합,융합된],(gate,gated)[게이트,게이트된],(cure,cured)[경화,경화된],(code,coded)[부호화,부호화된],(dope,doped)[도핑,도핑된])
+   ,able : 4((select,selectable)[선택,선택된],(inflat,inflatable)[팽창,팽창된],(emboss,embossable)[엠보싱,엠보싱된],(record,recordable)[기록,기록된])
+   ,ting : 3((format,formatting)[포맷,포맷된],(select,selectting)[선택,선택된],(limit,limitting)[제한,제한된])
+   ,alization : 3((person,personalization)[개인화,개인화된],(function,functionalization)[작용화,작용화된],(function,functionalization)[기능화,기능화된])
+   ,ive : 3((protect,protective)[보호,보호된],(distribut,distributive)[분산,분산된],(select,selective)[선택,선택된])
+   ,ment : 3((enrich,enrichment)[농축,농축된],(assign,assignment)[할당,할당된])
+   ,ance : 2((assur,assurance)[보장,보장된],(disturb,disturbance)[교란,교란된])
+   ,al : 2((propos,proposal)[제안,제안된],(retriev,retrieval)[검색,검색된])
+   ,ative : 2((decor,decorative)[장식,장식된],(oxid,oxidative)[산화,산화된])
+   ,ling : 2((tunnel,tunnelling)[터널링,터널링된],(control,controlling)[제어,제어된])
+   ,alized : 2((function,functionalized)[관능화,관능화된],(person,personalized)[개인화,개인화된])
+   ,ate : 2((duplic,duplicate)[이중화,이중화된],(dehydr,dehydrate)[탈수,탈수된])
+   ,ize : 1((synchron,synchronize)[동기화,동기화된])
+   ,ication : 1((authent,authentication)[인증,인증된])
+   ,icating : 1((authent,authenticating)[인증,인증된])
+   ,ator : 1((compens,compensator)[보상,보상된])
+   ,ping : 1((wiretap,wiretapping)[도청,도청된])
+   ,lable : 1((control,controllable)[제어,제어된])
+   ,ivity : 1((select,selectivity)[선택,선택된])
+   ,ible : 1((induc,inducible)[유도,유도된])
+   ,lization : 1((metal,metallization)[금속화,금속화된])
+   ,izer : 1((optim,optimizer)[최적화,최적화된])
+   ,ic : 1((oxid,oxidic)[산화,산화된])
+   ,l : 1((control,controll)[제어,제어된])
+   i,ying : 1((purifi,purifying)[정제,정제된])
+   ,eing : 1((guarante,guaranteeing)[보장,보장된])
+   ,ioned : 1((partit,partitioned)[분할,분할된])
+   ,lized : 1((metal,metallized)[금속화,금속화된])
+   ,ioning : 1((partit,partitioning)[분할,분할된])
+   ,ging : 1((plug,plugging)[플러깅,플러깅된])
+   ,lment : 1((enrol,enrollment)[등록,등록된])
+   ,ant : 1((acceler,accelerant)[촉진,촉진된])
+#,기 : 273 / MSUF, COMP / equipment, device //EXCEPTIONS: "공기","상기","폭기","알레르기" 공기=air, 알레르기=allergy
+   ,ation : 47((attenu,attenuation)[감쇠,감쇠기],(equalis,equalisation)[등화,등화기],(acceler,acceleration)[가속,가속기],(interpol,interpolation)[보간,보간기],(centrifug,centrifugation)[원심분리,원심분리기],(dehydr,dehydration)[탈수,탈수기],(separ,separation)[분리,분리기],(transplant,transplantation)[이식,이식기],(lamin,lamination)[적층,적층기],(fumig,fumigation)[훈증,훈증기],(irradi,irradiation)[조사,조사기],(regul,regulation)[조정,조정기],(stimul,stimulation)[자극,자극기],(evapor,evaporation)[증발,증발기],(attenu,attenuation)[감쇄,감쇄기],(quantiz,quantization)[양자화,양자화기],(stabilis,stabilisation)[안정화,안정화기],(ferment,fermentation)[발효,발효기],(regener,regeneration)[재생,재생기],(collim,collimation)[시준,시준기],(estim,estimation)[추정,추정기],(illumin,illumination)[조명,조명기],(recommend,recommendation)[추천,추천기],(regul,regulation)[조절,조절기],(correl,correlation)[상관,상관기],(nebulis,nebulisation)[분무,분무기],(elimin,elimination)[제거,제거기],(combin,combination)[조합,조합기],(inhal,inhalation)[흡입,흡입기],(modul,modulation)[변조,변조기],(implant,implantation)[주입,주입기],(demodul,demodulation)[복조,복조기],(compens,compensation)[보상,보상기],(respir,respiration)[호흡,호흡기],(floccul,flocculation)[응집,응집기],(indic,indication)[표시,표시기],(condens,condensation)[응축,응축기],(limit,limitation)[제한,제한기])
+   ,ing : 44((straighten,straightening)[교정,교정기],(limit,limiting)[제한,제한기],(reciev,recieving)[수신,수신기],(sinter,sintering)[소결,소결기],(recommend,recommending)[추천,추천기],(reproduc,reproducing)[재생,재생기],(exchang,exchanging)[교환,교환기],(brew,brewing)[양조,양조기],(entranc,entrancing)[이온,이온기],(inflat,inflating)[팽창,팽창기],(transceiv,transceiving)[송수신,송수신기],(tranceiv,tranceiving)[송수신,송수신기],(receiv,receiving)[수신,수신기],(reform,reforming)[개질,개질기],(massag,massaging)[마사지,마사지기],(demultiplex,demultiplexing)[역다중화,역다중화기],(equalis,equalising)[등화,등화기],(transplant,transplanting)[이식,이식기],(quantiz,quantizing)[양자화,양자화기],(convert,converting)[변환,변환기],(interpret,interpreting)[해석,해석기],(analyz,analyzing)[분석,분석기],(generat,generating)[발생,발생기],(extrud,extruding)[압출,압출기],(analys,analysing)[분석,분석기],(repeat,repeating)[중계,중계기],(encod,encoding)[부호화,부호화기],(dispens,dispensing)[분배,분배기],(translat,translating)[변환,변환기],(translat,translating)[번역,번역기],(milk,milking)[착유,착유기],(stabilis,stabilising)[안정화,안정화기],(recev,receving)[수신,수신기],(record,recording)[녹화,녹화기],(papermak,papermaking)[제지,제지기],(control,controling)[제어,제어기])
+   , : 29((recommend,recommend)[추천,추천기],(player,player)[재생,재생기],(pbx,pbx)[교환,교환기],(acryloyl,acryloyl)[아크릴로일,아크릴로일기],(mower,mower)[잔디깎,잔디깎기],(inspector,inspector)[검사,검사기],(coder,coder)[부호화,부호화기],(tenter,tenter)[텐터,텐터기],(shower,shower)[샤워,샤워기],(phone,phone)[전화,전화기],(resistor,resistor)[저항,저항기],(cooker,cooker)[조리기,조리기기],(cyano,cyano)[시아노,시아노기],(alkyl,alkyl)[알킬,알킬기],(dialkylamino,dialkylamino)[디알킬아미노,디알킬아미노기],(control,control)[제어,제어기],(sinter,sinter)[소결,소결기],(carboxyl,carboxyl)[카르복실,카르복실기],(aryl,aryl)[아릴,아릴기],(limit,limit)[제한,제한기],(photodetector,photodetector)[검출,검출기],(suppressor,suppressor)[억제,억제기],(welder,welder)[용접,용접기],(acyl,acyl)[아실,아실기],(record,record)[녹화,녹화기],(reader,reader)[리더,리더기],(bidet,bidet)[비데,비데기])
+   ,ating : 19((discrimin,discriminating)[판별,판별기],(regener,regenerating)[재생,재생기],(compens,compensating)[보상,보상기],(concentr,concentrating)[농축,농축기],(attenu,attenuating)[감쇄,감쇄기],(demodul,demodulating)[복조,복조기],(estim,estimating)[추정,추정기],(elimin,eliminating)[제거,제거기],(attenu,attenuating)[감쇠,감쇠기],(interpol,interpolating)[보간,보간기],(excav,excavating)[굴착,굴착기],(inciner,incinerating)[소각,소각기],(separ,separating)[분리,분리기],(illumin,illuminating)[조명,조명기],(acceler,accelerating)[가속,가속기],(modul,modulating)[변조,변조기],(stimul,stimulating)[자극,자극기])
+   ,e : 14((diffus,diffuse)[확산,확산기],(exchang,exchange)[교환,교환기],(telephon,telephone)[전화,전화기],(synthes,synthese)[합성,합성기],(massag,massage)[마사지,마사지기],(silan,silane)[실란,실란기],(receiv,receive)[수신,수신기],(dispens,dispense)[분배,분배기],(urin,urine)[소변,소변기])
+   ,er : 10((respond,responder)[수신,수신기],(reform,reformer)[개질,개질기],(reproduc,reproducer)[재생,재생기],(arbit,arbiter)[중재,중재기],(tranceiv,tranceiver)[송수신,송수신기],(verifi,verifier)[검증,검증기],(repeat,repeater)[중계,중계기],(quantiz,quantizer)[양자화,양자화기],(recommend,recommender)[추천,추천기])
+   ,ion : 10((diffus,diffusion)[확산,확산기],(deaerat,deaeration)[탈기,탈기기],(subtract,subtraction)[감산,감산기],(translat,translation)[번역,번역기],(ignit,ignition)[점화,점화기],(translat,translation)[변환,변환기],(generat,generation)[발생,발생기],(inflat,inflation)[팽창,팽창기])
+   ,ed : 10((sinter,sintered)[소결,소결기],(recommend,recommended)[추천,추천기],(reform,reformed)[개질,개질기],(stabilis,stabilised)[안정화,안정화기],(liquifi,liquified)[액화,액화기],(supercharg,supercharged)[과급,과급기],(ferment,fermented)[발효,발효기],(turbocharg,turbocharged)[과급,과급기],(extrud,extruded)[압출,압출기])
+   ,ization : 9((vapor,vaporization)[기화,기화기],(polar,polarization)[편광,편광기],(packet,packetization)[패킷화,패킷화기],(equal,equalization)[등화,등화기],(pulver,pulverization)[분쇄,분쇄기],(steril,sterilization)[살균,살균기],(magnet,magnetization)[자화,자화기])
+   ,ated : 9((modul,modulated)[변조,변조기],(acceler,accelerated)[가속,가속기],(concentr,concentrated)[농축,농축기],(collim,collimated)[시준,시준기],(compens,compensated)[보상,보상기],(dehydr,dehydrated)[탈수,탈수기],(illumin,illuminated)[조명,조명기],(correl,correlated)[상관,상관기],(lamin,laminated)[적층,적층기])
+   ,izing : 9((polar,polarizing)[편광,편광기],(steril,sterilizing)[살균,살균기],(atom,atomizing)[분무,분무기],(synthes,synthesizing)[합성,합성기],(equal,equalizing)[등화,등화기],(vulcan,vulcanizing)[가황,가황기],(packet,packetizing)[패킷화,패킷화기])
+   i,ying : 8((gasifi,gasifying)[가스화,가스화기],(amplifi,amplifying)[증폭,증폭기],(verifi,verifying)[검증,검증기],(classifi,classifying)[분류,분류기],(rectifi,rectifying)[정류,정류기],(dehumidifi,dehumidifying)[제습,제습기])
+   i,y : 6((verifi,verify)[검증,검증기],(aryloxi,aryloxy)[아릴옥시,아릴옥시기],(alkoxi,alkoxy)[알콕시,알콕시기],(embroideri,embroidery)[자수,자수기],(respiratori,respiratory)[호흡,호흡기],(telephoni,telephony)[전화,전화기])
+   ,lation : 6((distil,distillation)[증류,증류기],(cancel,cancellation)[상쇄,상쇄기],(cancel,cancellation)[소거,소거기],(oscil,oscillation)[발진,발진기],(cancel,cancellation)[제거,제거기])
+   ,ator : 5((acceler,accelerator)[가속,가속기],(inciner,incinerator)[소각,소각기],(demodul,demodulator)[복조,복조기],(compens,compensator)[보상,보상기])
+   ,ative : 4((ferment,fermentative)[발효,발효기],(compar,comparative)[비교,비교기],(evapor,evaporative)[증발,증발기])
+   ,ant : 4((reson,resonant)[공진,공진기],(inhal,inhalant)[흡입,흡입기])
+   ,al : 3((remov,removal)[제거,제거기],(termin,terminal)[단말,단말기])
+   ,ized : 3((polar,polarized)[편광,편광기],(vulcan,vulcanized)[가황,가황기])
+   ,ling : 3((control,controlling)[제어,제어기],(cancel,cancelling)[제거,제거기])
+   ,ate : 3((reform,reformate)[개질,개질기],(dehydr,dehydrate)[탈수,탈수기],(lamin,laminate)[적층,적층기])
+   ,ler : 2((cancel,canceller)[제거,제거기])
+   ,ance : 2((reson,resonance)[공진,공진기])
+   ,ic : 2((electromagnet,electromagnetic)[전자,전자기],(electrostat,electrostatic)[정전,정전기])
+   ,ent : 1((floccul,flocculent)[응집,응집기])
+   ,ting : 1((limit,limitting)[제한,제한기])
+   ,ication : 1((amplif,amplification)[증폭,증폭기])
+   ,lable : 1((control,controllable)[제어,제어기])
+   ,ational : 1((combin,combinational)[조합,조합기])
+   ,ive : 1((diffus,diffusive)[확산,확산기])
+   ,able : 1((inflat,inflatable)[팽창,팽창기])
+   ,izer : 1((steril,sterilizer)[살균,살균기])
+   ,l : 1((control,controll)[제어,제어기])
+   ,ically : 1((electrostat,electrostatically)[정전,정전기])
+   ,lating : 1((oscil,oscillating)[발진,발진기])
+   ,lative : 1((distil,distillative)[증류,증류기])
+#,성 : 272 / MSUF, COMP
+   , : 46((fuction,fuction)[기능,기능성],(function,function)[기능,기능성],(compliant,compliant)[유연,유연성],(binuclear,binuclear)[이핵,이핵성],(pain,pain)[통증,통증성],(polymorph,polymorph)[다형,다형성],(linear,linear)[선형,선형성],(keratinou,keratinou)[케라틴,케라틴성],(immunogen,immunogen)[면역원,면역원성],(viral,viral)[바이러스,바이러스성],(ionic,ionic)[이온,이온성],(semiconduct,semiconduct)[반도체,반도체성],(funtion,funtion)[기능,기능성],(phenol,phenol)[페놀,페놀성],(anion,anion)[음이온,음이온성],(sinter,sinter)[소결,소결성],(olefin,olefin)[올레핀,올레핀성],(parallel,parallel)[병렬,병렬성],(valid,valid)[유효,유효성],(heterologou,heterologou)[이종,이종성],(nonaqueou,nonaqueou)[비수,비수성],(subblock,subblock)[조작,조작성],(cation,cation)[양이온,양이온성],(renal,renal)[신장,신장성],(antigen,antigen)[항원,항원성],(infectiou,infectiou)[감염,감염성],(allyl,allyl)[알릴,알릴성],(colloid,colloid)[콜로이드,콜로이드성])
+   ,ic : 38((thrombot,thrombotic)[혈전,혈전성],(oligomer,oligomeric)[올리고머,올리고머성],(enter,enteric)[장용,장용성],(antineoplast,antineoplastic)[항신생물,항신생물성],(olefin,olefinic)[올레핀,올레핀성],(antigen,antigenic)[항원,항원성],(photocatalyt,photocatalytic)[광촉매,광촉매성],(exotherm,exothermic)[발열,발열성],(photochrom,photochromic)[광변색,광변색성],(metabol,metabolic)[대사,대사성],(thromboembol,thromboembolic)[혈전색전,혈전색전성],(neuropath,neuropathic)[신경병,신경병성],(adrenerg,adrenergic)[아드레날린,아드레날린성],(cation,cationic)[양이온,양이온성],(anion,anionic)[음이온,음이온성],(phenol,phenolic)[페놀,페놀성],(antibiot,antibiotic)[항균,항균성],(nicotin,nicotinic)[니코틴,니코틴성],(neuropath,neuropathic)[신경병증,신경병증성],(anaerob,anaerobic)[혐기,혐기성],(anisotrop,anisotropic)[이방,이방성],(muscarin,muscarinic)[무스카린,무스카린성],(mesogen,mesogenic)[메소젠,메소젠성],(ballist,ballistic)[탄도,탄도성],(psychot,psychotic)[정신병,정신병성],(azeotrop,azeotropic)[공비,공비성],(osmot,osmotic)[삼투,삼투성],(polymorph,polymorphic)[다형,다형성],(polymer,polymeric)[중합체,중합체성],(hemostat,hemostatic)[지혈,지혈성],(diabet,diabetic)[당뇨병,당뇨병성],(allerg,allergic)[알레르기,알레르기성],(system,systemic)[전신,전신성])
+   ,e : 28((nicotin,nicotine)[니코틴,니코틴성],(formabl,formable)[성형,성형성],(respons,response)[응답,응답성],(mobil,mobile)[이동,이동성],(diabet,diabete)[당뇨,당뇨성],(curabl,curable)[경화,경화성],(azeotrop,azeotrope)[공비,공비성],(bistabl,bistable)[쌍안정,쌍안정성],(psicos,psicose)[방수,방수성],(insecticid,insecticide)[살충,살충성],(crystallin,crystalline)[결정,결정성],(monodispers,monodisperse)[단분산,단분산성],(fungicid,fungicide)[살진균,살진균성],(reusabl,reusable)[재사용,재사용성],(olefin,olefine)[올레핀,올레핀성],(antiglar,antiglare)[방현,방현성],(alkalin,alkaline)[알칼리,알칼리성],(dispers,disperse)[분산,분산성],(hemorrhag,hemorrhage)[출혈,출혈성],(lysosom,lysosome)[리소좀,리소좀성],(diabet,diabete)[당뇨병,당뇨병성])
+   ,ion : 26((adsorpt,adsorption)[흡착,흡착성],(induct,induction)[유도,유도성],(dispers,dispersion)[분산,분산성],(adapt,adaption)[적응,적응성],(hydrat,hydration)[수화,수화성],(compress,compression)[압축,압축성],(connect,connection)[연결,연결성],(digest,digestion)[소화,소화성],(explos,explosion)[폭발,폭발성],(connect,connection)[접속,접속성],(multifunct,multifunction)[다기능,다기능성],(extens,extension)[확장,확장성],(corros,corrosion)[부식,부식성],(electrodeposit,electrodeposition)[전착,전착성],(antireflect,antireflection)[반사방지,반사방지성],(absorpt,absorption)[흡수,흡수성],(redispers,redispersion)[재분산,재분산성],(select,selection)[선택,선택성],(convect,convection)[대류,대류성])
+   ,ing : 17((expand,expanding)[확장,확장성],(crosslink,crosslinking)[가교,가교성],(develop,developing)[현상,현상성],(induc,inducing)[유도,유도성],(color,coloring)[착색,착색성],(semiconduct,semiconducting)[반도체,반도체성],(hydrolyz,hydrolyzing)[가수분해,가수분해성],(harden,hardening)[경화,경화성],(compress,compressing)[압축,압축성],(sinter,sintering)[소결,소결성],(absorb,absorbing)[흡수,흡수성],(select,selecting)[선택,선택성],(connect,connecting)[연결,연결성],(antifoul,antifouling)[방오,방오성])
+   ,ed : 15((dispers,dispersed)[분산,분산성],(sinter,sintered)[소결,소결성],(emulsifi,emulsified)[유화,유화성],(monodispers,monodispersed)[단분산,단분산성],(color,colored)[착색,착색성],(hydrat,hydrated)[수화,수화성],(thermoform,thermoformed)[열성형,열성형성],(compress,compressed)[압축,압축성],(crosslink,crosslinked)[가교,가교성],(induc,induced)[유도,유도성])
+   ,al : 13((herbicid,herbicidal)[제초,제초성],(insecticid,insecticidal)[살충,살충성],(continu,continual)[연속,연속성],(fungicid,fungicidal)[살진균,살진균성],(surviv,survival)[생존,생존성],(antifung,antifungal)[항진균,항진균성],(antibacteri,antibacterial)[항균,항균성],(colloid,colloidal)[콜로이드,콜로이드성],(lysosom,lysosomal)[리소좀,리소좀성],(antimicrobi,antimicrobial)[항균,항균성],(antivir,antiviral)[항바이러스,항바이러스성],(pesticid,pesticidal)[살충,살충성])
+   ,ive : 13((resist,resistive)[저항,저항성],(respons,responsive)[응답,응답성],(electroconduct,electroconductive)[도전,도전성],(induct,inductive)[유도,유도성],(thermosensit,thermosensitive)[감열,감열성],(recept,receptive)[수용,수용성],(adapt,adaptive)[적응,적응성],(select,selective)[선택,선택성],(antireflect,antireflective)[반사방지,반사방지성],(semiconduct,semiconductive)[반도체,반도체성],(adsorpt,adsorptive)[흡착,흡착성])
+   ,able : 11((surviv,survivable)[생존,생존성],(electrodeposit,electrodepositable)[전착,전착성],(absorb,absorbable)[흡수,흡수성],(oxidiz,oxidizable)[산화,산화성],(vulner,vulnerable)[취약,취약성],(compat,compatable)[호환,호환성],(select,selectable)[선택,선택성])
+   ,ent : 10((phosphoresc,phosphorescent)[인광,인광성],(depend,dependent)[의존,의존성],(concurr,concurrent)[동시,동시성],(transpar,transparent)[투명,투명성],(absorb,absorbent)[흡수,흡수성],(birefring,birefringent)[복굴절,복굴절성],(persist,persistent)[지속,지속성])
+   ,ible : 5((induc,inducible)[유도,유도성],(extens,extensible)[확장,확장성],(compat,compatible)[호환,호환성])
+   ,ity : 5((affin,affinity)[친화,친화성],(mobil,mobility)[이동,이동성],(similar,similarity)[유사,유사성],(acid,acidity)[산,산성],(continu,continuity)[연속,연속성])
+   ,ance : 4((resist,resistance)[저항,저항성])
+   ,ically : 4((anaerob,anaerobically)[혐기,혐기성],(cation,cationically)[양이온,양이온성],(anisotrop,anisotropically)[이방,이방성])
+   ,ism : 4((metabol,metabolism)[대사,대사성],(polymorph,polymorphism)[다형,다형성])
+   ,ivity : 3((connect,connectivity)[연결,연결성],(select,selectivity)[선택,선택성],(connect,connectivity)[접속,접속성])
+   ,ation : 3((polymeris,polymerisation)[중합,중합성],(adapt,adaptation)[적응,적응성],(color,coloration)[착색,착색성])
+   ,ality : 3((function,functionality)[기능,기능성])
+   ,ively : 3((explos,explosively)[폭발,폭발성],(induct,inductively)[유도,유도성])
+   ,er : 2((induc,inducer)[유도,유도성],(digest,digester)[소화,소화성])
+   ,ating : 2((disintegr,disintegrating)[붕해,붕해성],(demyelin,demyelinating)[탈수초,탈수초성])
+   ,ional : 2((polyfunct,polyfunctional)[다관능,다관능성],(multifunct,multifunctional)[다기능,다기능성])
+   ,ence : 2((phosphoresc,phosphorescence)[인광,인광성],(birefring,birefringence)[복굴절,복굴절성])
+   i,y : 2((refractori,refractory)[내화,내화성],(inflammatori,inflammatory)[염증,염증성])
+   ,ant : 2((relev,relevant)[관련,관련성])
+   ,ting : 1((select,selectting)[선택,선택성])
+   l,ility : 1((possibl,possibility)[가능,가능성])
+   ,erative : 1((prolif,proliferative)[증식,증식성])
+   ,ative : 1((associ,associative)[회합,회합성])
+   ,ful : 1((pain,painful)[통증,통증성])
+   ,ement : 1((induc,inducement)[유도,유도성])
+   ,ical : 1((botan,botanical)[식물,식물성])
+   ,ently : 1((concurr,concurrently)[동시,동시성])
+   ,ated : 1((insul,insulated)[절연,절연성])
+#,화 : 211 / MSUF, COMP //ONLYIFLISTED (dangerous exceptions: "운동화" means running-shoe, "주화" means coin "주" means nothing)
+   , : 95((cipher,cipher)[암호,암호화],(target,target)[표적,표적화],(score,score)[스코어,스코어화],(parallel,parallel)[병렬,병렬화],(human,human)[인간,인간화],(serial,serial)[직렬,직렬화],(group,group)[그룹,그룹화],(methyl,methyl)[메틸,메틸화],(general,general)[일반,일반화],(dimer,dimer)[이량체,이량체화],(aerosol,aerosol)[에어로졸,에어로졸화],(visual,visual)[시각,시각화],(multiplex,multiplex)[다중,다중화],(acyl,acyl)[아실,아실화],(fibril,fibril)[피브릴,피브릴화],(oxygen,oxygen)[산소,산소화],(biuret,biuret)[뷰렛,뷰렛화],(packet,packet)[패킷,패킷화],(carbonyl,carbonyl)[카보닐,카보닐화],(hybrid,hybrid)[혼성,혼성화],(standard,standard)[표준,표준화],(pixel,pixel)[픽셀,픽셀화],(linear,linear)[선형,선형화],(compost,compost)[퇴비,퇴비화],(circuit,circuit)[회로,회로화],(crystal,crystal)[결정,결정화],(slot,slot)[슬롯,슬롯화],(state,state)[상태,상태화],(pellet,pellet)[펠릿,펠릿화],(metal,metal)[금속,금속화],(sector,sector)[섹터,섹터화],(modular,modular)[모듈,모듈화],(silyl,silyl)[실릴,실릴화],(halogen,halogen)[할로겐,할로겐화],(channel,channel)[채널,채널화],(neutral,neutral)[중성,중성화],(signal,signal)[신호,신호화],(virtual,virtual)[가상,가상화],(fragment,fragment)[단편,단편화],(alloy,alloy)[합금,합금화],(invalid,invalid)[무효,무효화],(trimer,trimer)[삼량체,삼량체화],(segment,segment)[세그먼트,세그먼트화],(duplex,duplex)[이중,이중화],(visual,visual)[영상,영상화],(hydrogen,hydrogen)[수소,수소화],(alkyl,alkyl)[알킬,알킬화],(function,function)[기능,기능화])
+   ,e : 28((chlorin,chlorine)[염소,염소화],(activ,active)[활성,활성화],(amin,amine)[아민,아민화],(microstructur,microstructure)[미세구조,미세구조화],(iodin,iodine)[요오드,요오드화],(fluorin,fluorine)[불소,불소화],(structur,structure)[구조,구조화],(immun,immune)[면역,면역화],(bromin,bromine)[브롬,브롬화],(sulfon,sulfone)[술폰,술폰화],(phosgen,phosgene)[포스겐,포스겐화],(averag,average)[평균,평균화],(capsul,capsule)[캡슐,캡슐화],(granul,granule)[과립,과립화],(silicid,silicide)[실리사이드,실리사이드화])
+   ,al : 12((initi,initial)[초기,초기화],(optim,optimal)[최적,최적화],(structur,structural)[구조,구조화],(minim,minimal)[최소,최소화],(person,personal)[개인,개인화])
+   ,ate : 9((approxim,approximate)[근사,근사화],(granul,granulate)[과립,과립화],(duplic,duplicate)[이중,이중화])
+   ,ated : 9((invalid,invalidated)[무효,무효화],(fluorin,fluorinated)[불소,불소화],(granul,granulated)[과립,과립화],(autom,automated)[자동,자동화],(pixel,pixelated)[픽셀,픽셀화])
+   ,ing : 8((averag,averaging)[평균,평균화],(signal,signaling)[신호,신호화],(decod,decoding)[복호,복호화],(multiplex,multiplexing)[다중,다중화],(alloy,alloying)[합금,합금화])
+   ,ion : 8((dimens,dimension)[치수,치수화],(decrypt,decryption)[복호,복호화],(encrypt,encryption)[암호,암호화])
+   ,ation : 7((autom,automation)[자동,자동화],(approxim,approximation)[근사,근사화])
+   ,ic : 7((phosphon,phosphonic)[포스폰산,포스폰산화],(trimer,trimeric)[삼량체,삼량체화],(racem,racemic)[라세미,라세미화],(cryptograph,cryptographic)[암호,암호화],(oligomer,oligomeric)[올리고머,올리고머화],(dimer,dimeric)[이량체,이량체화],(anod,anodic)[양극,양극화])
+   ,ed : 6((silicid,silicided)[실리사이드,실리사이드화],(target,targeted)[표적,표적화],(structur,structured)[구조,구조화],(catalyz,catalyzed)[촉매,촉매화])
+   ,ization : 6((character,characterization)[특성,특성화],(synchron,synchronization)[동기,동기화],(resynchron,resynchronization)[재동기,재동기화],(syncron,syncronization)[동기,동기화])
+   ,lic : 3((metal,metallic)[금속,금속화])
+   ,lization : 3((metal,metallization)[금속,금속화])
+   ,ity : 3((activ,activity)[활성,활성화],(immun,immunity)[면역,면역화])
+   ,ized : 2((standard,standardized)[표준,표준화])
+   ,ication : 1((quantif,quantification)[정량,정량화])
+   ,ted : 1((slot,slotted)[슬롯,슬롯화])
+   ,ling : 1((signal,signalling)[신호,신호화])
+   ,ality : 1((function,functionality)[기능,기능화])
+   ,ically : 1((cryptograph,cryptographically)[암호,암호화])
+#,제 : 187  / MSUF, COMP
+   ,ing : 23((disinfect,disinfecting)[소독,소독제],(develop,developing)[현상,현상제],(thicken,thickening)[증점,증점제],(induc,inducing)[유도,유도제],(promot,promoting)[촉진,촉진제],(bleach,bleaching)[표백,표백제],(preserv,preserving)[보존,보존제],(sooth,soothing)[진정,진정제],(coat,coating)[코팅,코팅제],(stabilis,stabilising)[안정화,안정화제],(harden,hardening)[경화,경화제],(absorb,absorbing)[흡수,흡수제],(scaveng,scavenging)[제거,제거제],(crosslink,crosslinking)[가교,가교제],(color,coloring)[착색,착색제])
+   ,ation : 21((antioxid,antioxidation)[항산화,항산화제],(preserv,preservation)[보존,보존제],(activ,activation)[활성화,활성화제],(amelior,amelioration)[개선,개선제],(stimul,stimulation)[자극,자극제],(initi,initiation)[개시,개시제],(color,coloration)[착색,착색제],(oxid,oxidation)[산화,산화제],(lubric,lubrication)[윤활,윤활제],(floccul,flocculation)[응집,응집제],(encapsul,encapsulation)[캡슐화,캡슐화제],(stabilis,stabilisation)[안정화,안정화제])
+   ,al : 18((insecticid,insecticidal)[살충,살충제],(antibacteri,antibacterial)[항균,항균제],(antifung,antifungal)[항진균,항진균제],(fungicid,fungicidal)[살진균,살진균제],(supplement,supplemental)[보충,보충제],(antivir,antiviral)[항바이러스,항바이러스제],(herbicid,herbicidal)[제초,제초제],(antitumor,antitumoral)[항종양,항종양제],(remov,removal)[제거,제거제],(pesticid,pesticidal)[살충,살충제])
+   ,ed : 16((crosslink,crosslinked)[가교,가교제],(modifi,modified)[개질,개질제],(emulsifi,emulsified)[유화,유화제],(induc,induced)[유도,유도제],(preserv,preserved)[보존,보존제],(stabilis,stabilised)[안정화,안정화제],(dispers,dispersed)[분산,분산제],(promot,promoted)[촉진,촉진제],(color,colored)[착색,착색제])
+   ,ic : 13((antithrombot,antithrombotic)[항혈전,항혈전제],(oxid,oxidic)[산화,산화제],(therapeut,therapeutic)[치료,치료제],(probiot,probiotic)[생균,생균제],(analges,analgesic)[진통,진통제],(antidiabet,antidiabetic)[항당뇨,항당뇨제],(cytotox,cytotoxic)[세포독성,세포독성제],(antagonist,antagonistic)[길항,길항제])
+   ,e : 13((fungicid,fungicide)[살진균,살진균제],(insecticid,insecticide)[살충,살충제],(transferas,transferase)[트랜스퍼라,트랜스퍼라제],(activ,active)[활성,활성제],(aromatas,aromatase)[아로마타,아로마타제],(dispers,disperse)[분산,분산제])
+   ,ating : 11((stimul,stimulating)[자극,자극제],(lubric,lubricating)[윤활,윤활제],(initi,initiating)[개시,개시제],(activ,activating)[활성화,활성화제],(modul,modulating)[조절,조절제],(disintegr,disintegrating)[붕해,붕해제],(amelior,ameliorating)[개선,개선제])
+   ,ion : 10((prevent,prevention)[예방,예방제],(disinfect,disinfection)[소독,소독제],(contracept,contraception)[피임,피임제],(disinfect,disinfection)[살균,살균제],(promot,promotion)[촉진,촉진제],(prevent,prevention)[방지,방지제],(dispers,dispersion)[분산,분산제])
+   ,izing : 9((oxid,oxidizing)[산화,산화제],(deoxid,deoxidizing)[탈산,탈산제],(moistur,moisturizing)[보습,보습제],(neutral,neutralizing)[중화,중화제],(stabil,stabilizing)[안정화,안정화제],(solubil,solubilizing)[가용화,가용화제],(deodor,deodorizing)[탈취,탈취제])
+   ,ization : 8((stabil,stabilization)[안정화,안정화제],(neutral,neutralization)[중화,중화제],(solubil,solubilization)[가용화,가용화제],(deodor,deodorization)[탈취,탈취제],(dephosphor,dephosphorization)[탈인,탈인제])
+   ,ive : 7((prevent,preventive)[예방,예방제],(contracept,contraceptive)[피임,피임제],(abras,abrasive)[연마,연마제],(adhes,adhesive)[접착,접착제])
+   , : 6((supplement,supplement)[보충,보충제],(membership,membership)[회원,회원제],(antitumor,antitumor)[항종양,항종양제],(bleach,bleach)[표백,표백제],(cermet,cermet)[서멧,서멧제],(resinou,resinou)[수지,수지제])
+   ,ant : 5((lubric,lubricant)[윤활,윤활제],(antioxid,antioxidant)[항산화,항산화제],(acceler,accelerant)[촉진,촉진제])
+   ,ized : 4((solubil,solubilized)[가용화,가용화제],(oxid,oxidized)[산화,산화제],(stabil,stabilized)[안정화,안정화제])
+   ,ated : 4((initi,initiated)[개시,개시제],(lubric,lubricated)[윤활,윤활제])
+   ,ative : 3((oxid,oxidative)[산화,산화제],(antioxid,antioxidative)[항산화,항산화제])
+   ,ement : 3((improv,improvement)[개선,개선제],(induc,inducement)[유도,유도제])
+   ,ity : 3((activ,activity)[활성,활성제])
+   ,ent : 2((floccul,flocculent)[응집,응집제],(absorb,absorbent)[흡수,흡수제])
+   ,er : 2((anticanc,anticancer)[항암,항암제],(induc,inducer)[유도,유도제])
+   ,ical : 2((therapeut,therapeutical)[치료,치료제])
+   ,ible : 1((induc,inducible)[유도,유도제])
+   ,able : 1((absorb,absorbable)[흡수,흡수제])
+   ,icity : 1((cytotox,cytotoxicity)[세포독성,세포독성제])
+   i,y : 1((auxiliari,auxiliary)[보조,보조제])
+#,용 : 147  / MSUF, COMP
+   , : 41((oral,oral)[경구,경구용],(crt,crt)[음극선관,음극선관용],(BMV,BMV)[엘레베이터,엘레베이터용],(care,care)[케어,케어용],(handler,handler)[핸들러,핸들러용],(cataplasm,cataplasm)[첩부제,첩부제용],(reaction,reaction)[반응,반응용],(banana,banana)[밀봉,밀봉용],(fuel,fuel)[연료,연료용],(ship,ship)[선박,선박용],(welder,welder)[용접기,용접기용],(plotter,plotter)[플로터,플로터용],(felt,felt)[펠트,펠트용],(dental,dental)[치과,치과용],(radio,radio)[무선,무선용],(gearbox,gearbox)[변속기,변속기용],(truck,truck)[트럭,트럭용],(infant,infant)[유아,유아용],(vehicular,vehicular)[차량,차량용],(handheld,handheld)[휴대,휴대용],(blackboard,blackboard)[칠판,칠판용],(car,car)[차량,차량용],(reactor,reactor)[반응기,반응기용],(waterwork,waterwork)[상수도,상수도용],(cermet,cermet)[서멧트,서멧트용],(ocular,ocular)[안과,안과용],(tyre,tyre)[타이어,타이어용],(oven,oven)[오븐,오븐용],(ointment,ointment)[연고,연고용],(ltcc,ltcc)[엘티씨씨,엘티씨씨용])
+   ,e : 29((feminin,feminine)[여성,여성용],(agricultur,agriculture)[농업,농업용],(endoscop,endoscope)[내시경,내시경용],(vehicl,vehicle)[차량,차량용],(automobil,automobile)[자동차,자동차용],(lath,lathe)[선반,선반용],(practic,practice)[연습,연습용],(programm,programme)[프로그램,프로그램용],(portabl,portable)[휴대,휴대용],(turbin,turbine)[터빈,터빈용],(enterpris,enterprise)[기업,기업용],(engin,engine)[엔진,엔진용],(furnitur,furniture)[가구,가구용],(automobil,automobile)[차량,차량용],(potabl,potable)[휴대,휴대용])
+   ,ing : 8((brew,brewing)[양조,양조용],(green,greening)[녹화,녹화용],(inclos,inclosing)[파이프,파이프용],(papermak,papermaking)[제지,제지용],(forg,forging)[단조,단조용],(overspeed,overspeeding)[와이어본딩,와이어본딩용],(stabilis,stabilising)[안정화,안정화용],(whiten,whitening)[미백,미백용])
+   ,al : 8((residenti,residential)[주거,주거용],(person,personal)[개인,개인용],(topic,topical)[국소,국소용],(horticultur,horticultural)[원예,원예용],(medic,medical)[의료,의료용],(surgic,surgical)[수술,수술용],(industri,industrial)[산업,산업용])
+   ,ic : 6((pediatr,pediatric)[소아,소아용],(orthoped,orthopedic)[정형외과,정형외과용],(endoscop,endoscopic)[내시경,내시경용],(orthoped,orthopedic)[정형,정형용],(hemostat,hemostatic)[지혈,지혈용],(ophthalm,ophthalmic)[안과,안과용])
+   ,e' : 6((engin,engine')[엔진,엔진용],(automobil,automobile')[자동차,자동차용],(vehicl,vehicle')[차량,차량용])
+   i,y : 6((metallurgi,metallurgy)[야금,야금용],(bakeri,bakery)[제빵,제빵용],(confectioneri,confectionery)[제과,제과용],(surgeri,surgery)[수술,수술용],(industri,industry)[산업,산업용])
+   ,er : 5((hamburg,hamburger)[햄버거,햄버거용],(analys,analyser)[분석기,분석기용],(sphygmomanomet,sphygmomanometer)[혈압계,혈압계용],(aircondition,airconditioner)[에어콘,에어콘용],(inhal,inhaler)[흡입기,흡입기용])
+   ,ical : 4((dermatolog,dermatological)[피부,피부용],(metallurg,metallurgical)[야금,야금용],(dermatolog,dermatological)[피부과,피부과용])
+   ,ator : 3((refriger,refrigerator)[냉장고,냉장고용],(inhal,inhalator)[흡입기,흡입기용])
+   ,ation : 3((educ,education)[교육,교육용],(inhal,inhalation)[흡입,흡입용],(stabilis,stabilisation)[안정화,안정화용])
+   ,y : 2((dermatolog,dermatology)[피부과,피부과용])
+   ,ative : 2((decor,decorative)[장식,장식용])
+   ,ment : 2((experi,experiment)[실험,실험용])
+   ,ed : 2((fuel,fueled)[연료,연료용],(stabilis,stabilised)[안정화,안정화용])
+   ,late : 2((distil,distillate)[증류물,증류물용])
+   ,ization : 2((copolymer,copolymerization)[공중합,공중합용],(syncron,syncronization)[동기,동기용])
+   ,alization : 1((person,personalization)[개인화,개인화용])
+   ,ly : 1((oral,orally)[경구,경구용])
+   ,ating : 1((educ,educating)[교육,교육용])
+   ,ational : 1((educ,educational)[교육,교육용])
+   ,ive : 1((automot,automotive)[자동차,자동차용])
+   ,ering : 1((monit,monitering)[감시,감시용])
+   ,d : 1((pave,paved)[포장,포장용])
+   ,ized : 1((copolymer,copolymerized)[공중합,공중합용])
+   ie,ying : 1((die,dying)[염색,염색용])
+   ,ion : 1((thermocompress,thermocompression)[열압착,열압착용])
+   ,alized : 1((person,personalized)[개인화,개인화용])
+   i,ying : 1((quantifi,quantifying)[정량,정량용])
+   ,izing : 1((copolymer,copolymerizing)[공중합,공중합용])
+   ,lance : 1((surveil,surveillance)[감시,감시용])
+   ,ator' : 1((refriger,refrigerator')[냉장고,냉장고용])
+   ,ant : 1((inhal,inhalant)[흡입,흡입용])
+#,형 : 144 / MSUF, COMP
+   , : 28((nand,nand)[낸드,낸드형],(trommel,trommel)[트롬멜,트롬멜형],(tile,tile)[타일,타일형],(fin,fin)[핀,핀형],(dome,dome)[돔,돔형],(granular,granular)[과립,과립형],(stack,stack)[적층,적층형],(bead,bead)[비드,비드형],(cluster,cluster)[클러스터,클러스터형],(gate,gate)[게이트,게이트형],(lobe,lobe)[로브,로브형],(tandem,tandem)[탠덤,탠덤형],(handheld,handheld)[휴대,휴대형],(pouch,pouch)[파우치,파우치형],(centric,centric)[중심,중심형],(record,record)[기록,기록형],(modular,modular)[모듈,모듈형],(control,control)[제어,제어형],(brush,brush)[브러시,브러시형],(pyramid,pyramid)[피라미드,피라미드형],(multicolor,multicolor)[다색,다색형],(pant,pant)[팬티,팬티형])
+   ,e : 22((rewrit,rewrite)[재기록,재기록형],(changeabl,changeable)[가변,가변형],(pipelin,pipeline)[파이프라인,파이프라인형],(portabl,portable)[휴대,휴대형],(pouch,pouche)[파우치,파우치형],(tunabl,tunable)[가변,가변형],(dialogu,dialogue)[대화,대화형],(passiv,passive)[수동,수동형],(puls,pulse)[펄스,펄스형],(granul,granule)[과립,과립형],(packag,package)[패키지,패키지형],(curabl,curable)[경화,경화형],(wearabl,wearable)[착용,착용형],(larva,larvae)[포스트,포스트형],(crystallin,crystalline)[결정,결정형],(exchang,exchange)[교환,교환형],(lens,lense)[렌즈,렌즈형])
+   ,ed : 13((branch,branched)[분지,분지형],(lens,lensed)[렌즈,렌즈형],(mutat,mutated)[변이,변이형],(embed,embeded)[내장,내장형],(vent,vented)[통기,통기형],(hyperbranch,hyperbranched)[과분지,과분지형],(cluster,clustered)[클러스터,클러스터형],(distribut,distributed)[분산,분산형],(pipelin,pipelined)[파이프라인,파이프라인형],(stack,stacked)[적층,적층형],(puls,pulsed)[펄스,펄스형],(decentralis,decentralised)[분산,분산형])
+   ,ing : 10((unif,unifing)[통합,통합형],(stack,stacking)[적층,적층형],(absorb,absorbing)[흡수,흡수형],(harden,hardening)[경화,경화형],(vent,venting)[통기,통기형],(exchang,exchanging)[교환,교환형],(rewrit,rewriting)[재기록,재기록형],(control,controling)[제어,제어형],(record,recording)[기록,기록형])
+   ,ive : 9((diffract,diffractive)[회절,회절형],(transflect,transflective)[반투과,반투과형],(emiss,emissive)[발광,발광형],(distribut,distributive)[분산,분산형],(transmiss,transmissive)[투과,투과형],(adapt,adaptive)[적응,적응형],(reflect,reflective)[반사,반사형],(project,projective)[투사,투사형])
+   ,ion : 9((reflect,reflection)[반사,반사형],(project,projection)[투사,투사형],(diffract,diffraction)[회절,회절형],(adapt,adaption)[적응,적응형],(mutat,mutation)[변이,변이형],(multifunct,multifunction)[다기능,다기능형],(subtract,subtraction)[감산,감산형])
+   ,ation : 8((lamin,lamination)[적층,적층형],(adapt,adaptation)[적응,적응형],(convers,conversation)[대화,대화형],(cooper,cooperation)[협력,협력형],(separ,separation)[분리,분리형],(intergr,intergration)[통합,통합형])
+   ,ating : 5((cooper,cooperating)[협력,협력형],(separ,separating)[분리,분리형],(seper,seperating)[분리,분리형],(disintegr,disintegrating)[붕해,붕해형])
+   ,able : 5((record,recordable)[기록,기록형],(reclos,reclosable)[재밀폐,재밀폐형],(extend,extendable)[확장,확장형],(compat,compatable)[호환,호환형],(absorb,absorbable)[흡수,흡수형])
+   ,ence : 4((converg,convergence)[융합,융합형],(intellig,intelligence)[지능,지능형])
+   ,er : 3((record,recorder)[기록,기록형],(multilay,multilayer)[적층,적층형])
+   ,ate : 3((granul,granulate)[과립,과립형],(lamin,laminate)[적층,적층형])
+   ,ated : 3((lamin,laminated)[적층,적층형],(intergr,intergrated)[통합,통합형],(granul,granulated)[과립,과립형])
+   ,ication : 2((rectif,rectification)[정류,정류형],(unif,unification)[통합,통합형])
+   ,ional : 2((relat,relational)[관계,관계형],(multifunct,multifunctional)[다기능,다기능형])
+   i,y : 2((evolutionari,evolutionary)[진화,진화형],(vibratori,vibratory)[진동,진동형])
+   ,ent : 1((absorb,absorbent)[흡수,흡수형])
+   ,ned : 1((fin,finned)[핀,핀형])
+   ,ely : 1((passiv,passively)[수동,수동형])
+   ,lable : 1((control,controllable)[제어,제어형])
+   ,ance : 1((reson,resonance)[공진,공진형])
+   ,ational : 1((convers,conversational)[대화,대화형])
+   ,ative : 1((cooper,cooperative)[협력,협력형])
+   ,d : 1((gate,gated)[게이트,게이트형])
+   ,ible : 1((compat,compatible)[호환,호환형])
+   ,ment : 1((conceal,concealment)[은폐,은폐형])
+   ,ling : 1((control,controlling)[제어,제어형])
+   ,l : 1((control,controll)[제어,제어형])
+   ,ic : 1((ellipt,elliptic)[타원,타원형])
+   ,ical : 1((ellipt,elliptical)[타원,타원형])
+   ,ically : 1((ellipt,elliptically)[타원,타원형])
+   ,ant : 1((reson,resonant)[공진,공진형])
+#,적 : 134 / ISUF, 
+   ,ic : 19((enzymat,enzymatic)[효소,효소적],(electron,electronic)[전자,전자적],(electrostat,electrostatic)[정전기,정전기적],(synergist,synergistic)[상승,상승적],(electromagnet,electromagnetic)[전자기,전자기적],(electrokinet,electrokinetic)[동전기,동전기적],(therapeut,therapeutic)[치료,치료적],(stochast,stochastic)[확률,확률적],(probabilist,probabilistic)[확률,확률적],(photodynam,photodynamic)[광역학,광역학적],(electr,electric)[전기,전기적],(catalyt,catalytic)[촉매,촉매적],(geograph,geographic)[지리,지리적],(ergonom,ergonomic)[인체공학,인체공학적],(oxid,oxidic)[산화,산화적],(statist,statistic)[통계,통계적])
+   , : 16((general,general)[일반,일반적],(microRNA,microRNA)[유체,유체적],(spatial,spatial)[공간,공간적],(thermal,thermal)[열,열적],(logic,logic)[논리,논리적],(percutaneou,percutaneou)[경피,경피적],(optic,optic)[광학,광학적],(visual,visual)[시각,시각적],(technic,technic)[기술,기술적],(electron,electron)[전자,전자적],(social,social)[사회,사회적],(function,function)[기능,기능적],(sexual,sexual)[성,성적])
+   ,al : 14((tempor,temporal)[시간,시간적],(sequenti,sequential)[순차,순차적],(logic,logical)[논리,논리적],(topic,topical)[국소,국소적],(spatiotempor,spatiotemporal)[시공간,시공간적],(technic,technical)[기술,기술적],(chemic,chemical)[화학,화학적],(increment,incremental)[증분,증분적],(physic,physical)[물리,물리적],(perceptu,perceptual)[지각,지각적],(optic,optical)[광학,광학적])
+   ,ical : 14((photochem,photochemical)[광화학,광화학적],(biochem,biochemical)[생화학,생화학적],(mechan,mechanical)[기계,기계적],(electrochem,electrochemical)[전기화학,전기화학적],(hierarch,hierarchical)[계층,계층적],(electromechan,electromechanical)[전기기계,전기기계적],(statist,statistical)[통계,통계적],(therapeut,therapeutical)[치료,치료적],(pharmaceut,pharmaceutical)[약학,약학적],(electr,electrical)[전기,전기적])
+   ,ion : 11((constitut,constitution)[구성,구성적],(restrict,restriction)[제한,제한적],(competit,competition)[경쟁,경쟁적],(select,selection)[선택,선택적],(destruct,destruction)[파괴,파괴적],(cognit,cognition)[인지,인지적],(adapt,adaption)[적응,적응적])
+   ,ative : 10((collabor,collaborative)[협력,협력적],(cooper,cooperative)[협력,협력적],(quantit,quantitative)[정량,정량적],(oxid,oxidative)[산화,산화적],(collabor,collaborative)[협동,협동적],(specul,speculative)[추론,추론적],(iter,iterative)[반복,반복적],(compar,comparative)[비교,비교적])
+   ,ation : 9((collabor,collaboration)[협력,협력적],(adapt,adaptation)[적응,적응적],(cooper,cooperation)[협력,협력적],(quantit,quantitation)[정량,정량적],(oxid,oxidation)[산화,산화적],(iter,iteration)[반복,반복적])
+   ,ive : 8((adapt,adaptive)[적응,적응적],(competit,competitive)[경합,경합적],(cognit,cognitive)[인지,인지적],(destruct,destructive)[파괴,파괴적],(select,selective)[선택,선택적])
+   ,ent : 4((intermitt,intermittent)[간헐,간헐적],(depend,dependent)[의존,의존적],(independ,independent)[독립,독립적],(persist,persistent)[지속,지속적])
+   ,ly : 3((spatial,spatially)[공간,공간적],(thermal,thermally)[열,열적])
+   ,ting : 2((select,selectting)[선택,선택적])
+   ,ing : 2((select,selecting)[선택,선택적])
+   ,ency : 2((effici,efficiency)[효율,효율적])
+   ,ivity : 2((select,selectivity)[선택,선택적])
+   ,ized : 2((local,localized)[국부,국부적],(oxid,oxidized)[산화,산화적])
+   ,able : 2((select,selectable)[선택,선택적])
+   i,y : 2((hierarchi,hierarchy)[계층,계층적])
+   ,ically : 2((enzymat,enzymatically)[효소,효소적],(catalyt,catalytically)[촉매,촉매적])
+   ,ally : 1((optic,optically)[광학,광학적])
+   ,ating : 1((cooper,cooperating)[협력,협력적])
+   ,y : 1((patholog,pathology)[병리학,병리학적])
+   ,ible : 1((irrevers,irreversible)[비가역,비가역적])
+   ,ality : 1((function,functionality)[기능,기능적])
+   ,ence : 1((intellig,intelligence)[지능,지능적])
+   ,ed : 1((catalyz,catalyzed)[촉매,촉매적])
+   ,e : 1((variabl,variable)[가변,가변적])
+   ,ively : 1((noninvas,noninvasively)[비침습,비침습적])
+   ,izing : 1((oxid,oxidizing)[산화,산화적])
+#,물 : 112 /MSUF, COMP
+   ,ation : 16((oxygen,oxygenation)[산소화,산소화물],(combin,combination)[조합,조합물],(contamin,contamination)[오염,오염물],(oxid,oxidation)[산화,산화물],(agglomer,agglomeration)[응집,응집물],(nitrid,nitridation)[질화,질화물],(fraction,fractionation)[분획,분획물],(condens,condensation)[축합,축합물],(precipit,precipitation)[침전,침전물],(epoxid,epoxidation)[에폭시화,에폭시화물],(lamin,lamination)[적층,적층물])
+   ,ing : 14((extrud,extruding)[압출,압출물],(melt,melting)[용융,용융물],(product,producting)[생성,생성물],(extract,extracting)[추출,추출물],(nitrid,nitriding)[질화,질화물],(hydrolyz,hydrolyzing)[가수분해,가수분해물],(mold,molding)[성형,성형물],(cultur,culturing)[배양,배양물],(coat,coating)[코팅,코팅물])
+   , : 14((fraction,fraction)[분획,분획물],(melt,melt)[용융,용융물],(nonwoven,nonwoven)[부직,부직물],(hybrid,hybrid)[혼성,혼성물],(prosthesi,prosthesi)[보철,보철물],(solid,solid)[고형,고형물],(supplement,supplement)[보충,보충물],(workitem,workitem)[번역,번역물],(postal,postal)[우편,우편물])
+   ,ed : 9((dispers,dispersed)[분산,분산물],(nitrid,nitrided)[질화,질화물],(nanostructur,nanostructured)[나노구조,나노구조물],(hydrat,hydrated)[수화,수화물],(structur,structured)[구조,구조물],(extrud,extruded)[압출,압출물],(cultur,cultured)[배양,배양물])
+   ,e : 9((structur,structure)[구조,구조물],(composit,composite)[복합,복합물],(nanostructur,nanostructure)[나노구조,나노구조물],(obstacl,obstacle)[장애,장애물],(cultur,culture)[배양,배양물],(dispers,disperse)[분산,분산물])
+   ,ion : 7((dispers,dispersion)[분산,분산물],(hydrat,hydration)[수화,수화물],(construct,construction)[구조,구조물],(extract,extraction)[추출,추출물])
+   ,ated : 6((concentr,concentrated)[농축,농축물],(precipit,precipitated)[침전,침전물],(agglomer,agglomerated)[응집,응집물],(oxygen,oxygenated)[산소화,산소화물],(lamin,laminated)[적층,적층물])
+   ,al : 4((supplement,supplemental)[보충,보충물],(structur,structural)[구조,구조물],(residu,residual)[잔류,잔류물])
+   ,ic : 4((organ,organic)[유기,유기물],(prosthet,prosthetic)[보철,보철물],(oxid,oxidic)[산화,산화물])
+   ,ional : 3((composit,compositional)[조성,조성물])
+   ,ized : 3((epoxid,epoxidized)[에폭시화,에폭시화물],(oxid,oxidized)[산화,산화물])
+   ,ating : 2((concentr,concentrating)[농축,농축물])
+   ,ative : 2((oxid,oxidative)[산화,산화물])
+   ,ive : 2((extract,extractive)[추출,추출물])
+   ,able : 2((extract,extractable)[추출,추출물])
+   ,ement : 2((replac,replacement)[대체,대체물])
+   ,ical : 2((analyt,analytical)[분석,분석물])
+   i,y : 2((refractori,refractory)[내화,내화물])
+   ,lation : 2((distil,distillation)[증류,증류물])
+   ,izing : 2((oxid,oxidizing)[산화,산화물])
+   ,lative : 2((distil,distillative)[증류,증류물])
+   ,ational : 1((combin,combinational)[조합,조합물])
+    12a - h ),12a-h) : 1((( 12a - h ),(12a-h))[오염,오염물])
+   ,ate : 1((lamin,laminate)[적층,적층물])
+#,하는 : 107 /ISFU, EOMI
+   ,ing : 27((redirect,redirecting)[전환,전환하는],(offer,offering)[제공,제공하는],(recharg,recharging)[재충전,재충전하는],(determin,determining)[결정,결정하는],(mediat,mediating)[중개,중개하는],(control,controling)[제어,제어하는],(analys,analysing)[분석,분석하는],(host,hosting)[호스팅,호스팅하는],(provid,providing)[제공,제공하는],(equalis,equalising)[등화,등화하는],(polic,policing)[폴리싱,폴리싱하는],(textur,texturing)[텍스쳐링,텍스쳐링하는],(rear,rearing)[사육,사육하는],(postprocess,postprocessing)[후처리,후처리하는],(embod,emboding)[구현,구현하는],(request,requesting)[요청,요청하는],(encrypt,encrypting)[암호화,암호화하는],(assess,assessing)[평가,평가하는],(suppl,suppling)[공급,공급하는],(interact,interacting)[상호작용,상호작용하는],(reestablish,reestablishing)[재설정,재설정하는],(secret,secreting)[분비,분비하는],(manag,managing)[관리,관리하는],(compil,compiling)[컴파일,컴파일하는],(input,inputing)[입력,입력하는])
+   ,ation : 15((valid,validation)[검증,검증하는],(implement,implementation)[구현,구현하는],(interpol,interpolation)[보간,보간하는],(adapt,adaptation)[적응,적응하는],(determin,determination)[결정,결정하는],(coordin,coordination)[조정,조정하는],(initi,initiation)[개시,개시하는],(comput,computation)[계산,계산하는],(particip,participation)[참여,참여하는],(compil,compilation)[컴파일,컴파일하는],(alloc,allocation)[할당,할당하는],(equalis,equalisation)[등화,등화하는])
+   ,ion : 12((express,expression)[발현,발현하는],(adapt,adaption)[적응,적응하는],(interact,interaction)[상호작용,상호작용하는],(encrypt,encryption)[암호화,암호화하는],(reselect,reselection)[재선택,재선택하는],(mediat,mediation)[중개,중개하는],(secret,secretion)[분비,분비하는],(constitut,constitution)[구성,구성하는],(redirect,redirection)[전환,전환하는],(violat,violation)[위반,위반하는])
+   , : 7((assist,assist)[보조,보조하는],(input,input)[입력,입력하는],(encrypt,encrypt)[암호화,암호화하는],(control,control)[제어,제어하는],(request,request)[요청,요청하는],(import,import)[임포트,임포트하는])
+   ,ating : 5((coordin,coordinating)[조정,조정하는],(alloc,allocating)[할당,할당하는],(initi,initiating)[개시,개시하는],(interpol,interpolating)[보간,보간하는],(valid,validating)[검증,검증하는])
+   ,ment : 3((adjust,adjustment)[조정,조정하는],(assess,assessment)[평가,평가하는])
+   ,ling : 3((cancel,cancelling)[제거,제거하는],(control,controlling)[제어,제어하는])
+   ,ed : 3((assist,assisted)[보조,보조하는],(encrypt,encrypted)[암호화,암호화하는],(secret,secreted)[분비,분비하는])
+   ,ization : 3((author,authorization)[인증,인증하는],(polymer,polymerization)[중합,중합하는])
+   ,lable : 2((control,controllable)[제어,제어하는])
+   ,ance : 2((assur,assurance)[보장,보장하는],(assist,assistance)[보조,보조하는])
+   ,ence : 2((coexist,coexistence)[공존,공존하는],(correspond,correspondence)[대응,대응하는])
+   ,l : 2((control,controll)[제어,제어하는])
+   i,ying : 2((embodi,embodying)[구현,구현하는],(identifi,identifying)[식별,식별하는])
+   ,eable : 2((manag,manageable)[관리,관리하는],(produc,produceable)[생산,생산하는])
+   ,izing : 2((polymer,polymerizing)[중합,중합하는],(author,authorizing)[인증,인증하는])
+   ,ting : 1((input,inputting)[입력,입력하는])
+   ,ementing : 1((manag,managementing)[관리,관리하는])
+   ,ler : 1((cancel,canceller)[제거,제거하는])
+   ,ency : 1((resid,residency)[상주,상주하는])
+   ,ational : 1((comput,computational)[계산,계산하는])
+   e,ing : 1((style,styling)[스타일링,스타일링하는])
+   ,ivity : 1((interact,interactivity)[상호작용,상호작용하는])
+   ,ive : 1((adapt,adaptive)[적응,적응하는])
+   ,ized : 1((polymer,polymerized)[중합,중합하는])
+   ,eing : 1((guarante,guaranteeing)[보장,보장하는])
+   ,ement : 1((manag,management)[관리,관리하는])
+   ,e : 1((compil,compile)[컴파일,컴파일하는])
+   ,ated : 1((initi,initiated)[개시,개시하는])
+   ,lation : 1((cancel,cancellation)[제거,제거하는])
+   ,ant : 1((assist,assistant)[보조,보조하는])
+#,체 : 104 /MSUF, COMP
+   , : 19((mutant,mutant)[돌연변이,돌연변이체],(sinter,sinter)[소결,소결체],(plant,plant)[식물,식물체],(transport,transport)[수송,수송체],(polynuclear,polynuclear)[다핵,다핵체],(framework,framework)[골격,골격체],(hybrid,hybrid)[혼성,혼성체],(complex,complex)[복합,복합체],(paffia,paffia)[식물,식물체],(polymorph,polymorph)[다형,다형체],(transcript,transcript)[전사,전사체],(foam,foam)[발포,발포체])
+   ,e : 18((polysaccharid,polysaccharide)[다당,다당체],(nanostructur,nanostructure)[나노구조,나노구조체],(exchang,exchange)[교환,교환체],(dispers,disperse)[분산,분산체],(composit,composite)[복합,복합체],(structur,structure)[구조,구조체],(microstructur,microstructure)[미세구조,미세구조체],(microspher,microsphere)[미소구,미소구체])
+   ,ed : 13((thermoform,thermoformed)[열성형,열성형체],(complex,complexed)[복합,복합체],(nanostructur,nanostructured)[나노구조,나노구조체],(foam,foamed)[발포,발포체],(dispers,dispersed)[분산,분산체],(mediat,mediated)[매개,매개체],(sinter,sintered)[소결,소결체],(structur,structured)[구조,구조체])
+   ,ing : 8((mold,molding)[성형,성형체],(mould,moulding)[성형,성형체],(sinter,sintering)[소결,소결체],(assembl,assembling)[조립,조립체],(exchang,exchanging)[교환,교환체],(foam,foaming)[발포,발포체])
+   ,ic : 8((transgen,transgenic)[유동,유동체],(metabolit,metabolitic)[대사,대사체],(polymorph,polymorphic)[다형,다형체],(organ,organic)[유기,유기체],(racem,racemic)[라세미,라세미체])
+   ,ation : 7((agglomer,agglomeration)[응집,응집체],(deriv,derivation)[유도,유도체],(lamin,lamination)[적층,적층체])
+   ,ate : 5((lamin,laminate)[적층,적층체],(intermedi,intermediate)[중간,중간체])
+   ,ated : 5((insul,insulated)[절연,절연체],(lamin,laminated)[적층,적층체],(agglomer,agglomerated)[응집,응집체])
+   ,ion : 4((dispers,dispersion)[분산,분산체],(construct,construction)[구조,구조체],(transcript,transcription)[전사,전사체],(disrupt,disruption)[파괴,파괴체])
+   ,ism : 4((organ,organism)[생물,생물체],(polymorph,polymorphism)[다형,다형체])
+   ,ization : 3((copolymer,copolymerization)[공중합,공중합체],(polymer,polymerization)[중합,중합체])
+   ,ication : 2((modif,modification)[변형,변형체])
+   ,ized : 2((polymer,polymerized)[중합,중합체],(copolymer,copolymerized)[공중합,공중합체])
+   ,izing : 2((copolymer,copolymerizing)[공중합,공중합체],(polymer,polymerizing)[중합,중합체])
+   ,ional : 1((transcript,transcriptional)[전사,전사체])
+   ,al : 1((structur,structural)[구조,구조체])
+   ,y : 1((assembl,assembly)[조립,조립체])
+   ,lation : 1((scintil,scintillation)[섬광,섬광체])
+#,링 : 103 /MSUF
+   , : 71((shutter,shutter)[셔터,셔터링],(shower,shower)[샤워,샤워링],(steer,steer)[스티어,스티어링],(mill,mill)[밀,밀링],(anneal,anneal)[어닐,어닐링],(journal,journal)[저널,저널링],(poll,poll)[폴,폴링],(drill,drill)[드릴,드릴링],(core,core)[코어,코어링],(care,care)[케어,케어링],(reorder,reorder)[리오더,리오더링],(tile,tile)[타일,타일링],(label,label)[라벨,라벨링],(nail,nail)[네일,네일링],(dither,dither)[디더,디더링],(cluster,cluster)[클러스터,클러스터링],(model,model)[모델,모델링],(mail,mail)[메일,메일링],(center,center)[센터,센터링],(solder,solder)[솔더,솔더링],(wheel,wheel)[휠,휠링],(master,master)[마스터,마스터링],(level,level)[레벨,레벨링],(getter,getter)[게터,게터링],(anchor,anchor)[앵커,앵커링],(style,style)[스타일,스타일링],(file,file)[파일,파일링],(blur,blur)[블러,블러링],(bevel,bevel)[베벨,베벨링],(monitor,monitor)[모니터,모니터링],(color,color)[컬러,컬러링],(spool,spool)[스풀,스풀링],(dial,dial)[다이얼,다이얼링],(roll,roll)[롤,롤링],(lacquer,lacquer)[래커,래커링],(mirror,mirror)[미러,미러링],(tunnel,tunnel)[터널,터널링],(trigger,trigger)[트리거,트리거링],(filter,filter)[필터,필터링],(tool,tool)[툴,툴링],(buffer,buffer)[버퍼,버퍼링],(pool,pool)[풀,풀링],(corner,corner)[코너,코너링],(scale,scale)[스케일,스케일링])
+   ,e : 18((bundl,bundle)[번들,번들링],(textur,texture)[텍스쳐,텍스쳐링],(scrambl,scramble)[스크램블,스크램블링],(sampl,sample)[샘플,샘플링],(descrambl,descramble)[디스크램블,디스크램블링],(shuffl,shuffle)[셔플,셔플링],(compil,compile)[컴파일,컴파일링],(throttl,throttle)[스로틀,스로틀링],(wobbl,wobble)[워블,워블링],(centr,centre)[센터,센터링],(handl,handle)[핸들,핸들링],(schedul,schedule)[스케줄,스케줄링],(cycl,cycle)[사이클,사이클링])
+   ,ed : 8((wobbl,wobbled)[워블,워블링],(cluster,clustered)[클러스터,클러스터링],(wheel,wheeled)[휠,휠링],(scrambl,scrambled)[스크램블,스크램블링],(trigger,triggered)[트리거,트리거링],(descrambl,descrambled)[디스크램블,디스크램블링],(anneal,annealed)[어닐,어닐링])
+   ,ing : 3((descrambl,descrambling)[디스크램블,디스크램블링],(drill,drilling)[드릴,드릴링],(compil,compiling)[컴파일,컴파일링])
+   ,er : 2((calend,calender)[캘린더,캘린더링],(descrambl,descrambler)[디스크램블,디스크램블링])
+   ,ation : 1((compil,compilation)[컴파일,컴파일링])
+#,화된 : 82 /화(MSUF)+된(ISUF) /다중,다중화,다중화 된
+   , : 40((multiplex,multiplex)[다중,다중화된],(function,function)[기능,기능화된],(random,random)[랜덤,랜덤화된],(channel,channel)[채널,채널화된],(sector,sector)[섹터,섹터화된],(visual,visual)[시각,시각화된],(segment,segment)[세그먼트,세그먼트화된],(vector,vector)[벡터,벡터화된],(fragment,fragment)[단편,단편화된],(funtion,funtion)[기능,기능화된],(network,network)[네트워크,네트워크화된],(human,human)[인간,인간화된],(pellet,pellet)[펠렛,펠렛화된],(standard,standard)[표준,표준화된],(general,general)[일반,일반화된],(format,format)[포맷,포맷화된],(metal,metal)[금속,금속화된],(pattern,pattern)[패턴,패턴화된],(target,target)[표적,표적화된],(lipid,lipid)[지질,지질화된],(modular,modular)[모듈,모듈화된],(acyl,acyl)[아실,아실화된],(halogen,halogen)[할로겐,할로겐화된],(hydrogen,hydrogen)[수소,수소화된],(packet,packet)[패킷,패킷화된])
+   ,e : 10((sulfon,sulfone)[술폰,술폰화된],(silicid,silicide)[실리사이드,실리사이드화된],(capsul,capsule)[캡슐,캡슐화된],(structur,structure)[구조,구조화된],(silan,silane)[실란,실란화된],(activ,active)[활성,활성화된])
+   ,al : 5((individu,individual)[개별,개별화된],(structur,structural)[구조,구조화된],(person,personal)[개인,개인화된],(optim,optimal)[최적,최적화된],(digit,digital)[디지털,디지털화된])
+   ,ed : 5((network,networked)[네트워크,네트워크화된],(silicid,silicided)[실리사이드,실리사이드화된],(target,targeted)[표적,표적화된],(structur,structured)[구조,구조화된],(catalyz,catalyzed)[촉매,촉매화된])
+   ,ized : 3((standard,standardized)[표준,표준화된],(digit,digitized)[디지털,디지털화된],(computer,computerized)[컴퓨터,컴퓨터화된])
+   ,ated : 3((glycosyl,glycosylated)[당쇄,당쇄화된],(autom,automated)[자동,자동화된],(acceler,accelerated)[가속,가속화된])
+   ,ing : 2((multiplex,multiplexing)[다중,다중화된],(network,networking)[네트워크,네트워크화된])
+   ,ation : 2((autom,automation)[자동,자동화된],(acceler,acceleration)[가속,가속화된])
+   ,ting : 1((format,formatting)[포맷,포맷화된])
+   ,ally : 1((digit,digitally)[디지털,디지털화된])
+   ,ating : 1((acceler,accelerating)[가속,가속화된])
+   ,ator : 1((acceler,accelerator)[가속,가속화된])
+   ,lic : 1((metal,metallic)[금속,금속화된])
+   ,ality : 1((function,functionality)[기능,기능화된])
+   ,lization : 1((metal,metallization)[금속,금속화된])
+   ,ion : 1((encrypt,encryption)[암호,암호화된])
+   ,ate : 1((duplic,duplicate)[이중,이중화된])
+   ,ization : 1((synchron,synchronization)[동기,동기화된])
+   ,izing : 1((desulphur,desulphurizing)[탈황,탈황화된])
+   ,ity : 1((activ,activity)[활성,활성화된])
+#,방법 : 78 / Noun used for “method” in composite nouns
+   ,ing : 17((manufactru,manufactruing)[제조,제조방법],(manufactur,manufacturing)[제조,제조방법],(dirv,dirving)[구동,구동방법],(prepar,preparing)[제조,제조방법],(play,playing)[재생,재생방법],(refin,refining)[정제,정제방법],(transfer,transfering)[전송,전송방법],(revis,revising)[보정,보정방법],(menufactur,menufacturing)[제조,제조방법],(manufatur,manufaturing)[제조,제조방법],(control,controling)[제어,제어방법])
+   ,ation : 12((prolifer,proliferation)[증식,증식방법],(antioxid,antioxidation)[항산화,항산화방법],(fabric,fabrication)[제조,제조방법],(alkoxyl,alkoxylation)[알콕시화,알콕시화방법],(prepar,preparation)[제조,제조방법],(cultiv,cultivation)[재배,재배방법])
+   ,e : 8((manufactur,manufacture)[제조,제조방법],(mobil,mobile)[이동,이동방법],(method,methode)[제조,제조방법],(respons,response)[응답,응답방법])
+   , : 7((transfer,transfer)[전송,전송방법],(control,control)[제어,제어방법],(synthesi,synthesi)[합성,합성방법],(mathod,mathod)[제조,제조방법],(play,play)[재생,재생방법])
+   ,ating : 4((cultiv,cultivating)[재배,재배방법],(fabric,fabricating)[제조,제조방법],(prolifer,proliferating)[증식,증식방법])
+   ,lable : 3((control,controllable)[제어,제어방법])
+   ,ling : 3((control,controlling)[제어,제어방법])
+   ,ion : 3((cognit,cognition)[인식,인식방법],(revis,revision)[보정,보정방법],(format,formation)[형성,형성방법])
+   ,l : 3((control,controll)[제어,제어방법])
+   i,ying : 2((repli,replying)[회신,회신방법],(studi,studying)[학습,학습방법])
+   ,ement : 2((rearrang,rearrangement)[재배열,재배열방법],(refin,refinement)[정제,정제방법])
+   i,y : 2((repli,reply)[회신,회신방법],(studi,study)[학습,학습방법])
+   ,izing : 2((desulfur,desulfurizing)[탈황,탈황방법],(deoxid,deoxidizing)[탈산,탈산방법])
+   ,er : 1((teleview,televiewer)[정보검색,정보검색방법])
+   ,ication : 1((saccharif,saccharification)[당화,당화방법])
+   e,ing : 1((save,saving)[절약,절약방법])
+   ,ative : 1((antioxid,antioxidative)[항산화,항산화방법])
+   ,ive : 1((respons,responsive)[응답,응답방법])
+   ,ring : 1((transfer,transferring)[전송,전송방법])
+   ,ization : 1((desulfur,desulfurization)[탈황,탈황방법])
+   ,ated : 1((alkoxyl,alkoxylated)[알콕시화,알콕시화방법])
+   ,ity : 1((mobil,mobility)[이동,이동방법])
+   ,ant : 1((antioxid,antioxidant)[항산화,항산화방법])
+#,가능한 : 71 /MSUF, COMP
+   ,ing : 15((updat,updating)[갱신,갱신가능한],(reproduc,reproducing)[재생,재생가능한],(develop,developing)[현상,현상가능한],(compost,composting)[퇴비화,퇴비화가능한],(select,selecting)[선택,선택가능한],(configur,configuring)[구성,구성가능한],(predict,predicting)[예측,예측가능한],(rewrit,rewriting)[재기록,재기록가능한],(download,downloading)[다운로드,다운로드가능한],(extrud,extruding)[압출,압출가능한],(rotat,rotating)[회전,회전가능한],(record,recording)[기록,기록가능한],(reconfigur,reconfiguring)[재구성,재구성가능한],(detect,detecting)[검출,검출가능한])
+   ,able : 9((adjust,adjustable)[조절,조절가능한],(configur,configurable)[구성,구성가능한],(reconfigur,reconfigurable)[재구성,재구성가능한],(extend,extendable)[확장,확장가능한],(select,selectable)[선택,선택가능한],(record,recordable)[기록,기록가능한],(compat,compatable)[호환,호환가능한],(rotat,rotatable)[회전,회전가능한],(reclos,reclosable)[재밀폐,재밀폐가능한])
+   ,e : 9((wearabl,wearable)[착용,착용가능한],(potabl,potable)[휴대,휴대가능한],(programm,programme)[프로그램,프로그램가능한],(rewrit,rewrite)[재기록,재기록가능한],(stackabl,stackable)[적층,적층가능한],(updat,update)[갱신,갱신가능한],(dilut,dilute)[희석,희석가능한])
+   ,ion : 7((rotat,rotation)[회전,회전가능한],(extens,extension)[확장,확장가능한],(detect,detection)[검출,검출가능한],(predict,prediction)[예측,예측가능한],(select,selection)[선택,선택가능한],(dilut,dilution)[희석,희석가능한])
+   ,ation : 6((polymeris,polymerisation)[중합,중합가능한],(configur,configuration)[구성,구성가능한],(regener,regeneration)[재생,재생가능한],(reconfigur,reconfiguration)[재구성,재구성가능한],(administr,administration)[투여,투여가능한])
+   ,er : 3((reproduc,reproducer)[재생,재생가능한],(record,recorder)[기록,기록가능한],(verifi,verifier)[검증,검증가능한])
+   ,ive : 3((predict,predictive)[예측,예측가능한],(rotat,rotative)[회전,회전가능한],(select,selective)[선택,선택가능한])
+   ,ment : 3((adjust,adjustment)[조정,조정가능한],(adjust,adjustment)[조절,조절가능한])
+   ,ating : 2((regener,regenerating)[재생,재생가능한],(configur,configurating)[구성,구성가능한])
+   , : 2((download,download)[다운로드,다운로드가능한],(record,record)[기록,기록가능한])
+   ,al : 2((remov,removal)[제거,제거가능한])
+   ,ible : 2((compat,compatible)[호환,호환가능한],(extens,extensible)[확장,확장가능한])
+   ,ed : 2((extrud,extruded)[압출,압출가능한],(predict,predicted)[예측,예측가능한])
+   ,ting : 1((select,selectting)[선택,선택가능한])
+   ,ional : 1((rotat,rotational)[회전,회전가능한])
+   ,ivity : 1((select,selectivity)[선택,선택가능한])
+   i,ying : 1((verifi,verifying)[검증,검증가능한])
+   i,y : 1((verifi,verify)[검증,검증가능한])
+   ,ionally : 1((rotat,rotationally)[회전,회전가능한])
+#,자 : 64 /MSUF, COMP
+   ,ation : 12((origin,origination)[발신,발신자],(commut,commutation)[정류,정류자],(coordin,coordination)[조정,조정자],(indic,indication)[표시,표시자],(recommend,recommendation)[추천,추천자],(arbitr,arbitration)[중재,중재자],(communic,communication)[통신,통신자],(administr,administration)[관리,관리자],(occup,occupation)[점유,점유자])
+   ,ing : 11((vibrat,vibrating)[진동,진동자],(manag,managing)[관리,관리자],(listen,listening)[청취,청취자],(recommend,recommending)[추천,추천자],(design,designing)[설계,설계자],(inquir,inquiring)[조회,조회자],(provid,providing)[제공,제공자],(request,requesting)[요청,요청자],(consum,consuming)[소비,소비자])
+   ,ating : 6((administr,administrating)[관리,관리자],(commut,commutating)[정류,정류자],(discrimin,discriminating)[판별,판별자],(modul,modulating)[조절,조절자],(communic,communicating)[통신,통신자],(coordin,coordinating)[조정,조정자])
+   ,ic : 6((photon,photonic)[광,광자],(optoelectron,optoelectronic)[광전,광전자],(photoelectron,photoelectronic)[광전,광전자])
+   , : 5((design,design)[설계,설계자],(recommend,recommend)[추천,추천자],(PN,PN)[일정관리,일정관리자],(request,request)[요청,요청자])
+   ,e : 4((inquir,inquire)[조회,조회자],(subscrib,subscribe)[가입,가입자])
+   ,ence : 2((interfer,interference)[간섭,간섭자],(incontin,incontinence)[실금,실금자])
+   ,ion : 2((vibrat,vibration)[진동,진동자])
+   i,ying : 2((identifi,identifying)[식별,식별자])
+   ,eable : 2((produc,produceable)[생산,생산자],(manag,manageable)[관리,관리자])
+   ,er : 1((recommend,recommender)[추천,추천자])
+   ,ementing : 1((manag,managementing)[관리,관리자])
+   ,ional : 1((vibrat,vibrational)[진동,진동자])
+   ,ance : 1((reson,resonance)[공진,공진자])
+   ,ized : 1((polar,polarized)[편광,편광자])
+   ,ancy : 1((occup,occupancy)[점유,점유자])
+   ,' : 1((sender,sender')[발신,발신자])
+   ,ed : 1((recommend,recommended)[추천,추천자])
+   ,ement : 1((manag,management)[관리,관리자])
+   ,ization : 1((polar,polarization)[편광,편광자])
+   ,izing : 1((polar,polarizing)[편광,편광자])
+   ,ant : 1((reson,resonant)[공진,공진자])
+#,장치 : 59 / MSUF(NOUN), COMP / DEVICE, EQUIPMENT
+   , : 12((tacker,tacker)[타카,타카장치],(align,align)[정렬,정렬장치],(optic,optic)[광학,광학장치],(transfer,transfer)[전송,전송장치],(grower,grower)[성장,성장장치],(delay,delay)[지연,지연장치],(stepper,stepper)[노광,노광장치],(player,player)[재생,재생장치],(mic,mic)[마이크,마이크장치],(gear,gear)[기어,기어장치],(hvac,hvac)[공조,공조장치])
+   ,ing : 11((dehumidif,dehumidifing)[제습,제습장치],(assembl,assembling)[조립,조립장치],(reproduc,reproducing)[재생,재생장치],(align,aligning)[정렬,정렬장치],(transfer,transfering)[전송,전송장치],(gear,gearing)[기어,기어장치],(bookbind,bookbinding)[제본,제본장치],(recharg,recharging)[충전,충전장치],(electroform,electroforming)[전주,전주장치],(polish,polishing)[연마,연마장치],(electropolish,electropolishing)[전해연마,전해연마장치])
+   ,ation : 7((respir,respiration)[호흡,호흡장치],(estim,estimation)[추정,추정장치],(termin,termination)[종단,종단장치],(elimin,elimination)[제거,제거장치],(centrifug,centrifugation)[원심분리,원심분리장치],(illumin,illumination)[조명,조명장치])
+   ,ating : 4((termin,terminating)[종단,종단장치],(elimin,eliminating)[제거,제거장치],(estim,estimating)[추정,추정장치],(illumin,illuminating)[조명,조명장치])
+   ,e : 4((headphon,headphone)[헤드폰,헤드폰장치],(shuffl,shuffle)[셔플,셔플장치],(recharg,recharge)[충전,충전장치])
+   ,al : 3((peripher,peripheral)[주변,주변장치],(optic,optical)[광학,광학장치],(dispos,disposal)[처리,처리장치])
+   ,ization : 3((magnet,magnetization)[자화,자화장치],(synchron,synchronization)[동기,동기장치],(steril,sterilization)[살균,살균장치])
+   i,y : 3((supervisori,supervisory)[감시,감시장치],(safti,safty)[안전,안전장치],(dispali,dispaly)[표시,표시장치])
+   ,er : 2((reproduc,reproducer)[재생,재생장치],(polish,polisher)[연마,연마장치])
+   ,ally : 1((optic,optically)[광학,광학장치])
+   ,ication : 1((dehumidif,dehumidification)[제습,제습장치])
+   ,y : 1((assembl,assembly)[조립,조립장치])
+   ,ment : 1((align,alignment)[정렬,정렬장치])
+   ,ring : 1((transfer,transferring)[전송,전송장치])
+   ,izer : 1((steril,sterilizer)[살균,살균장치])
+   ,ion : 1((aerat,aeration)[폭기,폭기장치])
+   ,ed : 1((delay,delayed)[지연,지연장치])
+   ,ated : 1((illumin,illuminated)[조명,조명장치])
+   ,izing : 1((steril,sterilizing)[살균,살균장치])
+#,계 : 55 /MSUF, COMP
+   , : 19((acryl,acryl)[아크릴,아크릴계],(calcia,calcia)[칼시아,칼시아계],(gan,gan)[질화물,질화물계],(polyvinylalcohol,polyvinylalcohol)[폴리비닐알코올,폴리비닐알코올계],(phenol,phenol)[페놀,페놀계],(cardiovascular,cardiovascular)[심혈관,심혈관계],(gan,gan)[질화갈륨,질화갈륨계],(olefin,olefin)[올레핀,올레핀계],(paraffin,paraffin)[파라핀,파라핀계],(cerebrovascular,cerebrovascular)[뇌혈관,뇌혈관계],(nonaqueou,nonaqueou)[비수,비수계],(optic,optic)[광학,광학계])
+   ,e : 19((cellulos,cellulose)[셀룰로오스,셀룰로오스계],(imid,imide)[이미드,이미드계],(lacton,lactone)[락톤,락톤계],(norbornen,norbornene)[노보넨,노보넨계],(endocrin,endocrine)[내분비,내분비계],(pyren,pyrene)[피렌,피렌계],(olefin,olefine)[올레핀,올레핀계],(hydrazon,hydrazone)[히드라존,히드라존계],(chlorin,chlorine)[염소,염소계],(anthracyclin,anthracycline)[안트라사이클린,안트라사이클린계],(styren,styrene)[스티렌,스티렌계],(multistag,multistage)[다단,다단계],(ferrit,ferrite)[페라이트,페라이트계])
+   ,ic : 11((olefin,olefinic)[올레핀,올레핀계],(cellulos,cellulosic)[셀룰로오스,셀룰로오스계],(acryl,acrylic)[아크릴,아크릴계],(interferometr,interferometric)[간섭,간섭계],(phenol,phenolic)[페놀,페놀계],(styren,styrenic)[스티렌,스티렌계],(ferrit,ferritic)[페라이트,페라이트계])
+   ,ical : 2((neurolog,neurological)[신경,신경계])
+   ,ally : 1((optic,optically)[광학,광학계])
+   ,ing : 1((recod,recoding)[기록,기록계])
+   ,al : 1((optic,optical)[광학,광학계])
+   i,y : 1((ternari,ternary)[3원,3원계])
+#,들 : 52 /ISUF / PLURALS
+   , : 27((pilot,pilot)[파일럿,파일럿들],(router,router)[라우터,라우터들],(trigger,trigger)[트리거,트리거들],(bin,bin)[빈,빈들],(subscan,subscan)[서브스캔,서브스캔들],(constraint,constraint)[제약,제약들],(lan,lan)[랜,랜들],(via,via)[비아,비아들],(sampler,sampler)[샘플러,샘플러들],(learner,learner)[학습자,학습자들],(resort,resort)[겹,겹들],(system,system)[시스템,시스템들],(list,list)[목록,목록들],(these,these)[이,이들],(CPE,CPE)[cpe,cpe들],(slave,slave)[슬레이브,슬레이브들],(method,method)[방법,방법들],(cue,cue)[큐,큐들],(protocol,protocol)[프로토콜,프로토콜들])
+   ,e : 11((headphon,headphone)[헤드폰,헤드폰들],(programm,programme)[프로그램,프로그램들],(method,methode)[방법,방법들],(apparatus,apparatuse)[장치,장치들],(silan,silane)[실란,실란들],(identiti,identitie)[신원,신원들],(sevic,sevice)[서비스,서비스들],(polymeras,polymerase)[중합효소,중합효소들])
+   ,ing : 3((list,listing)[목록,목록들],(select,selecting)[선택,선택들])
+   ,ive : 2((explos,explosive)[화약,화약들],(select,selective)[선택,선택들])
+   ,er : 1((aptam,aptamer)[앱타머,앱타머들])
+   ,ting : 1((select,selectting)[선택,선택들])
+   ,ivity : 1((select,selectivity)[선택,선택들])
+   ,able : 1((select,selectable)[선택,선택들])
+   ,' : 1((system,system')[시스템,시스템들])
+   ,ion : 1((select,selection)[선택,선택들])
+   ,ed : 1((trigger,triggered)[트리거,트리거들])
+   ,ement : 1((arrang,arrangement)[장치,장치들])
+   i,y : 1((repositori,repository)[저장소,저장소들])
+#,식 : 34 /MSUF/COMP
+   , : 7((tension,tension)[장력,장력식],(tandem,tandem)[탠덤,탠덤식],(modular,modular)[모듈,모듈식],(binocular,binocular)[양안,양안식],(stairway,stairway)[계단,계단식],(pivot,pivot)[피봇,피봇식],(synchronou,synchronou)[동기,동기식])
+   ,ic : 5((hydraul,hydraulic)[유압,유압식],(polycycl,polycyclic)[다환,다환식],(panoram,panoramic)[파노라마,파노라마식],(tricycl,tricyclic)[삼환,삼환식])
+   ,ation : 3((evapor,evaporation)[증발,증발식],(lubric,lubrication)[윤활,윤활식],(convers,conversation)[대화,대화식])
+   ,ing : 2((actuat,actuating)[작동,작동식],(recharg,recharging)[충전,충전식])
+   ,ion : 2((electromot,electromotion)[전동,전동식],(actuat,actuation)[작동,작동식])
+   ,e : 2((multistag,multistage)[다단,다단식],(recharg,recharge)[충전,충전식])
+   ,ically : 2((hydraul,hydraulically)[유압,유압식])
+   ,ating : 1((lubric,lubricating)[윤활,윤활식])
+   ,ational : 1((convers,conversational)[대화,대화식])
+   ,ative : 1((evapor,evaporative)[증발,증발식])
+   ,ive : 1((electromot,electromotive)[전동,전동식])
+   ,ized : 1((motor,motorized)[전동,전동식])
+   ,able : 1((reclos,reclosable)[재밀폐,재밀폐식])
+   ,ed : 1((supercharg,supercharged)[과급,과급식])
+   ,ical : 1((mechan,mechanical)[기계,기계식])
+   i,y : 1((rotari,rotary)[회전,회전식])
+   ,ated : 1((lubric,lubricated)[윤활,윤활식])
+   ,ant : 1((lubric,lubricant)[윤활,윤활식])
+#,가능 : 34 /MSUF, COMP
+   ,ing : 7((select,selecting)[선택,선택가능],(reconfigur,reconfiguring)[재구성,재구성가능],(execut,executing)[실행,실행가능],(configur,configuring)[구성,구성가능],(receiv,receiving)[수신,수신가능],(record,recording)[기록,기록가능])
+   ,e : 6((wearabl,wearable)[착용,착용가능],(receiv,receive)[수신,수신가능],(programm,programme)[프로그램,프로그램가능],(interchang,interchange)[교환,교환가능],(address,addresse)[어드레스,어드레스가능])
+   ,able : 5((configur,configurable)[구성,구성가능],(execut,executable)[실행,실행가능],(record,recordable)[기록,기록가능],(select,selectable)[선택,선택가능],(reconfigur,reconfigurable)[재구성,재구성가능])
+   ,ion : 4((extens,extension)[확장,확장가능],(execut,execution)[실행,실행가능],(select,selection)[선택,선택가능])
+   ,ation : 3((configur,configuration)[구성,구성가능],(reconfigur,reconfiguration)[재구성,재구성가능])
+   ,er : 1((record,recorder)[기록,기록가능])
+   ,ting : 1((select,selectting)[선택,선택가능])
+   ,ating : 1((configur,configurating)[구성,구성가능])
+   , : 1((record,record)[기록,기록가능])
+   ,ivity : 1((select,selectivity)[선택,선택가능])
+   ,ive : 1((select,selective)[선택,선택가능])
+   ,ible : 1((extens,extensible)[확장,확장가능])
+   ,ed : 1((thermoform,thermoformed)[열성형,열성형가능])
+   ,eable : 1((interchang,interchangeable)[교환,교환가능])
+#,들을 : 28 /ISUF /, 들(PLURAL)+을(JOSA)
+   , : 14((CPE,CPE)[cpe,cpe들을],(partner,partner)[파트너,파트너들을],(stamp,stamp)[스탬프,스탬프들을],(comparison,comparison)[비교,비교들을],(align,align)[정렬,정렬들을],(session,session)[세션,세션들을],(scheme,scheme)[방식,방식들을],(watermark,watermark)[워터마크,워터마크들을])
+   ,er : 4((handov,handover)[핸드오버,핸드오버들을],(record,recorder)[레코더,레코더들을])
+   ,ion : 2((collis,collision)[충돌,충돌들을])
+   ,e : 2((programm,programme)[프로그램,프로그램들을])
+   ,ing : 1((align,aligning)[정렬,정렬들을])
+   ,ating : 1((modul,modulating)[변조,변조들을])
+   ,ation : 1((modul,modulation)[변조,변조들을])
+   ,ment : 1((align,alignment)[정렬,정렬들을])
+   i,y : 1((proxi,proxy)[프록시,프록시들을])
+   ,ated : 1((modul,modulated)[변조,변조들을])
+#,적인 : 24 /ISUF, EOMI
+   ,ion : 4((restrict,restriction)[제한,제한적인],(select,selection)[선택,선택적인],(adapt,adaption)[적응,적응적인])
+   , : 3((autonomou,autonomou)[자율,자율적인],(continuou,continuou)[연속,연속적인],(generic,generic)[일반,일반적인])
+   ,ive : 3((select,selective)[선택,선택적인],(success,successive)[연속,연속적인],(adapt,adaptive)[적응,적응적인])
+   ,ation : 3((adapt,adaptation)[적응,적응적인],(collabor,collaboration)[협력,협력적인],(iter,iteration)[반복,반복적인])
+   ,ent : 2((independ,independent)[독립,독립적인],(persist,persistent)[지속,지속적인])
+   ,ative : 2((iter,iterative)[반복,반복적인],(collabor,collaborative)[협력,협력적인])
+   ,ting : 1((select,selectting)[선택,선택적인])
+   ,ing : 1((select,selecting)[선택,선택적인])
+   ,ency : 1((effici,efficiency)[효율,효율적인])
+   ,al : 1((sequenti,sequential)[순차,순차적인])
+   ,ivity : 1((select,selectivity)[선택,선택적인])
+   ,able : 1((select,selectable)[선택,선택적인])
+   ,ical : 1((hierarch,hierarchical)[계층,계층적인])
+#,인 : 23  /ISUF, 
+   ,ent : 2((persist,persistent)[지속적,지속적인],(effici,efficient)[효율적,효율적인])
+   ,ally : 2((option,optionally)[선택적,선택적인],(typic,typically)[전형적,전형적인])
+   ,al : 2((option,optional)[선택적,선택적인],(sequenti,sequential)[순차적,순차적인])
+   ,ative : 2((collabor,collaborative)[협력적,협력적인],(iter,iterative)[반복적,반복적인])
+   ,ive : 2((adapt,adaptive)[적응적,적응적인],(select,selective)[선택적,선택적인])
+   ,ently : 2((effici,efficiently)[효율적,효율적인],(independ,independently)[독립적,독립적인])
+   ,ively : 2((select,selectively)[선택적,선택적인],(adapt,adaptively)[적응적,적응적인])
+   ,ly : 1((ideal,ideally)[이상적,이상적인])
+   ,edly : 1((restrict,restrictedly)[제한적,제한적인])
+   , : 1((implicit,implicit)[암시적,암시적인])
+   ,atively : 1((iter,iteratively)[반복적,반복적인])
+   ,ding : 1((bud,budding)[개별적,개별적인])
+   ,ic : 1((period,periodic)[주기적,주기적인])
+   ,ical : 1((hierarch,hierarchical)[계층적,계층적인])
+   ,ically : 1((hierarch,hierarchically)[계층적,계층적인])
+   ,ably : 1((adapt,adaptably)[적응적,적응적인])
+#,하기 : 20 /ISUF, 
+   ,ation : 6((manipul,manipulation)[조작,조작하기],(realloc,reallocation)[재할당,재할당하기],(comput,computation)[계산,계산하기],(negoti,negotiation)[협상,협상하기])
+   ,ing : 2((assist,assisting)[지원,지원하기],(output,outputing)[출력,출력하기])
+   ,ating : 2((manipul,manipulating)[조작,조작하기],(negoti,negotiating)[협상,협상하기])
+   ,ion : 2((addit,addition)[추가,추가하기],(distinct,distinction)[판별,판별하기])
+   ,izing : 2((linear,linearizing)[선형화,선형화하기],(custom,customizing)[커스터마이징,커스터마이징하기])
+   ,ting : 1((output,outputting)[출력,출력하기])
+   , : 1((output,output)[출력,출력하기])
+   ,ance : 1((assist,assistance)[지원,지원하기])
+   ,ational : 1((comput,computational)[계산,계산하기])
+   ,ed : 1((assist,assisted)[지원,지원하기])
+   ,ization : 1((linear,linearization)[선형화,선형화하기])
+#,의 : 20 /ISUF, JOSA
+   , : 11((blocker,blocker)[차단제,차단제의],(changer,changer)[체인저,체인저의],(pilot,pilot)[파일럿들,파일럿들의],(protein,protein)[단백질,단백질의],(diaper,diaper)[기저귀,기저귀의],(optimum,optimum)[최적,최적의],(modem,modem)[모뎀,모뎀의])
+   ,e : 4((brewag,brewage)[양조주,양조주의],(identiti,identitie)[아이덴티티들,아이덴티티들의],(submarin,submarine)[잠수함,잠수함의],(canin,canine)[개,개의])
+   ,ive : 2((adhes,adhesive)[접착제,접착제의])
+   ,al : 1((optim,optimal)[최적,최적의])
+   ,ed : 1((prepar,prepared)[이,이의])
+   i,y : 1((microscopi,microscopy)[현미경,현미경의])
+#,학적 : 20 / 학(MSUF, COMP) + 적(ISUF)
+   ,ical : 9((microbiolog,microbiological)[미생물,미생물학적],(therapeut,therapeutical)[치료,치료학적],(dermatolog,dermatological)[피부과,피부과학적],(neurolog,neurological)[신경,신경학적],(pharmaceut,pharmaceutical)[약제,약제학적],(dermatolog,dermatological)[피부,피부학적],(patholog,pathological)[병리,병리학적])
+   ,ic : 6((prophylact,prophylactic)[예방,예방학적],(ophthalmolog,ophthalmologic)[안과,안과학적],(therapeut,therapeutic)[치료,치료학적])
+   ,ically : 2((pharmacolog,pharmacologically)[약리,약리학적])
+   , : 1((optic,optic)[광,광학적])
+   ,al : 1((optic,optical)[광,광학적])
+   ,y : 1((dermatolog,dermatology)[피부과,피부과학적])
+#,러 : 19 / MSUF, COMP /IGNORE Different word (many exceptions)
+   , : 7((label,label)[라벨,라벨러],(modular,modular)[모듈,모듈러],(level,level)[레벨,레벨러])
+   ,e : 6((schedul,schedule)[스케줄,스케줄러],(descrambl,descramble)[디스크램블,디스크램블러],(profil,profile)[프로파일,프로파일러],(compil,compile)[컴파일,컴파일러])
+   ,ing : 2((descrambl,descrambling)[디스크램블,디스크램블러],(compil,compiling)[컴파일,컴파일러])
+   ,er : 1((descrambl,descrambler)[디스크램블,디스크램블러])
+   ,ation : 1((compil,compilation)[컴파일,컴파일러])
+   ,ed : 1((descrambl,descrambled)[디스크램블,디스크램블러])
+   ,l : 1((control,controll)[컨트롤,컨트롤러])
+#,부 : 19 /MSUF, COMP
+   ,ion : 8((induct,induction)[유도,유도부],(execut,execution)[실행,실행부],(connect,connection)[접속,접속부],(condit,condition)[조건,조건부])
+   ,ional : 2((condit,conditional)[조건,조건부])
+   , : 2((ptswt,ptswt)[중량,중량부],(-41,-41)[조명램프,조명램프부])
+   ,ing : 1((execut,executing)[실행,실행부])
+   ,ivity : 1((connect,connectivity)[접속,접속부])
+   ,ive : 1((induct,inductive)[유도,유도부])
+   ,ation : 1((corrug,corrugation)[주름,주름부])
+   ,able : 1((execut,executable)[실행,실행부])
+   ,e : 1((leve,levee)[제방,제방부])
+   ,ively : 1((induct,inductively)[유도,유도부])
+#기,장치 : 18 /MSUF,COMP
+   ,ator : 6((elimin,eliminator)[제거기,제거장치],(respir,respirator)[호흡기,호흡장치],(estim,estimator)[추정기,추정장치],(agit,agitator)[교반기,교반장치],(illumin,illuminator)[조명기,조명장치])
+   , : 5((snowplow,snowplow)[제설기,제설장치],(roaster,roaster)[구이기,구이장치],(player,player)[재생기,재생장치],(switchgear,switchgear)[개폐기,개폐장치],(crusher,crusher)[파쇄기,파쇄장치])
+   ,izer : 3((neutral,neutralizer)[제전기,제전장치],(steril,sterilizer)[살균기,살균장치],(magnet,magnetizer)[자화기,자화장치])
+   ,er : 2((humidifi,humidifier)[가습기,가습장치],(reproduc,reproducer)[재생기,재생장치])
+   ,e : 2((centrifug,centrifuge)[원심분리기,원심분리장치],(megaphon,megaphone)[확성기,확성장치])
+#,들의 : 17 /ISUF, 들(PLURAL)+의(JOSA)
+   , : 4((metric,metric)[메트릭,메트릭들의],(pilot,pilot)[파일럿,파일럿들의])
+   ,ion : 4((reflect,reflection)[반사,반사들의],(retransmiss,retransmission)[재전송,재전송들의])
+   ,e : 4((bytecod,bytecode)[바이트코드,바이트코드들의],(signatur,signature)[시그너처,시그너처들의],(cach,cache)[캐시,캐시들의])
+   ,ator : 2((coordin,coordinator)[조정자,조정자들의],(correl,correlator)[상관기,상관기들의])
+   ,ing : 1((cach,caching)[캐시,캐시들의])
+   ,ive : 1((reflect,reflective)[반사,반사들의])
+   ,ation : 1((design,designation)[지정,지정들의])
+#성,가능한 : 16 /MSUF, COMP
+   ,ibility : 4((compat,compatibility)[호환성,호환가능한],(process,processibility)[가공성,가공가능한],(extens,extensibility)[확장성,확장가능한])
+   ,able : 4((develop,developable)[현상성,현상가능한],(polymeriz,polymerizable)[중합성,중합가능한],(implant,implantable)[이식성,이식가능한],(polymeris,polymerisable)[중합성,중합가능한])
+   ,ability : 3((process,processability)[가공성,가공가능한],(compat,compatability)[호환성,호환가능한])
+   ,e : 2((peelabl,peelable)[박리성,박리가능한],(sealabl,sealable)[밀봉성,밀봉가능한])
+   l,ility : 1((moldabl,moldability)[성형성,성형가능한])
+   ,ivity : 1((select,selectivity)[선택성,선택가능한])
+   ,ible : 1((compat,compatible)[호환성,호환가능한])
+#,드 : 16 /ISUF
+   , : 9((core,core)[코어,코어드],(can,can)[캔,캔드],(skew,skew)[스큐,스큐드],(clock,clock)[클럭,클럭드],(gear,gear)[기어,기어드],(tile,tile)[타일,타일드])
+   ,ing : 2((compil,compiling)[컴파일,컴파일드],(gear,gearing)[기어,기어드])
+   ,ed : 2((strain,strained)[스트레인,스트레인드],(queu,queued)[큐,큐드])
+   ,e : 2((needl,needle)[니들,니들드],(compil,compile)[컴파일,컴파일드])
+   ,ation : 1((compil,compilation)[컴파일,컴파일드])
+#,하 : 15 /ISUF // 하는 -> 하 ? (this is as such incorrect, but is the result of splitting with JOSA suffix, 동기화하는 becomes "동기화하 −는"
+   ,ing : 3((deploy,deploying)[전개,전개하],(synchronis,synchronising)[동기화,동기화하],(fragment,fragmenting)[불출,불출하])
+   ,ization : 3((visual,visualization)[시각화,시각화하],(serial,serialization)[직렬화,직렬화하],(immobil,immobilization)[고정화,고정화하])
+   ,alization : 1((person,personalization)[개인화,개인화하])
+   ,ize : 1((serial,serialize)[직렬화,직렬화하])
+   ,al : 1((travers,traversal)[횡단,횡단하])
+   ,ation : 1((synchronis,synchronisation)[동기화,동기화하])
+   ,ized : 1((immobil,immobilized)[고정화,고정화하])
+   ,ment : 1((deploy,deployment)[전개,전개하])
+   ,able : 1((deploy,deployable)[전개,전개하])
+   ,alized : 1((person,personalized)[개인화,개인화하])
+   ,izing : 1((visual,visualizing)[시각화,시각화하])
+#제,아제 : 15 /MSUF, COMP //IGNORE because already taken into account by previous rules, But need to consider leaving as it is
+   ,e : 15((lipas,lipase)[리파제,리파아제],(glucokinas,glucokinase)[글루코키나제,글루코키나아제],(kinas,kinase)[키나제,키나아제],(oxidas,oxidase)[옥시다제,옥시다아제],(reductas,reductase)[리덕타제,리덕타아제],(galactosidas,galactosidase)[갈락토시다제,갈락토시다아제],(amylas,amylase)[아밀라제,아밀라아제],(phosphatas,phosphatase)[포스파타제,포스파타아제],(cyclas,cyclase)[사이클라제,사이클라아제],(chymas,chymase)[키마제,키마아제])
+#,된다 : 15 /ISUF, EOMI
+   ,ing : 5((increment,incrementing)[증가,증가된다],(signal,signaling)[시그널링,시그널링된다],(reestablish,reestablishing)[재설정,재설정된다],(tunnel,tunneling)[터널링,터널링된다])
+   ,ation : 3((optimis,optimisation)[최적화,최적화된다],(initi,initiation)[개시,개시된다],(continu,continuation)[계속,계속된다])
+   ,ling : 3((tunnel,tunnelling)[터널링,터널링된다],(signal,signalling)[시그널링,시그널링된다])
+   ,ating : 1((initi,initiating)[개시,개시된다])
+   ,ance : 1((assur,assurance)[보장,보장된다])
+   ,al : 1((propos,proposal)[제안,제안된다])
+   ,ated : 1((initi,initiated)[개시,개시된다])
+#,한 : 15 / ISUF
+   ,able : 5((record,recordable)[기록가능,기록가능한],(configur,configurable)[구성가능,구성가능한],(select,selectable)[선택가능,선택가능한],(programm,programmable)[프로그램가능,프로그램가능한],(reconfigur,reconfigurable)[재구성가능,재구성가능한])
+   , : 3((pure,pure)[순수,순수한],(novel,novel)[신규,신규한],(new,new)[신규,신규한])
+   ,e : 3((wearabl,wearable)[착용가능,착용가능한],(printabl,printable)[인쇄가능,인쇄가능한],(readabl,readable)[판독가능,판독가능한])
+   ,ible : 1((extens,extensible)[확장가능,확장가능한])
+   ,ed : 1((deriv,derived)[유래,유래한])
+   ,ant : 1((irrelev,irrelevant)[무관,무관한])
+   ,ity : 1((similar,similarity)[유사,유사한])
+#,재 : 15 /MSUF, COMP
+   , : 6((soundproof,soundproof)[방음,방음재],(floor,floor)[바닥,바닥재],(grout,grout)[그라우트,그라우트재])
+   ,ive : 2((abras,abrasive)[연마,연마재])
+   ,ation : 2((encapsul,encapsulation)[봉지,봉지재])
+   ,er : 1((ionis,ioniser)[충전,충전재])
+   ,ing : 1((soundproof,soundproofing)[방음,방음재])
+   ,ating : 1((inciner,incinerating)[소각,소각재])
+   ,ator : 1((inciner,incinerator)[소각,소각재])
+   ,e : 1((composit,composite)[복합,복합재])
+#제,물질 : 14 /MSUF, COMP //IGNORE because taken into account by other rules
+   , : 6((antagonist,antagonist)[길항제,길항물질],(blocker,blocker)[차단제,차단물질])
+   ,ator : 2((activ,activator)[활성제,활성물질])
+   ,ic : 2((antibiot,antibiotic)[항생제,항생물질])
+   ,e : 2((activ,active)[활성제,활성물질],(chemistri,chemistrie)[화학제,화학물질])
+   ,ant : 2((antioxid,antioxidant)[항산화제,항산화물질])
+#,류 : 14 /MSUF, COMP
+   ,e : 8((guanidin,guanidine)[구아니딘,구아니딘류],(nematod,nematode)[선충,선충류],(polysaccharid,polysaccharide)[다당,다당류],(saccharid,saccharide)[당,당류],(keton,ketone)[케톤,케톤류])
+   , : 4((prostaglandin,prostaglandin)[프로스타글란딘,프로스타글란딘류],(fungi,fungi)[진균,진균류],(bread,bread)[빵,빵류])
+   i,y : 2((hosieri,hosiery)[양말,양말류],(poultri,poultry)[가금,가금류])
+#,한다 : 14 /ISUF, EOMI
+   ,ing : 5((learn,learning)[학습,학습한다],(forward,forwarding)[포워딩,포워딩한다],(compil,compiling)[컴파일,컴파일한다],(decrypt,decrypting)[해독,해독한다])
+   ,ation : 3((compil,compilation)[컴파일,컴파일한다],(initi,initiation)[시작,시작한다])
+   ,e : 3((compil,compile)[컴파일,컴파일한다],(shackl,shackle)[전사,전사한다])
+   ,ent : 1((depend,dependent)[의존,의존한다])
+   ,al : 1((propos,proposal)[제안,제안한다])
+   ,ion : 1((decrypt,decryption)[해독,해독한다])
+#,를 : 14 /ISUF, JOSA /ISUF, JOSA
+   ,e : 7((sausag,sausage)[소시지,소시지를],(messag,message)[메시지,메시지를],(therefor,therefore)[이,이를])
+   ,ing : 2((messag,messaging)[메시지,메시지를])
+   ,e' : 2((messag,message')[메시지,메시지를])
+   ,er : 1((aptam,aptamer)[앱타머,앱타머를])
+   ,ed : 1((recor,recored)[이,이를])
+   ,ant : 1((transform,transformant)[이,이를])
+#,증 : 14 /MSUF, COMP
+   , : 4((hypoxia,hypoxia)[저산소,저산소증],(arteriosclerosi,arteriosclerosi)[동맥경화,동맥경화증],(stenosi,stenosi)[협착,협착증],(atherosclerosi,atherosclerosi)[동맥경화,동맥경화증])
+   ,ion : 3((hypertens,hypertension)[고혈압,고혈압증],(infect,infection)[감염,감염증])
+   ,ive : 2((depress,depressive)[우울,우울증])
+   ,ic : 2((thromboembol,thromboembolic)[혈전색전,혈전색전증],(neuropath,neuropathic)[신경병,신경병증])
+   ,ent : 1((depend,dependent)[의존,의존증])
+   ,ency : 1((immunodefici,immunodeficiency)[면역결핍,면역결핍증])
+   i,y : 1((anxieti,anxiety)[불안,불안증])
+#,법 : 13 /MSUF, COMP
+   , : 4((assay,assay)[분석,분석법])
+   i,y : 3((spectroscopi,spectroscopy)[분광,분광법],(therapi,therapy)[치료,치료법])
+   ,ing : 2((assay,assaying)[분석,분석법])
+   ,ic : 2((diagnost,diagnostic)[진단,진단법])
+   ,e : 2((therapi,therapie)[치료,치료법])
+#,도 : 13 /MSUF, COMP
+   , : 2((perindopril,perindopril)[페린,페린도],(waterwork,waterwork)[상수,상수도])
+   ,red : 2((prefer,preferred)[선호,선호도])
+   ,ring : 2((prefer,preferring)[선호,선호도])
+   ,ence : 2((prefer,preference)[선호,선호도])
+   ,ating : 1((acceler,accelerating)[가속,가속도])
+   ,ator : 1((acceler,accelerator)[가속,가속도])
+   ,ation : 1((acceler,acceleration)[가속,가속도])
+   ,ated : 1((acceler,accelerated)[가속,가속도])
+   ,ity : 1((similar,similarity)[유사,유사도])
+#,산 : 12 /MSUF, COMP
+   , : 5((tantal,tantal)[탄탈,탄탈산],(sulfur,sulfur)[황,황산],(rosin,rosin)[로진,로진산],(amino,amino)[아미노,아미노산],(acryl,acryl)[아크릴,아크릴산])
+   ,e : 3((sulfon,sulfone)[술폰,술폰산],(inosin,inosine)[이노신,이노신산])
+   ,ic : 2((carboxyl,carboxylic)[복실,복실산],(acryl,acrylic)[아크릴,아크릴산])
+   ,ate : 1((carboxyl,carboxylate)[복실,복실산])
+   ,ated : 1((carboxyl,carboxylated)[복실,복실산])
+#,시스템 : 12 /MSUF, COMP
+   , : 4((communicaiton,communicaiton)[통신,통신시스템],(control,control)[제어,제어시스템],(microsystem,microsystem)[마이크로,마이크로시스템],(homenetwork,homenetwork)[네트워크,네트워크시스템])
+   ,ing : 2((control,controling)[제어,제어시스템],(deal,dealing)[거래,거래시스템])
+   ,lable : 1((control,controllable)[제어,제어시스템])
+   ,ering : 1((monit,monitering)[감시,감시시스템])
+   ,ling : 1((control,controlling)[제어,제어시스템])
+   ,l : 1((control,controll)[제어,제어시스템])
+   ,e : 1((brokerag,brokerage)[중개,중개시스템])
+   i,y : 1((supervisori,supervisory)[감시,감시시스템])
+#,세포 : 12 /MSUF, COMP
+   , : 6((progenitor,progenitor)[전구,전구세포],(mononuclear,mononuclear)[단핵,단핵세포],(neuron,neuron)[신경,신경세포],(progenitor,progenitor)[선조,선조세포],(osteoblast,osteoblast)[골아,골아세포],(stem,stem)[줄기,줄기세포])
+   ,al : 4((epiderm,epidermal)[상피,상피세포],(endotheli,endothelial)[내피,내피세포],(neuron,neuronal)[신경,신경세포],(epitheli,epithelial)[상피,상피세포])
+   ,ic : 2((dendrit,dendritic)[수지상,수지상세포],(prokaryot,prokaryotic)[원핵,원핵세포])
+#된,하는 : 11 /ISUF, EOMI //IGNORE taken into account by other rules
+   ,ed : 6((encrypt,encrypted)[암호화된,암호화하는],(secret,secreted)[분비된,분비하는],(compil,compiled)[컴파일된,컴파일하는],(assur,assured)[보장된,보장하는],(guarante,guaranteed)[보장된,보장하는],(evolv,evolved)[진화된,진화하는])
+   ,ized : 2((polymer,polymerized)[중합된,중합하는],(author,authorized)[인증된,인증하는])
+   ,led : 2((control,controlled)[제어된,제어하는])
+   ,ated : 1((coordin,coordinated)[조정된,조정하는])
+#,로 : 11 //IGNORE Need to check the algorithm
+   , : 4((antiestrogen,antiestrogen)[스트,스트로],(hydrogel,hydrogel)[드,드로],(erythropoietin,erythropoietin)[리트,리트로])
+   ,e : 4((furnac,furnace)[−,−로],(sucralos,sucralose)[랄,랄로],(hydroquinon,hydroquinone)[히드,히드로],(hydrotalcit,hydrotalcite)[드,드로])
+   ,ation : 1((inform,information)[−,−로])
+   ,ate : 1((phenylpropion,phenylpropionate)[페닐프,페닐프로])
+   i,y : 1((circuitri,circuitry)[회,회로])
+#,염 : 11 /MSUF, COMP
+   ,ic : 3((hepat,hepatic)[간,간염],(carbon,carbonic)[탄산,탄산염])
+   ,e : 3((hypochlorit,hypochlorite)[차아염소산,차아염소산염],(phosphat,phosphate)[인산,인산염])
+   ,al : 2((vagin,vaginal)[질,질염],(mucos,mucosal)[점막,점막염])
+   ,ated : 2((carbon,carbonated)[탄산,탄산염])
+   , : 1((onium,onium)[오늄,오늄염])
+#,서 : 11 /MSUF, COMP
+   ,icate : 4((certif,certificate)[인증,인증서])
+   ,ication : 2((certif,certification)[인증,인증서])
+   ,icating : 2((certif,certificating)[인증,인증서])
+   ,ing : 1((sequenc,sequencing)[에,에서])
+   ,al : 1((credenti,credential)[자격증명,자격증명서])
+   ,e : 1((presenc,presence)[에,에서])
+#,하여 : 11 /ISUF, EOMI
+   ,ing : 3((invok,invoking)[호출,호출하여],(compil,compiling)[컴파일,컴파일하여],(retriev,retrieving)[검색,검색하여])
+   ,e : 3((respons,response)[응답,응답하여],(compil,compile)[컴파일,컴파일하여])
+   , : 2((comparison,comparison)[비교,비교하여])
+   ,al : 1((retriev,retrieval)[검색,검색하여])
+   ,ive : 1((respons,responsive)[응답,응답하여])
+   ,ation : 1((compil,compilation)[컴파일,컴파일하여])
+#,스 : 11 /
+   , : 7((graphic,graphic)[그래픽,그래픽스],(cuff,cuff)[커프,커프스],(bio,bio)[바이오,바이오스],(tri,tri)[트리,트리스],(coke,coke)[코크,코크스])
+   ,ic : 3((probiot,probiotic)[프로바이오틱,프로바이오틱스],(ceram,ceramic)[세라믹,세라믹스])
+   ,al : 1((graphic,graphical)[그래픽,그래픽스])
+#,링된 : 11 / 링 + 된
+   , : 7((tunnel,tunnel)[터널,터널링된],(tile,tile)[타일,타일링된],(filter,filter)[필터,필터링된],(scale,scale)[스케일,스케일링된])
+   ,e : 3((sampl,sample)[샘플,샘플링된],(scrambl,scramble)[스크램블,스크램블링된])
+   ,ed : 1((scrambl,scrambled)[스크램블,스크램블링된])
+#,되는 : 10 /ISUF, EOMI
+   ,ing : 3((reestablish,reestablishing)[재설정,재설정되는],(boot,booting)[부팅,부팅되는],(servic,servicing)[서비스,서비스되는])
+   , : 2((boot,boot)[부팅,부팅되는],(mismatch,mismatch)[부정합,부정합되는])
+   ,ed : 2((impress,impressed)[인가,인가되는],(mediat,mediated)[매개,매개되는])
+   ,e : 2((servic,service)[서비스,서비스되는])
+   ,ation : 1((expir,expiration)[만료,만료되는])
+#,액 : 10 / MSUF, COMP
+   ,ion : 2((dispers,dispersion)[분산,분산액])
+   ,ed : 2((dispers,dispersed)[분산,분산액])
+   ,e : 2((dispers,disperse)[분산,분산액])
+   ,ating : 1((concentr,concentrating)[농축,농축액])
+   ,ic : 1((electrolyt,electrolytic)[전해,전해액])
+   ,ated : 1((concentr,concentrated)[농축,농축액])
+   ,ically : 1((electrolyt,electrolytically)[전해,전해액])
+#형,가능한 : 10 /MSUF, COMP //IGNORE 
+   ,able : 7((reclos,reclosable)[재밀폐형,재밀폐가능한],(rewrit,rewritable)[재기록형,재기록가능한],(implant,implantable)[이식형,이식가능한],(extend,extendable)[확장형,확장가능한],(inject,injectable)[주사형,주사가능한],(activat,activatable)[활성화형,활성화가능한],(record,recordable)[기록형,기록가능한])
+   ,e : 2((writabl,writable)[기록형,기록가능한],(wearabl,wearable)[착용형,착용가능한])
+   ,ible : 1((compat,compatible)[호환형,호환가능한])
+#콜,코올 : 10 / 
+   , : 10((aminoalcohol,aminoalcohol)[아미노알콜,아미노알코올],(alcohol,alcohol)[알콜,알코올])
+#,질 : 10 /MSUF, COMP
+   ,e : 4((polycrystallin,polycrystalline)[다결정,다결정질],(graphit,graphite)[흑연,흑연질],(mullit,mullite)[뮬라이트,뮬라이트질],(crystallin,crystalline)[결정,결정질])
+   ,ic : 2((electrolyt,electrolytic)[전해,전해질])
+   ,ically : 2((electrolyt,electrolytically)[전해,전해질])
+   , : 1((cementitiou,cementitiou)[시멘트,시멘트질])
+   i,y : 1((glassi,glassy)[유리,유리질])
+#,레이트 : 9
+   , : 6((alkyl,alkyl)[알킬,알킬레이트],(phenol,phenol)[페놀,페놀레이트],(acryl,acryl)[아크릴,아크릴레이트],(acyl,acyl)[아실,아실레이트])
+   ,ic : 3((phenol,phenolic)[페놀,페놀레이트],(acryl,acrylic)[아크릴,아크릴레이트])
+#,율 : 9
+   ,ion : 5((absorpt,absorption)[흡수,흡수율],(reflect,reflection)[반사,반사율])
+   ,ive : 3((reflect,reflective)[반사,반사율],(emiss,emissive)[방사,방사율])
+   , : 1((slew,slew)[슬루,슬루율])
+#,팅 : 9
+   , : 8((jacket,jacket)[자켓,자켓팅],(pellet,pellet)[펠릿,펠릿팅],(target,target)[타겟,타겟팅],(rivet,rivet)[리벳,리벳팅],(format,format)[포맷,포맷팅])
+   ,ting : 1((format,formatting)[포맷,포맷팅])
+#,판 : 9 /MSUF, COMP
+   ,ized : 2((polar,polarized)[편광,편광판])
+   ,ization : 2((polar,polarization)[편광,편광판])
+   ,izing : 2((polar,polarizing)[편광,편광판])
+   ,ating : 1((seper,seperating)[분리,분리판])
+   ,al : 1((intervertebr,intervertebral)[추간,추간판])
+   ,ation : 1((retard,retardation)[위상차,위상차판])
+#스,오스 : 8
+   ,e : 5((sucros,sucrose)[수크로스,수크로오스],(ribos,ribose)[리보스,리보오스],(cellulos,cellulose)[셀룰로스,셀룰로오스],(tagatos,tagatose)[타가토스,타가토오스])
+   ,ic : 2((cellulos,cellulosic)[셀룰로스,셀룰로오스])
+   , : 1((mo,mo)[모스,모오스])
+#티드,타이드 : 8
+   ,e : 8((tripeptid,tripeptide)[트리펩티드,트리펩타이드],(dipeptid,dipeptide)[디펩티드,디펩타이드],(peptid,peptide)[펩티드,펩타이드])
+#자,하는 : 8
+   ,er : 7((manag,manager)[관리자,관리하는],(produc,producer)[생산자,생산하는],(identifi,identifier)[식별자,식별하는],(provid,provider)[제공자,제공하는],(request,requester)[요청자,요청하는])
+   ,ator : 1((coordin,coordinator)[조정자,조정하는])
+#신호,시그널링된다 : 8
+   , : 4((signal,signal)[신호,시그널링된다])
+   ,ing : 2((signal,signaling)[신호,시그널링된다])
+   ,ling : 2((signal,signalling)[신호,시그널링된다])
+#제,화제 : 8 /MSUF, COMP//IGNORE
+   ,ator : 4((activ,activator)[활성제,활성화제])
+   ,izer : 2((stabil,stabilizer)[안정제,안정화제])
+   ,e : 2((activ,active)[활성제,활성화제])
+#환,압기 : 8
+   ,ation : 4((transform,transformation)[변환,변압기])
+   ,ing : 2((transform,transforming)[변환,변압기])
+   , : 2((transform,transform)[변환,변압기])
+#,치 : 8 /MSUF, COMP
+   ,ing : 3((weight,weighting)[가중,가중치])
+   ,ed : 3((weight,weighted)[가중,가중치])
+   , : 2((comparison,comparison)[비교,비교치])
+#램,래밍 : 8
+   , : 4((program,program)[프로그램,프로그래밍])
+   ,ing : 2((program,programing)[프로그램,프로그래밍])
+   ,ming : 2((program,programming)[프로그램,프로그래밍])
+#,비 : 8
+   , : 2((molar,molar)[몰,몰비],(reflux,reflux)[환류,환류비])
+   ,ting : 1((select,selectting)[선택,선택비])
+   ,ing : 1((select,selecting)[선택,선택비])
+   ,ivity : 1((select,selectivity)[선택,선택비])
+   ,ive : 1((select,selective)[선택,선택비])
+   ,able : 1((select,selectable)[선택,선택비])
+   ,ion : 1((select,selection)[선택,선택비])
+#,킹 : 8
+   , : 7((track,track)[트랙,트랙킹],(deblock,deblock)[디블록,디블록킹],(clock,clock)[클럭,클럭킹],(chuck,chuck)[척,척킹],(clock,clock)[클록,클록킹])
+   ,ed : 1((clock,clocked)[클록,클록킹])
+#,을 : 8 /ISUF, JOSA
+   , : 6((modem,modem)[모뎀,모뎀을],(jade,jade)[옥,옥을],(CPE,CPE)[cpe들,cpe들을])
+   ,e : 1((programm,programme)[프로그램들,프로그램들을])
+   ,ity : 1((infertil,infertility)[불임,불임을])
+#신호,시그널링 : 8
+   , : 4((signal,signal)[신호,시그널링])
+   ,ing : 2((signal,signaling)[신호,시그널링])
+   ,ling : 2((signal,signalling)[신호,시그널링])
+#,수 : 8 /MSUF, COMP
+   , : 2((lake,lake)[호소,호소수],(PMM8SX08910protein,PMM8SX08910protein)[주파,주파수])
+   ,ing : 1((sampl,sampling)[샘플링,샘플링수])
+   ,ic : 1((carbon,carbonic)[탄산,탄산수])
+   ,e : 1((sewag,sewage)[하,하수])
+   ,ated : 1((carbon,carbonated)[탄산,탄산수])
+   ,lation : 1((distil,distillation)[증류,증류수])
+   ,lative : 1((distil,distillative)[증류,증류수])
+#미드,마이드 : 8
+   ,e : 8((sulfonamid,sulfonamide)[술폰아미드,술폰아마이드],(sulfamid,sulfamide)[설파미드,설파마이드],(amid,amide)[아미드,아마이드])
+#,유 : 8 /MSUF, COMP
+   ,ating : 2((lubric,lubricating)[윤활,윤활유])
+   ,ation : 2((lubric,lubrication)[윤활,윤활유])
+   ,ated : 2((lubric,lubricated)[윤활,윤활유])
+   ,ant : 2((lubric,lubricant)[윤활,윤활유])
+#성,화된 : 8
+   ,al : 2((function,functional)[기능성,기능화된],(funtion,funtional)[기능성,기능화된])
+   , : 1((neutral,neutral)[중성,중화된])
+   ,ality : 1((function,functionality)[기능성,기능화된])
+   ,icity : 1((hydrophil,hydrophilicity)[친수성,친수화된])
+   ,alized : 1((function,functionalized)[기능성,기능화된])
+   ,ic : 1((hydrophil,hydrophilic)[친수성,친수화된])
+   ,ity : 1((stabil,stability)[안정성,안정화된])
+#기,하는 : 7
+   ,er : 3((cancel,canceler)[제거기,제거하는],(equalis,equaliser)[등화기,등화하는],(analys,analyser)[분석기,분석하는])
+   ,ler : 3((control,controller)[제어기,제어하는],(cancel,canceller)[제거기,제거하는])
+   ,ator : 1((interpol,interpolator)[보간기,보간하는])
+#,물질 : 7 /MSUF, COMP
+   ,ic : 2((antagonist,antagonistic)[길항,길항물질])
+   ,ative : 1((antioxid,antioxidative)[항산화,항산화물질])
+   ,ation : 1((antioxid,antioxidation)[항산화,항산화물질])
+   ,e : 1((activ,active)[활성,활성물질])
+   ,ity : 1((activ,activity)[활성,활성물질])
+   ,ant : 1((antioxid,antioxidant)[항산화,항산화물질])
+#,학 : 7
+   , : 3((optic,optic)[광,광학])
+   ,al : 3((optic,optical)[광,광학])
+   ,ical : 1((patholog,pathological)[병리,병리학])
+#,과 : 7
+   , : 2((ocular,ocular)[안,안과],(DSP,DSP)[세제통,세제통과])
+   ,ical : 2((dermatolog,dermatological)[피부,피부과])
+   ,e : 2((appl,apple)[사,사과],(divic,divice)[장치,장치과])
+   ,ation : 1((nanofiltr,nanofiltration)[나노여,나노여과])
+#폰,포네이트 : 7
+   ,e : 7((sulfon,sulfone)[설폰,설포네이트],(sulfon,sulfone)[술폰,술포네이트],(sulphon,sulphone)[설폰,설포네이트])
+#,어 : 7
+   ,ion : 4((instruct,instruction)[명령,명령어])
+   , : 2((burr,burr)[버,버어],(display,display)[디스플레이,디스플레이어])
+   ,ing : 1((display,displaying)[디스플레이,디스플레이어])
+#,막 : 7 /MSUF, COMP
+   ,ive : 2((antireflect,antireflective)[반사방지,반사방지막])
+   ,ation : 2((separ,separation)[분리,분리막])
+   ,ion : 2((antireflect,antireflection)[반사방지,반사방지막])
+   ,ating : 1((separ,separating)[분리,분리막])
+#기,가능한 : 6
+   ,er : 5((extrud,extruder)[압출기,압출가능한],(reproduc,reproducer)[재생기,재생가능한],(verifi,verifier)[검증기,검증가능한],(remov,remover)[제거기,제거가능한])
+   ,ator : 1((regener,regenerator)[재생기,재생가능한])
+#매,장고 : 6
+   ,ant : 6((refriger,refrigerant)[냉매,냉장고])
+#제,화된 : 6
+   ,izer : 3((plastic,plasticizer)[가소제,가소화된],(stabil,stabilizer)[안정제,안정화된])
+   ,ator : 2((activ,activator)[활성제,활성화된])
+   ,e : 1((activ,active)[활성제,활성화된])
+#,기구 : 6 /MSUF, COMP
+   ,e : 2((luminair,luminaire)[조명,조명기구],(exercis,exercise)[운동,운동기구])
+   ,ing : 1((sport,sporting)[운동,운동기구])
+   ,ating : 1((illumin,illuminating)[조명,조명기구])
+   ,ation : 1((illumin,illumination)[조명,조명기구])
+   ,ated : 1((illumin,illuminated)[조명,조명기구])
+#,들과 : 6 /들+과 
+   ,ation : 2((recommend,recommendation)[추천,추천들과])
+   ,er : 1((recommend,recommender)[추천,추천들과])
+   ,ing : 1((recommend,recommending)[추천,추천들과])
+   , : 1((recommend,recommend)[추천,추천들과])
+   ,ed : 1((recommend,recommended)[추천,추천들과])
+#임,이밍 : 6
+   , : 5((game,game)[게임,게이밍],(frame,frame)[프레임,프레이밍],(name,name)[네임,네이밍])
+   e,ing : 1((game,gaming)[게임,게이밍])
+#,상 : 6
+   , : 4((fibrou,fibrou)[섬유,섬유상],(hue,hue)[색,색상],(resinou,resinou)[수지,수지상],(granular,granular)[과립,과립상])
+   i,y : 2((powderi,powdery)[분말,분말상],(glassi,glassy)[유리,유리상])
+#맷,르메이트 : 6
+   , : 4((format,format)[포맷,포르메이트])
+   ,ting : 2((format,formatting)[포맷,포르메이트])
+#동,장고 : 6
+   ,ating : 3((refriger,refrigerating)[냉동,냉장고])
+   ,ation : 3((refriger,refrigeration)[냉동,냉장고])
+#,응답 : 6 /MSUF, COMP
+   ,ment : 4((acknowledg,acknowledgment)[확인,확인응답])
+   ,e : 2((acknowledg,acknowledge)[확인,확인응답])
+#,할 : 6
+   ,ting : 1((retransmit,retransmitting)[재전송,재전송할])
+   ,ing : 1((roam,roaming)[로밍,로밍할])
+   ,ating : 1((manipul,manipulating)[조작,조작할])
+   ,ation : 1((manipul,manipulation)[조작,조작할])
+   ,able : 1((reclos,reclosable)[재밀폐,재밀폐할])
+   i,y : 1((supervisori,supervisory)[감시,감시할])
+#보네이트,르보네이트 : 6
+   ,ate : 6((copolycarbon,copolycarbonate)[코폴리카보네이트,코폴리카르보네이트],(polycarbon,polycarbonate)[폴리카보네이트,폴리카르보네이트])
+#,병 : 6 /MSUF, COMP
+   ,er : 3((alzheim,alzheimer)[알쯔하이머,알쯔하이머병],(alzheim,alzheimer)[알츠하이머,알츠하이머병])
+   ,e : 3((diabet,diabete)[당뇨,당뇨병])
+#및,방법 : 6
+   , : 6((method,method)[및,방법])
+#제,학적 : 6
+   ,ic : 4((therapeut,therapeutic)[치료제,치료학적])
+   ,ical : 2((pharmaceut,pharmaceutical)[약제,약학적])
+#체,전성 : 6
+   ,ing : 2((semiconduct,semiconducting)[반도체,반도전성])
+   , : 2((semiconduct,semiconduct)[반도체,반도전성])
+   ,ive : 2((semiconduct,semiconductive)[반도체,반도전성])
+#,구조 : 6 /MSUF, COMP
+   ,e : 5((infrastructur,infrastructure)[인프라,인프라구조],(microstructur,microstructure)[미세,미세구조],(nanostructur,nanostructure)[나노,나노구조])
+   ,ing : 1((bookbind,bookbinding)[제본,제본구조])
+#기,방법 : 6 /MSUF, COMP
+   ,ler : 3((control,controller)[제어기,제어방법])
+   ,er : 1((clarifi,clarifier)[정화기,정화방법])
+   ,ing : 1((cocultur,coculturing)[세탁기,세탁방법])
+   ,alizer : 1((deminer,demineralizer)[탈염기,탈염방법])
+#,릭 : 6
+   ,e : 3((macrocycl,macrocycle)[마크로사이클,마크로사이클릭],(heterocycl,heterocycle)[헤테로사이클,헤테로사이클릭])
+   , : 2((symbol,symbol)[심볼,심볼릭])
+   ,ic : 1((chimer,chimeric)[키메,키메릭])
+#,매체 : 6 /MSUF, COMP
+   ,ing : 3((record,recording)[기록,기록매체],(recod,recoding)[기록,기록매체])
+   ,er : 1((record,recorder)[기록,기록매체])
+   , : 1((record,record)[기록,기록매체])
+   ,able : 1((record,recordable)[기록,기록매체])
+#,주 : 6
+   ,ement : 2((advertis,advertisement)[광고,광고주])
+   ,ate : 2((pomegran,pomegranate)[석류,석류주])
+   ,ing : 1((advertis,advertising)[광고,광고주])
+   ,ment : 1((advertis,advertisment)[광고,광고주])
+#,핑 : 5
+   , : 5((map,map)[맵,맵핑],(snap,snap)[스냅,스냅핑],(hop,hop)[홉,홉핑],(group,group)[그룹,그룹핑])
+#,국 : 5 /MSUF, COMP
+   , : 3((bt,bt)[기지,기지국],(broadcast,broadcast)[방송,방송국])
+   ,ing : 1((broadcast,broadcasting)[방송,방송국])
+   ,ed : 1((broadcast,broadcasted)[방송,방송국])
+#립,리핑 : 5
+   , : 5((strip,strip)[스트립,스트리핑],(flip,flip)[플립,플리핑],(clip,clip)[클립,클리핑])
+#킨,카인 : 5
+   ,e : 5((chemokin,chemokine)[케모킨,케모카인],(cytokin,cytokine)[사이토킨,사이토카인])
+#,다 : 5
+   ,ed : 4((optimis,optimised)[최적화된,최적화된다],(propos,proposed)[제안된,제안된다],(tunnel,tunneled)[터널링된,터널링된다],(assur,assured)[보장된,보장된다])
+   , : 1((benzimidazol,benzimidazol)[즈이미,즈이미다])
+#류,동물 : 5 /MSUF, COMP//IGNORE (taken into account)  -> consider leaving it as it is
+   , : 5((mammalian,mammalian)[포유류,포유동물],(mammal,mammal)[포유류,포유동물])
+#으,위한 : 5
+   ,e : 3((determin,determine)[으,위한],(reduc,reduce)[으,위한])
+   , : 1((prevent,prevent)[으,위한])
+   ,ed : 1((treat,treated)[으,위한])
+#더,딩된 : 5
+   ,er : 5((vocod,vocoder)[보코더,보코딩된],(decod,decoder)[디코더,디코딩된],(transcod,transcoder)[트랜스코더,트랜스코딩된])
+#형,하는 : 5
+   ,ed : 2((control,controled)[제어형,제어하는])
+   , : 1((rebuilt,rebuilt)[개조형,개조하는])
+   ,ive : 1((adapt,adaptive)[적응형,적응하는])
+   ,able : 1((adapt,adaptable)[적응형,적응하는])
+#,구 : 5
+   ,ing : 1((connect,connecting)[연결,연결구])
+   , : 1((ocular,ocular)[안,안구])
+   ,ator : 1((illumin,illuminator)[조명기,조명기구])
+   ,ivity : 1((connect,connectivity)[연결,연결구])
+   ,ion : 1((connect,connection)[연결,연결구])
+#트,티드 : 5
+   , : 4((vent,vent)[벤트,벤티드],(gate,gate)[게이트,게이티드])
+   ,d : 1((gate,gated)[게이트,게이티드])
+#,잉 : 5
+   , : 4((key,key)[키,키잉],(ring,ring)[링,링잉],(chew,chew)[츄,츄잉])
+   ,ed : 1((queu,queued)[큐,큐잉])
+#,질환 : 5
+   ,ic : 1((hepat,hepatic)[간,간질환])
+   ,ical : 1((dermatolog,dermatological)[피부,피부질환])
+   ,e : 1((autoimmun,autoimmune)[자가면역,자가면역질환])
+   i,y : 1((pulmonari,pulmonary)[폐,폐질환])
+   ,ity : 1((autoimmun,autoimmunity)[자가면역,자가면역질환])
+#,통신 : 5 /MSUF, COMP
+   ,e : 2((powerlin,powerline)[전력선,전력선통신],(mobil,mobile)[이동,이동통신])
+   , : 1((plc,plc)[전력선,전력선통신])
+   i,y : 1((telephoni,telephony)[전화,전화통신])
+   ,ity : 1((mobil,mobility)[이동,이동통신])
+#,인식 : 5 /MSUF, COMP
+   ,ic : 4((biometr,biometric)[생체,생체인식])
+   , : 1((rfid,rfid)[무선,무선인식])
+#,들은 : 5
+   , : 4((constraint,constraint)[제약,제약들은],(token,token)[토큰,토큰들은])
+   ,e : 1((buss,busse)[버스,버스들은])
+#션,셔널 : 5
+   ,ion : 2((transact,transaction)[트랜잭션,트랜잭셔널])
+   ,ional : 1((transact,transactional)[트랜잭션,트랜잭셔널])
+   , : 1((torsion,torsion)[토션,토셔널])
+   ,al : 1((torsion,torsional)[토션,토셔널])
+#도,발시 : 5
+   ,er : 1((induc,inducer)[유도,유발시])
+   ,ing : 1((induc,inducing)[유도,유발시])
+   ,ible : 1((induc,inducible)[유도,유발시])
+   ,ed : 1((induc,induced)[유도,유발시])
+   ,ement : 1((induc,inducement)[유도,유발시])
+#형,화된 : 4
+   , : 1((modular,modular)[모듈형,모듈화된])
+   ,al : 1((intellectu,intellectual)[지능형,지능화된])
+   ,ized : 1((central,centralized)[중앙집중형,중앙집중화된])
+   ,ated : 1((encapsul,encapsulated)[캡슐형,캡슐화된])
+#개,간체 : 4
+   ,ating : 2((intermedi,intermediating)[중개,중간체])
+   ,ation : 2((intermedi,intermediation)[중개,중간체])
+#,인자 : 4 /MSUF, COMP
+   ,ating : 1((activ,activating)[활성화,활성화인자])
+   ,ation : 1((activ,activation)[활성화,활성화인자])
+   ,icity : 1((cytotox,cytotoxicity)[세포독성,세포독성인자])
+   ,ic : 1((cytotox,cytotoxic)[세포독성,세포독성인자])
+#,배선 : 4 /MSUF, COMP
+   , : 2((metal,metal)[금속,금속배선])
+   ,lic : 1((metal,metallic)[금속,금속배선])
+   ,lization : 1((metal,metallization)[금속,금속배선])
+#,하고 : 4
+   ,ting : 1((retransmit,retransmitting)[재전송,재전송하고])
+   ,ation : 1((matur,maturation)[성숙,성숙하고])
+   ,e : 1((matur,mature)[성숙,성숙하고])
+    04 ),04) : 1((( 04 ),(04))[운반,운반하고])
+#,키 : 4 /MSUF, COMP
+   , : 1((shortcut,shortcut)[단축,단축키])
+   ,al : 1((numer,numeral)[숫자,숫자키])
+   ,ering : 1((enciph,enciphering)[암호화,암호화키])
+   ,ic : 1((numer,numeric)[숫자,숫자키])
+#,약 : 4 /MSUF, COMP
+   ,ive : 2((contracept,contraceptive)[피임,피임약])
+   ,ion : 2((contracept,contraception)[피임,피임약])
+#,품 : 4 /MSUF, COMP
+   ,ing : 2((mold,molding)[성형,성형품],(mould,moulding)[성형,성형품])
+   ,ic : 2((cosmet,cosmetic)[화장,화장품])
+#인,이닝 : 4
+   , : 3((line,line)[라인,라이닝],(train,train)[트레인,트레이닝],(chain,chain)[체인,체이닝])
+   ,ed : 1((chain,chained)[체인,체이닝])
+#램,래머 : 4
+   , : 2((program,program)[프로그램,프로그래머])
+   ,ing : 1((program,programing)[프로그램,프로그래머])
+   ,ming : 1((program,programming)[프로그램,프로그래머])
+#,들이 : 4
+   , : 1((glitch,glitch)[글리치,글리치들이])
+   ,ator : 1((coordin,coordinator)[조정자,조정자들이])
+   ,e : 1((glitch,glitche)[글리치,글리치들이])
+   i,y : 1((directori,directory)[디렉토리,디렉토리들이])
+#족사졸,즈옥사졸 : 4
+   ,e : 4((benzoxazol,benzoxazole)[벤족사졸,벤즈옥사졸])
+#가노폴리실록산,르가노폴리실록산 : 4
+   ,e : 4((organopolysiloxan,organopolysiloxane)[오가노폴리실록산,오르가노폴리실록산])
+#럭,러그 : 4
+   , : 4((prodrug,prodrug)[프로드럭,프로드러그])
+#소,산염 : 4
+   , : 4((carbon,carbon)[탄소,탄산염])
+#,방지 : 4
+   ,ive : 2((antireflect,antireflective)[반사,반사방지])
+   ,ion : 2((antireflect,antireflection)[반사,반사방지])
+#된,가능한 : 4
+   ,ed : 4((record,recorded)[기록된,기록가능한],(polymeris,polymerised)[중합된,중합가능한],(select,selected)[선택된,선택가능한],(extrud,extruded)[압출된,압출가능한])
+#,사 : 4
+   ,ing : 2((sutur,suturing)[봉합,봉합사])
+   ,e : 2((sutur,suture)[봉합,봉합사])
+#,장애 : 4
+   , : 2((behavior,behavior)[행동,행동장애])
+   ,al : 1((behavior,behavioral)[행동,행동장애])
+   ,ive : 1((affect,affective)[정동,정동장애])
+#,오사이드 : 4
+   ,e : 4((nucleosid,nucleoside)[뉴클레,뉴클레오사이드])
+#,방지막 : 4
+   ,ive : 2((antireflect,antireflective)[반사,반사방지막])
+   ,ion : 2((antireflect,antireflection)[반사,반사방지막])
+#도,축물 : 4
+   ,ation : 4((concentr,concentration)[농도,농축물])
+#징,지를 : 4
+   ,ing : 2((messag,messaging)[메시징,메시지를])
+   ,eing : 2((messag,messageing)[메시징,메시지를])
+#과,학적 : 4
+   ,y : 2((dermatolog,dermatology)[피부과,피부학적])
+   ,ical : 2((dermatolog,dermatological)[피부과,피부학적])
+#을,인핸서 : 4
+   ,ing : 2((enhanc,enhancing)[을,인핸서])
+   ,ed : 2((enhanc,enhanced)[을,인핸서])
+#,테 : 4
+   ,e : 4((spectacl,spectacle)[안경,안경테])
+#터,테르 : 4
+   , : 4((ester,ester)[에스터,에스테르],(ether,ether)[에터,에테르])
+#러지,레르기 : 4
+   ,e : 2((allergi,allergie)[알러지,알레르기])
+   i,y : 2((allergi,allergy)[알러지,알레르기])
+#,조건 : 4
+   , : 4((constraint,constraint)[제약,제약조건])
+#,광학 : 4
+   ,ic : 2((electroopt,electrooptic)[전기,전기광학])
+   ,ical : 2((electroopt,electrooptical)[전기,전기광학])
+#,시키는 : 4
+   ,ing : 1((temper,tempering)[템퍼링,템퍼링시키는])
+   ,able : 1((electrodeposit,electrodepositable)[전착,전착시키는])
+   ,ion : 1((electrodeposit,electrodeposition)[전착,전착시키는])
+   ,ed : 1((remind,reminded)[연상,연상시키는])
+#된,방법 : 4
+   ,led : 3((control,controlled)[제어된,제어방법])
+   , : 1((mutagensi,mutagensi)[동정된,동정방법])
+#,펩티드 : 4
+   ,e : 4((oligopeptid,oligopeptide)[올리고,올리고펩티드])
+#,량 : 4
+   ,ation : 2((calcul,calculation)[계산,계산량])
+   ,ed : 1((recompos,recomposed)[캠버,캠버량])
+   ,ization : 1((pulver,pulverization)[분쇄,분쇄량])
+#,화하 : 4
+   , : 2((serial,serial)[직렬,직렬화하],(visual,visual)[시각,시각화하])
+   ,al : 2((person,personal)[개인,개인화하],(orthogon,orthogonal)[직교,직교화하])
+#,체성 : 4
+   ,ization : 2((polymer,polymerization)[중합,중합체성])
+   ,ized : 1((polymer,polymerized)[중합,중합체성])
+   ,izing : 1((polymer,polymerizing)[중합,중합체성])
+#,렌즈 : 4
+   ,e : 2((spectacl,spectacle)[안경,안경렌즈])
+   ,s : 1((eyegla,eyeglas)[안경,안경렌즈])
+   ,ive : 1((object,objective)[대물,대물렌즈])
+#,저항 : 4
+   ,ance : 2((magnetoresist,magnetoresistance)[자기,자기저항])
+   ,ive : 2((magnetoresist,magnetoresistive)[자기,자기저항])
+#바메이트,르바메이트 : 4
+   ,ate : 4((carbam,carbamate)[카바메이트,카르바메이트])
+#,들에 : 4
+   ,red : 1((prefer,preferred)[선호,선호들에])
+   ,ring : 1((prefer,preferring)[선호,선호들에])
+   ,ence : 1((prefer,preference)[선호,선호들에])
+   ,e : 1((bytecod,bytecode)[바이트코드,바이트코드들에])
+#기,화된 : 4
+   , : 2((silan,silan)[실란기,실란화된],(acyl,acyl)[아실기,아실화된])
+   ,er : 1((quantiz,quantizer)[양자기,양자화된])
+   ,ator : 1((acceler,accelerator)[가속기,가속화된])
+#선,와이어 : 4
+   ,e : 4((nanowir,nanowire)[나노선,나노와이어])
+#,s : 4
+   , : 3((DRAM,DRAM)[dram,drams],(destruct,destruct)[tfc,tfcs])
+   ,ed : 1((destruct,destructed)[tfc,tfcs])
+#적,하는 : 4
+   ,ive : 2((constitut,constitutive)[구성적,구성하는],(adapt,adaptive)[적응적,적응하는])
+   ,ively : 1((adapt,adaptively)[적응적,적응하는])
+   ,ably : 1((adapt,adaptably)[적응적,적응하는])
+#직접,지향성 : 4
+   ,ly : 2((direct,directly)[직접,지향성])
+   , : 2((direct,direct)[직접,지향성])
+#,결정 : 4 /MSUF, COMP
+   ,e : 2((sequenc,sequence)[서열,서열결정])
+   , : 1((price,price)[가격,가격결정])
+   e,ing : 1((price,pricing)[가격,가격결정])
+#,구조체 : 4 /MSUF, COMP
+   ,e : 4((nanostructur,nanostructure)[나노,나노구조체],(microstructur,microstructure)[미세,미세구조체])
+#,및 : 4
+   , : 2((imidazol,imidazol)[이미다졸,이미다졸및],(appaturu,appaturu)[장치,장치및])
+   ,e : 2((imidazol,imidazole)[이미다졸,이미다졸및])
+#,기용 : 4 /기+용
+   ,ing : 1((analys,analysing)[분석,분석기용])
+   , : 1((welder,welder)[용접,용접기용])
+   ,ation : 1((inhal,inhalation)[흡입,흡입기용])
+   ,ant : 1((inhal,inhalant)[흡입,흡입기용])
+#적,화된 : 4
+   ,ally : 1((function,functionally)[기능적,기능화된])
+   ,ly : 1((general,generally)[일반적,일반화된])
+   , : 1((visual,visual)[시각적,시각화된])
+   ,ed : 1((catalyz,catalyzed)[촉매적,촉매화된])
+#,환경 : 4 /MSUF, COMP
+   ,ing : 1((look,looking)[시청,시청환경])
+   ,ating : 1((illumin,illuminating)[조명,조명환경])
+   ,ation : 1((illumin,illumination)[조명,조명환경])
+   ,ated : 1((illumin,illuminated)[조명,조명환경])
+#라이드,로겐화물 : 4
+   ,e : 4((halid,halide)[할라이드,할로겐화물])
+#,이 : 4
+   ,ator : 2((emul,emulator)[뮬레,뮬레이])
+   ,e : 2((hydroperoxid,hydroperoxide)[퍼옥사,퍼옥사이])
+#,화제 : 4
+   ,e : 2((activ,active)[활성,활성화제])
+   ,ity : 2((activ,activity)[활성,활성화제])
+#,업자들 : 4 / 업자+들/ MSUF, COMP
+   , : 2((broadcast,broadcast)[방송,방송업자들])
+   ,ing : 1((broadcast,broadcasting)[방송,방송업자들])
+   ,ed : 1((broadcast,broadcasted)[방송,방송업자들])
+#체,질체 : 4
+   ,er : 4((isom,isomer)[이성체,이성질체])
+#,로폰 : 4
+   ,e : 4((microphon,microphone)[마이크,마이크로폰])
+#,사이즈 : 4
+   ,ize : 2((nanos,nanosize)[나노,나노사이즈])
+   ,ized : 2((nanos,nanosized)[나노,나노사이즈])
+#,내 : 4
+   , : 3((intravenou,intravenou)[정맥,정맥내],(pap,pap)[배양액,배양액내],(VOP,VOP)[백,백내])
+   ,ic : 1((pyruv,pyruvic)[안구,안구내])
+#용,학적 : 4
+   ,ical : 3((dermatolog,dermatological)[피부과용,피부과학적],(dermatolog,dermatological)[피부용,피부학적])
+   ,ic : 1((dermatolog,dermatologic)[피부과용,피부과학적])
+#화,레이트 : 4
+   ,ation : 2((alkyl,alkylation)[알킬화,알킬레이트],(acyl,acylation)[아실화,아실레이트])
+   ,ated : 2((acyl,acylated)[아실화,아실레이트],(alkyl,alkylated)[알킬화,알킬레이트])
+#화,산염 : 4
+   ,ization : 2((carbon,carbonization)[탄화,탄산염])
+   ,izing : 2((carbon,carbonizing)[탄화,탄산염])
+#,장비 : 4
+   , : 2((sport,sport)[스포츠,스포츠장비])
+   ,ating : 1((perfor,perforating)[천공,천공장비])
+   ,ation : 1((perfor,perforation)[천공,천공장비])
+#시클릭,사이클릭 : 4
+   ,ic : 4((spirocycl,spirocyclic)[스피로시클릭,스피로사이클릭],(polycycl,polycyclic)[폴리시클릭,폴리사이클릭],(tricycl,tricyclic)[트리시클릭,트리사이클릭],(bicycl,bicyclic)[비시클릭,비사이클릭])
+#,기기 : 3
+   , : 2((multipolar,multipolar)[다극,다극기기],(combo,combo)[복합,복합기기])
+   ,al : 1((peripher,peripheral)[주변,주변기기])
+#,링용 : 3
+   , : 1((enamel,enamel)[에나멜,에나멜링용])
+   ,ling : 1((enamel,enamelling)[에나멜,에나멜링용])
+   ,led : 1((enamel,enamelled)[에나멜,에나멜링용])
+#돌,접한 : 3
+   ,e : 2((indol,indole)[인돌,인접한])
+   , : 1((indol,indol)[인돌,인접한])
+#,동물 : 3/MSUF, COMP
+   ,al : 2((vertebr,vertebral)[척추,척추동물])
+   ,d : 1((clone,cloned)[복제,복제동물])
+#,별 : 3
+   , : 2((object,object)[객체,객체별])
+   ,al : 1((person,personal)[개인,개인별])
+#,링하는 : 3
+   ,e : 2((textur,texture)[텍스쳐,텍스쳐링하는])
+   , : 1((style,style)[스타일,스타일링하는])
+#,소자 : 3/MSUF, COMP
+   , : 3((semicondutor,semicondutor)[반도체,반도체소자],(pmo,pmo)[피모스,피모스소자],(sandifish,sandifish)[전계발광,전계발광소자])
+#드,딩된 : 3
+   , : 2((code,code)[코드,코딩된])
+   ,e : 1((decod,decode)[디코드,디코딩된])
+#,고기 : 3 /MSUF, COMP
+   , : 2((duck,duck)[오리,오리고기],(chicken,chicken)[닭,닭고기])
+   ,' : 1((chicken,chicken')[닭,닭고기])
+#시,공하는 : 3 ?
+   ,ing : 1((present,presenting)[제시,제공하는])
+   ,ation : 1((present,presentation)[제시,제공하는])
+   ,ment : 1((present,presentment)[제시,제공하는])
+#효,명품 : 3
+   ,ative : 1((ferment,fermentative)[발효,발명품])
+   ,ation : 1((ferment,fermentation)[발효,발명품])
+   ,ed : 1((ferment,fermented)[발효,발명품])
+#갱신,가정등에서 : 3
+   ,ing : 1((renew,renewing)[갱신,가정등에서])
+   ,al : 1((renew,renewal)[갱신,가정등에서])
+   ,ability : 1((renew,renewability)[갱신,가정등에서])
+#업,력적 : 3
+   ,ating : 1((cooper,cooperating)[협업,협력적])
+   ,ative : 1((collabor,collaborative)[협업,협력적])
+   ,ation : 1((collabor,collaboration)[협업,협력적])
+#제,가능한 : 3
+   ,er : 3((remov,remover)[제거제,제거가능한],(develop,developer)[현상제,현상가능한])
+#특권,트리플 : 3
+   ,e : 2((privileg,privilege)[특권,트리플])
+   ,ed : 1((privileg,privileged)[특권,트리플])
+#날씨,내후성 : 3
+   , : 3((weather,weather)[날씨,내후성])
+#,계수지 : 3
+   ,e : 2((polyurethan,polyurethane)[폴리우레탄,폴리우레탄계수지])
+   , : 1((polyurethan,polyurethan)[폴리우레탄,폴리우레탄계수지])
+#디아제핀,다이아제핀 : 3
+   ,e : 2((benzodiazepin,benzodiazepine)[벤조디아제핀,벤조다이아제핀])
+   , : 1((benzodiazepin,benzodiazepin)[벤조디아제핀,벤조다이아제핀])
+#갱신,감쇄시킬 : 3
+   ,ing : 1((renew,renewing)[갱신,감쇄시킬])
+   ,al : 1((renew,renewal)[갱신,감쇄시킬])
+   ,ability : 1((renew,renewability)[갱신,감쇄시킬])
+#리드,라이드 : 3
+   ,e : 3((triglycerid,triglyceride)[트리글리세리드,트리글리세라이드],(glycerid,glyceride)[글리세리드,글리세라이드])
+#체,량용 : 3
+   ,e' : 3((vehicl,vehicle')[차체,차량용])
+#,시킨다 : 3
+   ,ing : 1((bias,biasing)[편향,편향시킨다])
+   ,ating : 1((mitig,mitigating)[완화,완화시킨다])
+   ,ation : 1((mitig,mitigation)[완화,완화시킨다])
+#,태 : 3
+   , : 1((polymorph,polymorph)[다형,다형태])
+   ,ic : 1((polymorph,polymorphic)[다형,다형태])
+   ,ism : 1((polymorph,polymorphism)[다형,다형태])
+#,레 : 3
+   ,ic : 1((carboxyl,carboxylic)[복실,복실레])
+   ,ate : 1((carboxyl,carboxylate)[복실,복실레])
+   ,ated : 1((carboxyl,carboxylated)[복실,복실레])
+#제,시키기에 : 3
+   ,er : 2((stabilis,stabiliser)[안정화제,안정화시키기에])
+   ,ing : 1((stabilis,stabilising)[안정화제,안정화시키기에])
+#화,장치 : 3
+   ,ize : 1((synchron,synchronize)[동기화,동기장치])
+   ,ization : 1((synchron,synchronization)[동기화,동기장치])
+   ,izing : 1((synchron,synchronizing)[동기화,동기장치])
+#림,리밍 : 3
+   , : 3((trim,trim)[트림,트리밍],(stream,stream)[스트림,스트리밍])
+#배,산된 : 3
+   ,ing : 1((distribut,distributing)[분배,분산된])
+   ,ive : 1((distribut,distributive)[분배,분산된])
+   ,ion : 1((distribut,distribution)[분배,분산된])
+#,력 : 3
+   ,al : 1((centrifug,centrifugal)[원심,원심력])
+   ,ic : 1((electrostat,electrostatic)[정전기,정전기력])
+   ,e : 1((centrifug,centrifuge)[원심,원심력])
+#성,적인 : 3
+   ,ivity : 1((select,selectivity)[선택성,선택적인])
+   ,ive : 1((adapt,adaptive)[적응성,적응적인])
+   ,ence : 1((persist,persistence)[지속성,지속적인])
+#랙,래킹 : 3
+   , : 3((track,track)[트랙,트래킹],(crack,crack)[크랙,크래킹])
+#화,배선 : 3
+   ,ized : 1((metal,metalized)[금속화,금속배선])
+   ,lization : 1((metal,metallization)[금속화,금속배선])
+   ,lized : 1((metal,metallized)[금속화,금속배선])
+#탄,타늄 : 3
+   , : 3((titanium,titanium)[티탄,티타늄],(lanthanum,lanthanum)[란탄,란타늄],(tio2,tio2)[이산화티탄,이산화티타늄])
+#접합체,절단단계 : 3
+   ,ate : 2((conjug,conjugate)[접합체,절단단계])
+   ,ation : 1((conjug,conjugation)[접합체,절단단계])
+#,들을지원하는 : 3
+   ,ion : 2((correct,correction)[보정,보정들을지원하는])
+   ,ing : 1((correct,correcting)[보정,보정들을지원하는])
+#된,한다 : 3
+   ,ed : 3((compil,compiled)[컴파일된,컴파일한다],(propos,proposed)[제안된,제안한다])
+#기,가능 : 3
+   ,er : 2((receiv,receiver)[수신기,수신가능])
+   ,eing : 1((receiv,receiveing)[수신기,수신가능])
+#,이션 : 3
+   ,ator : 3((simul,simulator)[시뮬레,시뮬레이션])
+#방법,시스템 : 3 /MSUF, COMP//IGNORE (taken into account)
+   ,ing : 1((control,controling)[제어방법,제어시스템])
+   ,ling : 1((control,controlling)[제어방법,제어시스템])
+   ,l : 1((control,controll)[제어방법,제어시스템])
+#수,착제 : 3
+   ,ent : 1((absorb,absorbent)[흡수,흡착제])
+   ,ing : 1((absorb,absorbing)[흡수,흡착제])
+   ,able : 1((absorb,absorbable)[흡수,흡착제])
+#,현미 : 3
+   ,ating : 1((germin,germinating)[발아,발아현미])
+   ,ed : 1((sprout,sprouted)[발아,발아현미])
+   ,ated : 1((germin,germinated)[발아,발아현미])
+#트,테이션 : 3
+   , : 3((segment,segment)[세그먼트,세그먼테이션],(import,import)[임포트,임포테이션])
+#시,공된다 : 3
+   ,ing : 1((present,presenting)[제시,제공된다])
+   ,ation : 1((present,presentation)[제시,제공된다])
+   ,ment : 1((present,presentment)[제시,제공된다])
+#래,도체 : 3
+   ,ed : 3((deriv,derived)[유래,유도체])
+#송,사성 : 3
+   ,ing : 1((transfer,transfering)[전송,전사성])
+   , : 1((transfer,transfer)[전송,전사성])
+   ,ring : 1((transfer,transferring)[전송,전사성])
+#리아졸,라이아졸 : 3
+   ,e : 2((triazol,triazole)[트리아졸,트라이아졸])
+   , : 1((triazol,triazol)[트리아졸,트라이아졸])
+#,시키기에 : 3
+   ,ing : 1((stabilis,stabilising)[안정화,안정화시키기에])
+   ,ation : 1((stabilis,stabilisation)[안정화,안정화시키기에])
+   ,ed : 1((stabilis,stabilised)[안정화,안정화시키기에])
+#물,가능한 : 3
+   , : 2((implant,implant)[이식물,이식가능한])
+   ,ate : 1((extrud,extrudate)[압출물,압출가능한])
+#정보,전용전송채널 : 3
+   ,ation : 2((inform,information)[정보,전용전송채널])
+   ,ational : 1((inform,informational)[정보,전용전송채널])
+#,로이드 : 3
+   ,al : 3((steroid,steroidal)[스테,스테로이드])
+#각,장고 : 3
+   ,ation : 3((refriger,refrigeration)[냉각,냉장고])
+#산,레이트 : 3
+   ,ic : 2((acryl,acrylic)[아크릴산,아크릴레이트])
+   , : 1((subpad,subpad)[옥살산,옥살레이트])
+#트,팅된 : 3
+   , : 3((graft,graft)[그래프트,그래프팅된],(coat,coat)[코트,코팅된])
+#,함으로써 : 3
+   ,ing : 2((wobbl,wobbling)[워블링,워블링함으로써],(examin,examining)[검사,검사함으로써])
+   ,ation : 1((examin,examination)[검사,검사함으로써])
+#,되 : 3
+   ,ic : 1((metabol,metabolic)[대사,대사되])
+   ,e : 1((actinomycet,actinomycete)[만곡,만곡되])
+   ,ism : 1((metabol,metabolism)[대사,대사되])
+#제,조방법 : 3
+   ,ation : 3((prepar,preparation)[제제,제조방법])
+#,과용 : 3
+   ,ical : 2((dermatolog,dermatological)[피부,피부과용])
+   , : 1((ocular,ocular)[안,안과용])
+#을,이용 : 3
+   ,ability : 1((bioavail,bioavailability)[을,이용])
+   ,ization : 1((util,utilization)[을,이용])
+   ,izing : 1((util,utilizing)[을,이용])
+#,점 : 3
+   ,ing : 1((retail,retailing)[소매,소매점])
+   , : 1((retail,retail)[소매,소매점])
+   ,able : 1((vulner,vulnerable)[취약,취약점])
+#배,산형 : 3
+   ,ing : 1((distribut,distributing)[분배,분산형])
+   ,ive : 1((distribut,distributive)[분배,분산형])
+   ,ion : 1((distribut,distribution)[분배,분산형])
+#성,화제 : 3
+   ,ity : 2((stabil,stability)[안정성,안정화제])
+   , : 1((neutral,neutral)[중성,중화제])
+#득,량체 : 3
+   ,ic : 3((dimer,dimeric)[이득,이량체])
+#제,방법 : 3
+   ,ant : 2((antioxid,antioxidant)[항산화제,항산화방법])
+   ,izer : 1((deoxid,deoxidizer)[탈산제,탈산방법])
+#인쇄,이량체 : 3
+   , : 3((dimer,dimer)[인쇄,이량체])
+#,조 : 3
+   ,ing : 1((electroform,electroforming)[전주,전주조])
+   ,ion : 1((flotat,flotation)[부상,부상조])
+   i,y : 1((forgeri,forgery)[위,위조])
+#계,레이트 : 3
+   ,ic : 3((phenol,phenolic)[페놀계,페놀레이트],(acryl,acrylic)[아크릴계,아크릴레이트])
+#제,화인자 : 3
+   ,ator : 2((activ,activator)[활성제,활성화인자])
+   ,e : 1((activ,active)[활성제,활성화인자])
+#형,방법 : 3
+   ,ed : 3((control,controled)[제어형,제어방법])
+#시,싱된 : 3
+   ,e : 2((cach,cache)[캐시,캐싱된])
+   ,ing : 1((cach,caching)[캐시,캐싱된])
+#시드,사이드 : 3
+   ,e : 3((nitroxid,nitroxide)[니트록시드,니트록사이드],(dioxid,dioxide)[디옥시드,디옥사이드],(peroxid,peroxide)[퍼옥시드,퍼옥사이드])
+#진,지니어링 : 3
+   ,e : 2((engin,engine)[엔진,엔지니어링])
+   ,e' : 1((engin,engine')[엔진,엔지니어링])
+#,더 : 3
+   ,ance : 2((imped,impedance)[임피,임피더])
+   ,ence : 1((imped,impedence)[임피,임피더])
+#,카드 : 3
+   , : 3((credit,credit)[신용,신용카드],(cablecard,cablecard)[케이블,케이블카드],(smartcard,smartcard)[스마트,스마트카드])
+#,망 : 3
+   , : 3((ngn,ngn)[차세대,차세대망],(neural,neural)[신경,신경망],(vpn,vpn)[사설,사설망])
+#,제어기 : 3
+   ,e : 2((cach,cache)[캐시,캐시제어기])
+   ,ing : 1((cach,caching)[캐시,캐시제어기])
+#한,하게 : 3
+   , : 1((similar,similar)[유사한,유사하게])
+   ,red : 1((prefer,preferred)[바람직한,바람직하게])
+   ,able : 1((detect,detectable)[검출가능한,검출가능하게])
+#,하도록 : 3
+   ,ating : 1((demodul,demodulating)[복조,복조하도록])
+   ,ator : 1((demodul,demodulator)[복조,복조하도록])
+   ,ation : 1((demodul,demodulation)[복조,복조하도록])
+#성,가능 : 3
+   ,ivity : 1((select,selectivity)[선택성,선택가능])
+   ,ibility : 1((extens,extensibility)[확장성,확장가능])
+   ,able : 1((thermoform,thermoformable)[열성형성,열성형가능])
+#입자,시광역 : 3
+   ,er : 2((subscrib,subscriber)[가입자,가시광역])
+   ,er' : 1((subscrib,subscriber')[가입자,가시광역])
+#제,인자 : 3
+   ,ator : 2((activ,activator)[활성화제,활성화인자])
+   ,ic : 1((cytotox,cytotoxic)[세포독성제,세포독성인자])
+#생,활용 : 3
+   ,ed : 3((recycl,recycled)[재생,재활용])
+#,기적 : 3
+   ,ic : 2((electrostat,electrostatic)[정전,정전기적],(electromagnet,electromagnetic)[전자,전자기적])
+   ,ically : 1((electrostat,electrostatically)[정전,정전기적])
+#리아진,라이아진 : 3
+   ,e : 2((triazin,triazine)[트리아진,트라이아진])
+   , : 1((triazin,triazin)[트리아진,트라이아진])
+#기,화기 : 3
+   ,er : 1((quantiz,quantizer)[양자기,양자화기])
+   , : 1((coder,coder)[부호기,부호화기])
+   ,ic : 1((magnet,magnetic)[자기,자화기])
+#균제,진균제 : 3
+   ,e : 3((fungicid,fungicide)[살균제,살진균제])
+#,줄기세포 : 3
+   , : 1((neural,neural)[신경,신경줄기세포])
+   ,al : 1((mesenchym,mesenchymal)[간엽,간엽줄기세포])
+   ,ic : 1((embryon,embryonic)[배아,배아줄기세포])
+#용,가능한 : 3
+   ,e : 2((potabl,potable)[휴대용,휴대가능한],(programm,programme)[프로그램용,프로그램가능한])
+   ,able : 1((inject,injectable)[주사용,주사가능한])
+#한,련된 : 3
+   ,ing : 1((relat,relating)[관한,관련된])
+   , : 1((pertain,pertain)[관한,관련된])
+   ,e : 1((relat,relate)[관한,관련된])
+#랩,래핑 : 3
+   , : 3((lap,lap)[랩,래핑],(trap,trap)[트랩,트래핑])
+#접합체,제조방법 : 3
+   ,ate : 2((conjug,conjugate)[접합체,제조방법])
+   ,ation : 1((conjug,conjugation)[접합체,제조방법])
+#,핑된 : 3
+   , : 3((tap,tap)[탭,탭핑된],(cap,cap)[캡,캡핑된])
+#,이트 : 3
+   ,ic : 2((ferrit,ferritic)[페라,페라이트])
+   , : 1((scn,scn)[에틸아세테,에틸아세테이트])
+#털,타이저 : 3
+   ,ally : 1((digit,digitally)[디지털,디지타이저])
+   ,al : 1((digit,digital)[디지털,디지타이저])
+   ,ized : 1((digit,digitized)[디지털,디지타이저])
+#,료 : 3
+   ,ic : 2((cosmet,cosmetic)[화장,화장료])
+   ,e : 1((composit,composite)[복합재,복합재료])
+#체,형물 : 3
+   , : 2((solid,solid)[고체,고형물])
+   ,e : 1((solid,solide)[고체,고형물])
+#동화,세하게는 : 3
+   ,ating : 1((autom,automating)[자동화,자세하게는])
+   ,ation : 1((autom,automation)[자동화,자세하게는])
+   ,ated : 1((autom,automated)[자동화,자세하게는])
+#,하게 : 3
+   ,ent : 1((transpar,transparent)[투명,투명하게])
+   ,e : 1((uniqu,unique)[고유,고유하게])
+   ,ity : 1((similar,similarity)[유사,유사하게])
+#,라진 : 3
+   ,e : 3((piperazin,piperazine)[피페,피페라진])
+#강재,가용화 : 3
+   ,ize : 3((solubil,solubilize)[강재,가용화])
+#체,물학적 : 3
+   ,ical : 3((biolog,biological)[생체,생물학적])
+#,균 : 3
+   , : 3((tuberculosi,tuberculosi)[결핵,결핵균],(monascu,monascu)[홍국,홍국균],(lactic,lactic)[젖산,젖산균])
+#맷,름산염 : 3
+   , : 2((format,format)[포맷,포름산염])
+   ,ting : 1((format,formatting)[포맷,포름산염])
+#소자,다이오드 : 3
+   , : 3((led,led)[발광소자,발광다이오드])
+#,공급 : 3/MSUF, COMP
+   , : 2((fuel,fuel)[연료,연료공급])
+   ,ed : 1((fuel,fueled)[연료,연료공급])
+#품,조방법 : 3
+   ,e : 3((manufactur,manufacture)[제품,제조방법])
+#건,절된 : 3
+   ,ion : 2((condit,condition)[조건,조절된])
+   ,ional : 1((condit,conditional)[조건,조절된])
+#,네트워크 : 2/MSUF, COMP
+   , : 2((homenetwork,homenetwork)[홈,홈네트워크],(ngn,ngn)[차세대,차세대네트워크])
+#,억제제 : 2
+   ,ed : 2((immunosuppress,immunosuppressed)[면역,면역억제제])
+#,작용 : 2
+   , : 1((catalysi,catalysi)[촉매,촉매작용])
+   ,ic : 1((synergist,synergistic)[상승,상승작용])
+#,출 : 2
+   , : 2((call,call)[호,호출])
+#이,인핸서 : 2
+   ,ed : 2((enhanc,enhanced)[이,인핸서])
+#몰탈,모르타르 : 2
+   , : 2((mortar,mortar)[몰탈,모르타르])
+#,도체 : 2
+   , : 2((superconductor,superconductor)[초전,초전도체])
+#쉬,시들의 : 2
+   ,e : 2((cach,cache)[캐쉬,캐시들의])
+#으,유전자 : 2
+   ,ically : 2((genet,genetically)[으,유전자])
+#그,깅된 : 2
+   , : 2((plug,plug)[플러그,플러깅된])
+#라프트,래프팅된 : 2
+   , : 1((graft,graft)[그라프트,그래프팅된])
+   ,ed : 1((graft,grafted)[그라프트,그래프팅된])
+#황,류기 : 2
+   ,ized : 1((vulcan,vulcanized)[가황,가류기])
+   ,izing : 1((vulcan,vulcanizing)[가황,가류기])
+#장치,잔류시켜 : 2
+   ,ating : 1((estim,estimating)[장치,잔류시켜])
+   ,ation : 1((estim,estimation)[장치,잔류시켜])
+#입,록형 : 2
+   ,ing : 1((rewrit,rewriting)[재기입,재기록형])
+   ,e : 1((rewrit,rewrite)[재기입,재기록형])
+#석,기적 : 2
+   , : 2((electromagnet,electromagnet)[전자석,전자기적])
+#,클램프 : 2
+   , : 2((unclamp,unclamp)[언,언클램프])
+#,효소 : 2
+   ,ic : 1((fibrinolyt,fibrinolytic)[혈전용해,혈전용해효소])
+   ,e : 1((reductas,reductase)[환원,환원효소])
+#도,축액 : 2
+   ,ation : 2((concentr,concentration)[농도,농축액])
+#구,세포 : 2
+   ,e : 2((monocyt,monocyte)[단핵구,단핵세포],(granulocyt,granulocyte)[과립구,과립세포])
+#름산염,르메이트 : 2
+   ,e : 2((format,formate)[포름산염,포르메이트])
+#록,럭킹 : 2
+   , : 1((clock,clock)[클록,클럭킹])
+   ,ed : 1((clock,clocked)[클록,클럭킹])
+#쇄,쇠기 : 2
+   ,ating : 1((attenu,attenuating)[감쇄,감쇠기])
+   ,ation : 1((attenu,attenuation)[감쇄,감쇠기])
+#,화인자 : 2
+   ,e : 1((activ,active)[활성,활성화인자])
+   ,ity : 1((activ,activity)[활성,활성화인자])
+#렛,레타이저 : 2
+   , : 2((pellet,pellet)[펠렛,펠레타이저])
+#,벽 : 2
+   ,ing : 1((soundproof,soundproofing)[방음,방음벽])
+   , : 1((soundproof,soundproof)[방음,방음벽])
+#폼,포밍 : 2
+   , : 2((preform,preform)[프리폼,프리포밍])
+#접,결된 : 2
+   ,ation : 1((concaten,concatenation)[연접,연결된])
+   ,ated : 1((concaten,concatenated)[연접,연결된])
+#,론 : 2
+   ,y : 1((methodolog,methodology)[방법,방법론])
+   ,ic : 1((semant,semantic)[의미,의미론])
+#인증,이젝트스위치 : 2
+   ,ization : 1((author,authorization)[인증,이젝트스위치])
+   ,izing : 1((author,authorizing)[인증,이젝트스위치])
+#체,산물 : 2
+   ,e : 2((metabolit,metabolite)[대사체,대사산물])
+#쥴,줄링 : 2
+   ,e : 2((schedul,schedule)[스케쥴,스케줄링])
+#잭,재키잉 : 2
+   , : 2((jack,jack)[잭,재키잉])
+#스,오스계 : 2
+   ,ic : 1((cellulos,cellulosic)[셀룰로스,셀룰로오스계])
+   ,e : 1((cellulos,cellulose)[셀룰로스,셀룰로오스계])
+#,의제조 : 2
+   ,e : 2((pyrrolidon,pyrrolidone)[피롤리돈,피롤리돈의제조])
+#도,축기 : 2
+   ,ation : 2((concentr,concentration)[농도,농축기])
+#,학계 : 2
+   , : 1((optic,optic)[광,광학계])
+   ,al : 1((optic,optical)[광,광학계])
+#,시간 : 2
+   ,ation : 1((occup,occupation)[점유,점유시간])
+   ,ancy : 1((occup,occupancy)[점유,점유시간])
+#,분리장치 : 2
+   ,al : 1((centrifug,centrifugal)[원심,원심분리장치])
+   ,e : 1((centrifug,centrifuge)[원심,원심분리장치])
+#것,검출 : 2
+   , : 2((detect,detect)[것,검출])
+#,암 : 2
+   , : 1((lung,lung)[폐,폐암])
+   ,e : 1((prostat,prostate)[전립선,전립선암])
+#기,하도록 : 2
+   ,ator : 2((demodul,demodulator)[복조기,복조하도록])
+#작,조방법 : 2
+   ,ation : 2((fabric,fabrication)[제작,제조방법])
+#별,획물 : 2
+   ,ation : 2((fraction,fractionation)[분별,분획물])
+#제,된다 : 2
+   ,ator : 2((initi,initiator)[개시제,개시된다])
+#,가능하게 : 2
+   ,ing : 1((detect,detecting)[검출,검출가능하게])
+   ,ion : 1((detect,detection)[검출,검출가능하게])
+#동,용한 : 2
+   ,e : 1((mobil,mobile)[이동,이용한])
+   ,ity : 1((mobil,mobility)[이동,이용한])
+#가,개선 : 2
+   ,ed : 2((improv,improved)[가,개선])
+#란,레인 : 2
+   ,e : 2((boran,borane)[보란,보레인])
+#,입자 : 2
+   ,e : 2((nanoparticl,nanoparticle)[나노,나노입자])
+#인접,이루어진 : 2
+   ,ing : 1((neighbor,neighboring)[인접,이루어진])
+   , : 1((neighbor,neighbor)[인접,이루어진])
+#쇠,쇄기 : 2
+   ,ating : 1((attenu,attenuating)[감쇠,감쇄기])
+   ,ation : 1((attenu,attenuation)[감쇠,감쇄기])
+#화,성화 : 2
+   ,ization : 1((neutral,neutralization)[중화,중성화])
+   ,izing : 1((neutral,neutralizing)[중화,중성화])
+#,유전자 : 2
+   ,e : 2((allel,allele)[대립,대립유전자])
+#식물,온주입장치 : 2
+   , : 2((implant,implant)[이식물,이온주입장치])
+#히드로푸란,하이드로푸란 : 2
+   , : 1((tetrahydrofuran,tetrahydrofuran)[테트라히드로푸란,테트라하이드로푸란])
+   ,e : 1((tetrahydrofuran,tetrahydrofurane)[테트라히드로푸란,테트라하이드로푸란])
+#압타머,아프타자임으로 : 2
+   ,er : 2((aptam,aptamer)[압타머,아프타자임으로])
+#쯔하이머,츠하이머병 : 2
+   ,er : 2((alzheim,alzheimer)[알쯔하이머,알츠하이머병])
+#직접,진공화 : 2
+   ,ly : 1((direct,directly)[직접,진공화])
+   , : 1((direct,direct)[직접,진공화])
+#할당,한글학습 : 2
+   ,ting : 1((allot,allotting)[할당,한글학습])
+   ,ment : 1((allot,allotment)[할당,한글학습])
+#,머성 : 2
+   ,er : 2((ionom,ionomer)[이오노,이오노머성])
+#투과형,사투과형 : 2
+   ,ive : 2((transflect,transflective)[반투과형,반사투과형],(transreflect,transreflective)[반투과형,반사투과형])
+#턴,터닝된 : 2
+   , : 2((pattern,pattern)[패턴,패터닝된])
+#,발광소자 : 2
+   ,d : 2((ole,oled)[유기,유기발광소자])
+#절,정하는 : 2
+   ,ment : 1((adjust,adjustment)[조절,조정하는])
+   ,able : 1((adjust,adjustable)[조절,조정하는])
+#을,이용한 : 2
+   , : 1((linteu,linteu)[을,이용한])
+   e,ing : 1((use,using)[을,이용한])
+#전착,저항성 : 2
+   ,ancy : 2((resist,resistancy)[전착,저항성])
+#,들에서 : 2
+   , : 2((ballast,ballast)[안정기,안정기들에서])
+#,메시지 : 2
+   , : 2((sm,sm)[단문,단문메시지],(sm,sm)[문자,문자메시지])
+#위,층적 : 2
+   i,y : 2((hierarchi,hierarchy)[계위,계층적])
+#바,및부품 : 2
+   ,er : 2((biomark,biomarker)[바,및부품])
+#,자들의 : 2
+   ,ating : 1((coordin,coordinating)[조정,조정자들의])
+   ,ation : 1((coordin,coordination)[조정,조정자들의])
+#성,하게 : 2
+   ,ency : 1((transpar,transparency)[투명성,투명하게])
+   ,ity : 1((similar,similarity)[유사성,유사하게])
+#화,체화 : 2
+   ,ization : 2((isomer,isomerization)[이성화,이성체화],(isomer,isomerization)[이성질화,이성질체화])
+#업,력적인 : 2
+   ,ative : 1((collabor,collaborative)[협업,협력적인])
+   ,ation : 1((collabor,collaboration)[협업,협력적인])
+#화,처리 : 2
+   ,ing : 1((hydroprocess,hydroprocessing)[수소화,수소처리])
+   ,eating : 1((hydrotr,hydrotreating)[수소화,수소처리])
+#장치,재생장치 : 2
+   ,ing : 1((reproduc,reproducing)[장치,재생장치])
+   , : 1((player,player)[장치,재생장치])
+#,복호화 : 2
+   , : 2((datastream,datastream)[데이터스트림,데이터스트림복호화])
+#면,탄화 : 2
+   , : 2((planar,planar)[평면,평탄화])
+#출,사율 : 2
+   ,ion : 2((emiss,emission)[방출,방사율])
+#제조,전기광학 : 2
+   ,ical : 2((electroopt,electrooptical)[제조,전기광학])
+#킹,크스 : 2
+   e,ing : 2((coke,coking)[코킹,코크스])
+#렛,릿화 : 2
+   , : 2((pellet,pellet)[펠렛,펠릿화])
+#론,로닝 : 2
+   , : 2((clone,clone)[클론,클로닝])
+#단,료점 : 2
+   , : 2((endpoint,endpoint)[종단,종료점])
+#,방송 : 2
+   ,al : 2((commerci,commercial)[광고,광고방송])
+#공,어를제공하기 : 2
+   ,ion : 1((provis,provision)[제공,제어를제공하기])
+   ,ioning : 1((provis,provisioning)[제공,제어를제공하기])
+#링,장치 : 2
+   ,ing : 1((shuffl,shuffling)[셔플링,셔플장치])
+   ,ed : 1((shuffl,shuffled)[셔플링,셔플장치])
+#민,미노화에의한 : 2
+   ,e : 2((amin,amine)[아민,아미노화에의한])
+#뿔,추형 : 2
+   , : 2((conic,conic)[원뿔,원추형])
+#력,동적 : 2
+   ,ative : 1((collabor,collaborative)[협력,협동적])
+   ,ation : 1((collabor,collaboration)[협력,협동적])
+#출,상화 : 2
+   ,ing : 1((abstract,abstracting)[추출,추상화])
+   ,ion : 1((abstract,abstraction)[추출,추상화])
+#체,관적 : 2
+   , : 2((object,object)[객체,객관적])
+#및,방법들 : 2
+   , : 2((method,method)[및,방법들])
+#구,계적 : 2
+   ,ism : 2((mechan,mechanism)[기구,기계적])
+#압타머,앱타머들 : 2
+   ,er : 2((aptam,aptamer)[압타머,앱타머들])
+#,실 : 2
+   , : 1((ramannianu,ramannianu)[상황,상황실])
+   ,ate : 1((carboxyl,carboxylate)[카르복,카르복실])
+#,들로 : 2
+   , : 1((DVD,DVD)[dvd,dvd들로])
+   ,ation : 1((design,designation)[지정,지정들로])
+#,분리기 : 2
+   ,al : 1((centrifug,centrifugal)[원심,원심분리기])
+   ,e : 1((centrifug,centrifuge)[원심,원심분리기])
+#촉매,물촉매 : 2
+   , : 2((biocatalyst,biocatalyst)[생촉매,생물촉매])
+#칸,카날 : 2
+   ,e : 2((alkan,alkane)[알칸,알카날])
+#웹,웨빙 : 2
+   , : 2((web,web)[웹,웨빙])
+#도,명환경 : 2
+   ,ance : 1((illumin,illuminance)[조도,조명환경])
+   ,ant : 1((illumin,illuminant)[조도,조명환경])
+#제,결합된 : 2
+   ,er : 2((crosslink,crosslinker)[가교제,가교결합된])
+#들,가능한 : 2
+   ,ion : 1((select,selection)[선택들,선택가능한])
+   ,e : 1((programm,programme)[프로그램들,프로그램가능한])
+#,링된다 : 2
+   , : 2((tunnel,tunnel)[터널,터널링된다])
+#쉬,시형 : 2
+   , : 1((brush,brush)[브러쉬,브러시형])
+   ,e : 1((brush,brushe)[브러쉬,브러시형])
+#탁액,가장치 : 2
+   ,ion : 2((suspens,suspension)[현탁액,현가장치])
+#,라이저 : 2
+   , : 2((channel,channel)[채널,채널라이저])
+#동,력적 : 2
+   ,ative : 2((collabor,collaborative)[협동,협력적],(cooper,cooperative)[협동,협력적])
+#,운용 : 2
+   ,able : 1((interoper,interoperable)[상호,상호운용])
+   ,ability : 1((interoper,interoperability)[상호,상호운용])
+#빙,브된 : 2
+   ,ing : 1((interleav,interleaving)[인터리빙,인터리브된])
+   ,bing : 1((scrub,scrubbing)[스크러빙,스크러브된])
+#층,중층 : 2
+   ,er : 1((multilay,multilayer)[다층,다중층])
+   ,ered : 1((multilay,multilayered)[다층,다중층])
+#타머,접하고 : 2
+   ,er : 2((aptam,aptamer)[압타머,압접하고])
+#맷화된,르메이트 : 2
+   ,ted : 2((format,formatted)[포맷화된,포르메이트])
+#릿,레이팅된 : 2
+   ,e : 2((templat,template)[템플릿,템플레이팅된])
+#쉬,싱된 : 2
+   ,e : 2((cach,cache)[캐쉬,캐싱된])
+#쥴,줄러 : 2
+   ,e : 2((schedul,schedule)[스케쥴,스케줄러])
+#적,학적 : 2
+   ,ic : 2((therapeut,therapeutic)[치료적,치료학적])
+#전환,절단하는 : 2
+   ,ion : 2((convers,conversion)[전환,절단하는])
+#르탄성체,로엘라스토머 : 2
+   ,er : 2((fluoroelastom,fluoroelastomer)[플루오르탄성체,플루오로엘라스토머])
+#야채,액자형 : 2
+   ,able : 2((veget,vegetable)[야채,액자형])
+#,표시소자 : 2
+   , : 2((fpd,fpd)[평판,평판표시소자],(lcd,lcd)[액정,액정표시소자])
+#드,화물 : 2
+   ,e : 2((epoxid,epoxide)[에폭시드,에폭시화물])
+#,엔계 : 2
+   ,e : 2((butadien,butadiene)[부타디,부타디엔계])
+#,석 : 2
+   ,ic : 2((electromagnet,electromagnetic)[전자,전자석])
+#,될 : 2
+   e,ing : 1((brake,braking)[제동,제동될])
+   ,ement : 1((displac,displacement)[변위,변위될])
+#릿,렛화된 : 2
+   , : 2((pellet,pellet)[펠릿,펠렛화된])
+#츠,티형 : 2
+   , : 2((pant,pant)[팬츠,팬티형])
+#열,에서 : 2
+   ,ly : 1((thermal,thermally)[열,에서])
+   , : 1((thermal,thermal)[열,에서])
+#정,절가능한 : 2
+   ,ment : 2((adjust,adjustment)[조정,조절가능한])
+#물,학적 : 2
+   ,ical : 2((pharmaceut,pharmaceutical)[약물,약학적])
+#,고리 : 2
+   ,e : 2((oxadiazol,oxadiazole)[옥사디아졸,옥사디아졸고리])
+#,인터넷 : 2
+   , : 2((hpi,hpi)[휴대,휴대인터넷],(wibro,wibro)[휴대,휴대인터넷])
+#,도금강판 : 2
+   ,ized : 1((galvan,galvanized)[아연,아연도금강판])
+   ,izing : 1((galvan,galvanizing)[아연,아연도금강판])
+#,시키도록 : 2
+   ,ive : 1((diffract,diffractive)[회절,회절시키도록])
+   ,ion : 1((diffract,diffraction)[회절,회절시키도록])
+#화,소화 : 2
+   ,ation : 1((oxychlorin,oxychlorination)[옥시염화,옥시염소화])
+   ,ated : 1((fluorin,fluorinated)[불화,불소화])
+#출,상성 : 2
+   ,ing : 1((abstract,abstracting)[추출,추상성])
+   ,ion : 1((abstract,abstraction)[추출,추상성])
+#,접종 : 2
+   ,e : 2((vaccin,vaccine)[백신,백신접종])
+#형,상체 : 2
+   ,al : 1((spheroid,spheroidal)[구형,구상체])
+   ,ized : 1((spheroid,spheroidized)[구형,구상체])
+#소플라본,동식메디아모듈 : 2
+   ,e : 2((isoflavon,isoflavone)[이소플라본,이동식메디아모듈])
+#적,리학 : 2
+   ,ic : 1((patholog,pathologic)[병적,병리학])
+   ,ical : 1((patholog,pathological)[병적,병리학])
+#다,디아졸 : 2
+   ,e : 2((oxadiazol,oxadiazole)[옥사다,옥사디아졸])
+#,균주 : 2
+   ,ating : 1((isol,isolating)[분리,분리균주])
+   ,ation : 1((isol,isolation)[분리,분리균주])
+#요소,우레아 : 2
+   , : 2((urea,urea)[요소,우레아])
+#기,지형 : 2
+   ,ing : 1((branch,branching)[분기,분지형])
+   , : 1((branch,branch)[분기,분지형])
+#셋,세트 : 2
+   , : 2((subset,subset)[서브셋,서브세트])
+#적,가능한 : 2
+   ,ive : 1((select,selective)[선택적,선택가능한])
+   ,ively : 1((select,selectively)[선택적,선택가능한])
+#,실기 : 2
+   ,ate : 2((carboxyl,carboxylate)[카르복,카르복실기])
+#물,원료 : 2
+   , : 2((blend,blend)[배합물,배합원료])
+#,폭 : 2
+   , : 2((bandwidth,bandwidth)[대역,대역폭])
+#,권 : 2
+   ,al : 1((intellectu,intellectual)[지적재산,지적재산권])
+   ,e : 1((merchandis,merchandise)[상품,상품권])
+#도,명기 : 2
+   ,ance : 1((illumin,illuminance)[조도,조명기])
+   ,ant : 1((illumin,illuminant)[조도,조명기])
+#신호화,시그널링 : 2
+   ,ization : 2((signal,signalization)[신호화,시그널링])
+#부,장치 : 2
+   , : 2((RERR,RERR)[도금부,도금장치],(SCCH,SCCH)[도금부,도금장치])
+#을,이를 : 2
+   , : 1((screen,screen)[을,이를])
+   ,e : 1((genotyp,genotype)[을,이를])
+#,재생물질 : 2
+   , : 1((neuron,neuron)[신경,신경재생물질])
+   ,al : 1((neuron,neuronal)[신경,신경재생물질])
+#방법,발생시키는데 : 2
+   ,ating : 1((alloc,allocating)[방법,발생시키는데])
+   ,ation : 1((alloc,allocation)[방법,발생시키는데])
+#계,학적 : 2
+   ,ic : 1((neurolog,neurologic)[신경계,신경학적])
+   ,ical : 1((neurolog,neurological)[신경계,신경학적])
+#립자,세입자 : 2
+   ,e : 2((microparticl,microparticle)[미립자,미세입자])
+#압타머,앱타머를 : 2
+   ,er : 2((aptam,aptamer)[압타머,앱타머를])
+#법,결과 : 2
+   ,ing : 1((nonsmok,nonsmoking)[측정법,측정결과])
+   , : 1((condiment,condiment)[측정법,측정결과])
+#,선 : 2
+   ,ion : 1((radiat,radiation)[방사,방사선])
+   ,e : 1((barg,barge)[바지,바지선])
+#림,리밍된 : 2
+   , : 2((stream,stream)[스트림,스트리밍된])
+#신,장제 : 2
+   ,ible : 2((extend,extendible)[연신,연장제])
+#렴,도관 : 2
+   ,ing : 1((converg,converging)[수렴,수도관])
+   ,ence : 1((converg,convergence)[수렴,수도관])
+#,형성 : 2
+   , : 2((cardiovascular,cardiovascular)[심혈관,심혈관형성],(angiogenesi,angiogenesi)[혈관,혈관형성])
+#학적,제학적 : 2
+   ,ical : 1((pharmaceut,pharmaceutical)[약학적,약제학적])
+   ,ically : 1((pharmaceut,pharmaceutically)[약학적,약제학적])
+#쉬,시제어기 : 2
+   ,e : 2((cach,cache)[캐쉬,캐시제어기])
+#,스트림 : 2
+   , : 2((datastream,datastream)[데이터,데이터스트림])
+#션,티드 : 2
+   ,ation : 2((anim,animation)[애니메이션,애니메이티드])
+#,선택성 : 2
+   ,ive : 2((stereoselect,stereoselective)[입체,입체선택성])
+#문자,무기핵제 : 2
+   , : 2((letter,letter)[문자,무기핵제])
+#적,가능 : 2
+   ,ive : 1((select,selective)[선택적,선택가능])
+   ,ively : 1((select,selectively)[선택적,선택가능])
+#드,한다 : 2
+   ,ed : 2((compil,compiled)[컴파일드,컴파일한다])
+#싱,스가능 : 2
+   ,ing : 1((address,addressing)[어드레싱,어드레스가능])
+   ,ed : 1((address,addressed)[어드레싱,어드레스가능])
+#링,한다 : 2
+   ,ation : 2((compil,compilation)[컴파일링,컴파일한다])
+#으,위치 : 2
+   ,ly : 2((local,locally)[으,위치])
+#,방지성 : 2
+   ,ive : 1((antireflect,antireflective)[반사,반사방지성])
+   ,ion : 1((antireflect,antireflection)[반사,반사방지성])
+#반사,방지막 : 2
+   ,ive : 1((antireflect,antireflective)[반사,방지막])
+   ,ion : 1((antireflect,antireflection)[반사,방지막])
+#형,화제 : 2
+   ,ated : 2((encapsul,encapsulated)[캡슐형,캡슐화제])
+#젤라틴,저분자량 : 2
+   , : 1((gelatin,gelatin)[젤라틴,저분자량])
+   ,e : 1((gelatin,gelatine)[젤라틴,저분자량])
+#암,종양 : 2
+   , : 2((antitumor,antitumor)[항암,항종양])
+#라제,레이즈 : 2
+   ,e : 2((amylas,amylase)[아밀라제,아밀레이즈],(transferas,transferase)[트랜스퍼라제,트랜스퍼레이즈])
+#족사졸,조옥사졸 : 2
+   ,e : 2((benzoxazol,benzoxazole)[벤족사졸,벤조옥사졸])
+#,팩 : 2
+   , : 2((carton,carton)[카톤,카톤팩])
+#제,정제 : 2
+   ,ent : 2((deterg,detergent)[세제,세정제])
+#성,조화 : 2
+   ,ing : 2((structur,structuring)[구성,구조화])
+#,혈액종양 : 2
+   , : 1((malign,malign)[악성,악성혈액종양])
+   ,ant : 1((malign,malignant)[악성,악성혈액종양])
+#쇄,쇠된 : 2
+   ,ating : 1((attenu,attenuating)[감쇄,감쇠된])
+   ,ation : 1((attenu,attenuation)[감쇄,감쇠된])
+#들,가능 : 2
+   ,ion : 1((select,selection)[선택들,선택가능])
+   ,e : 1((programm,programme)[프로그램들,프로그램가능])
+#,육 : 2
+   , : 1((neuromuscular,neuromuscular)[신경근,신경근육])
+   i,y : 1((poultri,poultry)[가금,가금육])
+#,닝된 : 2
+   , : 2((clone,clone)[클론,클론닝된])
+#신호화,시그널링된다 : 2
+   ,ization : 2((signal,signalization)[신호화,시그널링된다])
+#,기력 : 2
+   ,ic : 1((electrostat,electrostatic)[정전,정전기력])
+   ,ically : 1((electrostat,electrostatically)[정전,정전기력])
+#파,광기 : 2
+   ,ized : 2((polar,polarized)[편파,편광기])
+#,블 : 2
+   ,er : 2((convert,converter)[컨버터,컨버터블])
+#고,집제 : 2
+   ,ation : 1((coagul,coagulation)[응고,응집제])
+   ,ated : 1((coagul,coagulated)[응고,응집제])
+#,머 : 2
+   , : 2((primer,primer)[프라이,프라이머])
+#분자,체분자 : 2
+   ,e : 2((biomolecul,biomolecule)[생분자,생체분자])
+#합,잡성 : 2
+   , : 1((complex,complex)[복합,복잡성])
+   ,ed : 1((complex,complexed)[복합,복잡성])
+#형,가능 : 2
+   ,able : 1((record,recordable)[기록형,기록가능])
+   ,e : 1((wearabl,wearable)[착용형,착용가능])
+#료,식물 : 2
+   , : 2((drink,drink)[음료,음식물])
+#,표시장치 : 2
+   , : 2((phytopathogen,phytopathogen)[액정,액정표시장치],(fpd,fpd)[평판,평판표시장치])
+#스,시브 : 2
+   ,e : 2((impuls,impulse)[임펄스,임펄시브])
+#히드로푸란,하이드로퓨란 : 2
+   , : 1((tetrahydrofuran,tetrahydrofuran)[테트라히드로푸란,테트라하이드로퓨란])
+   ,e : 1((tetrahydrofuran,tetrahydrofurane)[테트라히드로푸란,테트라하이드로퓨란])
+#,학장치 : 2
+   , : 1((optic,optic)[광,광학장치])
+   ,al : 1((optic,optical)[광,광학장치])
+#식식,시스템 : 2
+   , : 2((asynchronou,asynchronou)[식식,시스템],(umt,umt)[식식,시스템])
+#기,레이트 : 2
+   , : 2((alkyl,alkyl)[알킬기,알킬레이트],(acyl,acyl)[아실기,아실레이트])
+#디케이터,덱스를위한 : 2
+   ,ator : 2((indic,indicator)[인디케이터,인덱스를위한])
+#세징,시지를 : 2
+   ,ing : 2((messag,messaging)[메세징,메시지를])
+#을,인핸스먼트 : 2
+   ,ing : 1((enhanc,enhancing)[을,인핸스먼트])
+   ,ed : 1((enhanc,enhanced)[을,인핸스먼트])
+#팅,티드 : 2
+   ,ing : 1((vent,venting)[벤팅,벤티드])
+   e,ing : 1((gate,gating)[게이팅,게이티드])
+#턴,터닝 : 2
+   , : 2((pattern,pattern)[패턴,패터닝])
+#균성,생물제 : 2
+   ,al : 2((biocid,biocidal)[살균성,살생물제])
+#방지막,반사방지막 : 2
+   ,ive : 2((antireflect,antireflective)[방지막,반사방지막])
+#,발광 : 2
+   ,ent : 2((electroluminesc,electroluminescent)[전계,전계발광])
+#하는,시스템 : 2
+   ,ing : 1((control,controling)[제어하는,제어시스템])
+   ,ling : 1((control,controlling)[제어하는,제어시스템])
+#더,들들과 : 2
+   ,er : 2((record,recorder)[레코더,레코들들과])
+#험,사각조절 : 2
+   ,ence : 2((experi,experience)[경험,경사각조절])
+#형,자형 : 2
+   ,ing : 2((genotyp,genotyping)[유전형,유전자형])
+#형,적인 : 2
+   ,ive : 1((adapt,adaptive)[적응형,적응적인])
+   ,able : 1((adapt,adaptable)[적응형,적응적인])
+#자미드,즈아미드 : 2
+   ,e : 2((benzamid,benzamide)[벤자미드,벤즈아미드])
+#알레르겐,암호화하는 : 2
+   , : 2((allergen,allergen)[알레르겐,암호화하는])
+#서,스먼트 : 2
+   ,er : 2((enhanc,enhancer)[인핸서,인핸스먼트])
+#으,유압손실 : 2
+   ,e : 2((determin,determine)[으,유압손실])
+#파,광판 : 2
+   ,ized : 2((polar,polarized)[편파,편광판])
+#블,빌리티 : 2
+   ,y : 1((scalabl,scalably)[스케일러블,스케일러빌리티])
+   ,e : 1((scalabl,scalable)[스케일러블,스케일러빌리티])
+#럭,록킹 : 2
+   , : 2((clock,clock)[클럭,클록킹])
+#매,장고용 : 2
+   ,ant : 2((refriger,refrigerant)[냉매,냉장고용])
+#보니트릴,르보니트릴 : 2
+   ,e : 2((carbonitril,carbonitrile)[카보니트릴,카르보니트릴])
+#제,정의 : 2
+   ,ive : 2((definit,definitive)[제,정의])
+#,링함으로써 : 2
+   ,ed : 1((wobbl,wobbled)[워블,워블링함으로써])
+   ,e : 1((wobbl,wobble)[워블,워블링함으로써])
+#팰릿,팔레트 : 2
+   , : 2((pallet,pallet)[팰릿,팔레트])
+#렛,레트 : 2
+   , : 2((billet,billet)[빌렛,빌레트])
+#듀서,덕션된 : 2
+   ,er : 2((transduc,transducer)[트랜스듀서,트랜스덕션된])
+#,화기 : 2
+   , : 2((packet,packet)[패킷,패킷화기])
+#러젠,레르겐 : 2
+   , : 2((allergen,allergen)[알러젠,알레르겐])
+#균제,진균성 : 2
+   ,e : 2((fungicid,fungicide)[살균제,살진균성])
+#할,가능한 : 2
+   , : 1((ALS,ALS)[처리할,처리가능한])
+   ,able : 1((reclos,reclosable)[재밀폐할,재밀폐가능한])
+#성,한다 : 2
+   ,ent : 1((depend,dependent)[의존성,의존한다])
+   ,ency : 1((depend,dependency)[의존성,의존한다])
+#틴,티네이트 : 2
+   ,ic : 1((nicotin,nicotinic)[니코틴,니코티네이트])
+   ,e : 1((nicotin,nicotine)[니코틴,니코티네이트])
+#,링수 : 2
+   ,e : 2((sampl,sample)[샘플,샘플링수])
+#장치,재생기 : 2
+   ,ing : 1((reproduc,reproducing)[장치,재생기])
+   , : 1((player,player)[장치,재생기])
+#린,리닝 : 2
+   , : 2((screen,screen)[스크린,스크리닝])
+#,자들이 : 2
+   ,ating : 1((coordin,coordinating)[조정,조정자들이])
+   ,ation : 1((coordin,coordination)[조정,조정자들이])
+#,결합된 : 2
+   ,ing : 1((crosslink,crosslinking)[가교,가교결합된])
+   ,ed : 1((crosslink,crosslinked)[가교,가교결합된])
+#러,한다 : 2
+   ,er : 2((compil,compiler)[컴파일러,컴파일한다])
+#식,가능한 : 2
+   , : 1((erect,erect)[직립식,직립가능한])
+   ,able : 1((reclos,reclosable)[재밀폐식,재밀폐가능한])
+#도,명기구 : 2
+   ,ance : 1((illumin,illuminance)[조도,조명기구])
+   ,ant : 1((illumin,illuminant)[조도,조명기구])
+#팩,패킹 : 2
+   , : 2((pack,pack)[팩,패킹])
+#,하여도 : 2
+   ,ion : 2((fluctuat,fluctuation)[변동,변동하여도])
+#감쇠,각형강관부 : 2
+   ,ing : 1((damp,damping)[감쇠,각형강관부])
+   ,ed : 1((damp,damped)[감쇠,각형강관부])
+#어레,배열기 : 2
+   , : 2((microarray,microarray)[마이크로어레,마이크로배열기])
+#성,방법 : 2
+   ,ibility : 1((respons,responsibility)[응답성,응답방법])
+   ,ity : 1((mobil,mobility)[이동성,이동방법])
+#입,록가능한 : 2
+   ,ing : 1((rewrit,rewriting)[재기입,재기록가능한])
+   ,e : 1((rewrit,rewrite)[재기입,재기록가능한])
+#싱,서블 : 2
+   ,ing : 1((address,addressing)[어드레싱,어드레서블])
+   ,ed : 1((address,addressed)[어드레싱,어드레서블])
+#산,성물 : 2
+   ,ing : 1((product,producting)[생산,생성물])
+   ,ion : 1((product,production)[생산,생성물])
+#한,계형 : 2
+   ,ing : 1((relat,relating)[관한,관계형])
+   ,e : 1((relat,relate)[관한,관계형])
+#,산물 : 2
+   ,ic : 2((metabolit,metabolitic)[대사,대사산물])
+#접,쇄적 : 2
+   ,ation : 1((concaten,concatenation)[연접,연쇄적])
+   ,ated : 1((concaten,concatenated)[연접,연쇄적])
+#,측 : 2
+   , : 2((drunken,drunken)[접지전극,접지전극측],(FBG,FBG)[접지전극,접지전극측])
+#동,세하게는 : 2
+   ,ation : 1((autom,automation)[자동,자세하게는])
+   ,ated : 1((autom,automated)[자동,자세하게는])
+#음파,고집적 : 2
+   , : 1((sonic,sonic)[초음파,초고집적])
+   ,ation : 1((sonic,sonication)[초음파,초고집적])
+#,키트 : 2
+   ,ic : 2((diagnost,diagnostic)[진단,진단키트])
+#소,산수 : 2
+   , : 2((carbon,carbon)[탄소,탄산수])
+#,학습 : 2
+   ,ative : 1((collabor,collaborative)[협력,협력학습])
+   ,ation : 1((collabor,collaboration)[협력,협력학습])
+#기,지된 : 2
+   ,ing : 1((branch,branching)[분기,분지된])
+   , : 1((branch,branch)[분기,분지된])
+#압타머,아프타머 : 2
+   ,er : 2((aptam,aptamer)[압타머,아프타머])
+#히드,하이드 : 2
+   , : 2((dihydro,dihydro)[디히드,디하이드],(tetrahydro,tetrahydro)[테트라히드,테트라하이드])
+#,말 : 2
+   ,ing : 2((greet,greeting)[인사,인사말])
+#맷된,르메이트 : 2
+   ,ted : 2((format,formatted)[포맷된,포르메이트])
+#전단,정보단말기 : 2
+   ,ing : 1((shear,shearing)[전단,정보단말기])
+   , : 1((shear,shear)[전단,정보단말기])
+#,도금 : 2
+   ,ating : 1((electropl,electroplating)[전기,전기도금])
+   ,ated : 1((electropl,electroplated)[전기,전기도금])
+#,잉된 : 2
+   , : 2((key,key)[키,키잉된])
+#접착,제작하였으나 : 2
+   ,ing : 1((glu,gluing)[접착,제작하였으나])
+   ,ed : 1((glu,glued)[접착,제작하였으나])
+#체,화합물 : 2
+   , : 1((complex,complex)[착체,착화합물])
+   ,e : 1((complex,complexe)[착체,착화합물])
+#민,미네이트 : 2
+   , : 2((lamin,lamin)[라민,라미네이트])
+#,성과 : 2
+   ,ive : 1((success,successive)[연속,연속성과])
+   ,ity : 1((anonym,anonymity)[익명,익명성과])
+#,기반 : 2
+   , : 2((state,state)[상태,상태기반])
+#율,들의 : 2
+   ,ance : 1((reflect,reflectance)[반사율,반사들의])
+   ,ivity : 1((reflect,reflectivity)[반사율,반사들의])
+#화,물질 : 2
+   ,ating : 1((activ,activating)[활성화,활성물질])
+   ,ation : 1((activ,activation)[활성화,활성물질])
+#스,싱된 : 2
+   ,ed : 1((deinterlac,deinterlaced)[디인터레이스,디인터레이싱된])
+   ,e : 1((deinterlac,deinterlace)[디인터레이스,디인터레이싱된])
+#딩,디드 : 2
+   ,ding : 2((embed,embedding)[임베딩,임베디드])
+#트,팅시 : 2
+   , : 2((port,port)[포트,포팅시])
+#도,들에 : 2
+   ,ence : 2((prefer,preference)[선호도,선호들에])
+#캔,캐닝 : 2
+   , : 1((scan,scan)[스캔,스캐닝])
+   ,ning : 1((scan,scanning)[스캔,스캐닝])
+#옵셋,오프셋 : 2
+   , : 2((offset,offset)[옵셋,오프셋])
+#,수지 : 2
+   , : 2((fluororesin,fluororesin)[불소,불소수지])
+#드,더블 : 2
+   ,ing : 1((download,downloading)[다운로드,다운로더블])
+   , : 1((download,download)[다운로드,다운로더블])
+#선,량제 : 2
+   ,ement : 2((improv,improvement)[개선,개량제])
+#홀,황화물 : 2
+   ,ization : 2((sulfid,sulfidization)[홀,황화물])
+#,상태 : 2
+   , : 1((equilibrium,equilibrium)[평형,평형상태])
+   ,e : 1((pathologi,pathologie)[병리,병리상태])
+#팅,트된 : 2
+   ,ing : 1((graft,grafting)[그래프팅,그래프트된])
+   e,ing : 1((gate,gating)[게이팅,게이트된])
+#션,턴스 : 2
+   ,ion : 2((induct,induction)[인덕션,인덕턴스])
+#제,하는 : 2
+   ,ator : 2((initi,initiator)[개시제,개시하는])
+#러,링하여 : 2
+   , : 2((scaler,scaler)[스케일러,스케일링하여])
+#입,이핑 : 2
+   , : 1((type,type)[타입,타이핑])
+   ,d : 1((type,typed)[타입,타이핑])
+#화기,록되지 : 2
+   ,izer : 2((equal,equalizer)[등화기,등록되지])
+#속사졸린,소옥사졸린 : 2
+   ,e : 2((isoxazolin,isoxazoline)[이속사졸린,이소옥사졸린])
+#방출,발광형 : 2
+   ,ion : 2((emiss,emission)[방출,발광형])
+#,신호 : 2
+   ,ment : 1((acknowledg,acknowledgment)[응답,응답신호])
+   ,ement : 1((acknowledg,acknowledgement)[응답,응답신호])
+#균,생제 : 2
+   ,ic : 2((antibiot,antibiotic)[항균,항생제])
+#절,정가능한 : 2
+   ,ment : 1((adjust,adjustment)[조절,조정가능한])
+   ,able : 1((adjust,adjustable)[조절,조정가능한])
+#,인플루엔자 : 2
+   , : 2((avian,avian)[조류,조류인플루엔자])
+#,포 : 2
+   , : 2((nonwoven,nonwoven)[부직,부직포])
+#,분해효소 : 2
+   , : 1((paragonimu,paragonimu)[단백,단백분해효소])
+   ,ic : 1((fibrinolyt,fibrinolytic)[혈전,혈전분해효소])
+#간세포,감지한다 : 2
+   ,e : 2((hepatocyt,hepatocyte)[간세포,감지한다])
+#본,복합소재 : 2
+   , : 2((end,end)[본,복합소재])
+#탭,태핑 : 2
+   , : 2((tap,tap)[탭,태핑])
+#,재료 : 2
+   , : 1((Fe3O4,Fe3O4)[전극,전극재료])
+   ,e : 1((composit,composite)[복합,복합재료])
+#렛,릿팅 : 2
+   , : 2((pellet,pellet)[펠렛,펠릿팅])
+#식물,온주입설비 : 2
+   , : 2((implant,implant)[이식물,이온주입설비])
+#적,체방울 : 2
+   , : 2((droplet,droplet)[액적,액체방울])
+#한,하는 : 2
+   , : 2((jstof,jstof)[사용한,사용하는],(adenosyl,adenosyl)[건조한,건조하는])
+#동,장고용 : 2
+   ,ating : 1((refriger,refrigerating)[냉동,냉장고용])
+   ,ation : 1((refriger,refrigeration)[냉동,냉장고용])
+#,중 : 2
+   ,e : 1((absenc,absence)[부재,부재중])
+   i,y : 1((busi,busy)[통화,통화중])
+#프리,플라보노이드 : 2
+   , : 2((flavonoid,flavonoid)[프리,플라보노이드])
+#적응성,전송된다 : 2
+   ,al : 1((lysosom,lysosomal)[적응성,전송된다])
+   ,e : 1((lysosom,lysosome)[적응성,전송된다])
+#물,화합물 : 2
+   , : 1((complex,complex)[착물,착화합물])
+   ,e : 1((complex,complexe)[착물,착화합물])
+#단,데인 : 2
+   , : 1((indan,indan)[인단,인데인])
+   ,e : 1((indan,indane)[인단,인데인])
+#지,식방법 : 2
+   ,ive : 1((cognit,cognitive)[인지,인식방법])
+   ,ion : 1((cognit,cognition)[인지,인식방법])
+#된,하여 : 2
+   ,ed : 2((compil,compiled)[컴파일된,컴파일하여],(retriev,retrieved)[검색된,검색하여])
+#형,분석칩 : 2
+   ,ing : 1((genotyp,genotyping)[유전자형,유전자분석칩])
+   ,e : 1((genotyp,genotype)[유전자형,유전자분석칩])
+#록,럭드 : 2
+   , : 1((clock,clock)[클록,클럭드])
+   ,ed : 1((clock,clocked)[클록,클럭드])
+#,통합 : 2
+   ,e : 2((middlewar,middleware)[미들웨어,미들웨어통합])
+#체,재료 : 2
+   ,e : 2((composit,composite)[복합체,복합재료])
+#,바이러스 : 2
+   , : 1((coronaviru,coronaviru)[코로나,코로나바이러스])
+   ,e : 1((herp,herpe)[헤르페스,헤르페스바이러스])
+#,되나 : 2
+   ,ation : 1((denatur,denaturation)[변성,변성되나])
+   ,ed : 1((denatur,denatured)[변성,변성되나])
+#업,동적 : 2
+   ,ative : 1((collabor,collaborative)[협업,협동적])
+   ,ation : 1((collabor,collaboration)[협업,협동적])
+#,관 : 2
+   , : 1((carcinogen,carcinogen)[오수,오수관])
+   ,al : 1((gastrointestin,gastrointestinal)[위장,위장관])
+#인,이너 : 2
+   , : 2((design,design)[디자인,디자이너],(align,align)[얼라인,얼라이너])
+#,랜 : 2
+   , : 2((wlan,wlan)[무선,무선랜])
+#생,전기 : 2
+   ,ing : 1((generat,generating)[발생,발전기])
+   ,ion : 1((generat,generation)[발생,발전기])
+#,사진 : 2
+   , : 1((radiograph,radiograph)[방사선,방사선사진])
+   ,ic : 1((radiograph,radiographic)[방사선,방사선사진])
+#,분석 : 2
+   ,ative : 1((quantit,quantitative)[정량,정량분석])
+   ,ation : 1((quantit,quantitation)[정량,정량분석])
+#,물용 : 2
+   ,lation : 1((distil,distillation)[증류,증류물용])
+   ,lative : 1((distil,distillative)[증류,증류물용])
+#,기들의 : 2
+   ,ation : 1((correl,correlation)[상관,상관기들의])
+   ,ated : 1((correl,correlated)[상관,상관기들의])
+#경,형체 : 2
+   ,ication : 2((modif,modification)[변경,변형체])
+#선단면,세퍼레이터 : 2
+   ,atively : 2((separ,separatively)[선단면,세퍼레이터])
+#도,명장치 : 2
+   ,ance : 1((illumin,illuminance)[조도,조명장치])
+   ,ant : 1((illumin,illuminant)[조도,조명장치])
+#형,상화 : 2
+   ,al : 1((spheroid,spheroidal)[구형,구상화])
+   ,ized : 1((spheroid,spheroidized)[구형,구상화])
+#과,질환 : 2
+   ,y : 1((dermatolog,dermatology)[피부과,피부질환])
+   ,ical : 1((dermatolog,dermatological)[피부과,피부질환])
+#,정보 : 2
+   ,ing : 1((see,seeing)[시청,시청정보])
+   , : 1((teleweb,teleweb)[텔레웹,텔레웹정보])
+#,강판 : 2
+   ,ized : 2((galvan,galvanized)[용융아연도금,용융아연도금강판])
+#체,장치 : 2
+   ,er : 1((transport,transporter)[운반체,운반장치])
+   ,y : 1((assembl,assembly)[조립체,조립장치])
+#차,류물 : 2
+   ,al : 2((residu,residual)[잔차,잔류물])
+#한,련적이고 : 2
+   ,ing : 1((relat,relating)[관한,관련적이고])
+   ,e : 1((relat,relate)[관한,관련적이고])
+#,단말기 : 2
+   ,ication : 1((comun,comunication)[통신,통신단말기])
+   ,e : 1((radiotelephon,radiotelephone)[무선,무선단말기])
+#지,징된 : 2
+   ,e : 2((packag,package)[패키지,패키징된])
+#화,산수 : 2
+   ,ization : 1((carbon,carbonization)[탄화,탄산수])
+   ,izing : 1((carbon,carbonizing)[탄화,탄산수])
+#충제,해충제 : 2
+   ,al : 1((pesticid,pesticidal)[살충제,살해충제])
+   ,e : 1((pesticid,pesticide)[살충제,살해충제])
+#록,로킹 : 2
+   , : 2((deblock,deblock)[디블록,디블로킹])
+#반복,방향성 : 2
+   ,ative : 1((iter,iterative)[반복,방향성])
+   ,ation : 1((iter,iteration)[반복,방향성])
+#된,가능 : 2
+   ,ed : 2((record,recorded)[기록된,기록가능],(select,selected)[선택된,선택가능])
+#,로사이클 : 2
+   ,e : 2((heterocycl,heterocycle)[헤테,헤테로사이클])
+#,종양 : 2
+   , : 1((malign,malign)[악성,악성종양])
+   ,ant : 1((malign,malignant)[악성,악성종양])
+#애노드,아노다이징 : 2
+   ,e : 2((anod,anode)[애노드,아노다이징])
+#제,수기 : 2
+   ,ed : 1((purifi,purified)[정제,정수기])
+   i,ying : 1((purifi,purifying)[정제,정수기])
+#초,조류 : 2
+   ,ed : 2((seawe,seaweed)[해초,해조류])
+#,라히드로푸란 : 2
+   , : 2((polytetrahydrofuran,polytetrahydrofuran)[폴리테트,폴리테트라히드로푸란])
+#들,조건 : 2
+   , : 2((constraint,constraint)[제약들,제약조건])
+#을,응집 : 2
+   ,ation : 2((floccul,flocculation)[을,응집])
+#,분리 : 2
+   ,al : 1((centrifug,centrifugal)[원심,원심분리])
+   ,e : 1((centrifug,centrifuge)[원심,원심분리])
+#핑,프들을 : 2
+   ,ing : 1((stamp,stamping)[스탬핑,스탬프들을])
+   ,ed : 1((stamp,stamped)[스탬핑,스탬프들을])
+#업,력학습 : 2
+   ,ative : 1((collabor,collaborative)[협업,협력학습])
+   ,ation : 1((collabor,collaboration)[협업,협력학습])
+#용,과용 : 2
+   ,ical : 2((dermatolog,dermatological)[피부용,피부과용])
+#제거,정화되고 : 2
+   ,ating : 1((elimin,eliminating)[제거,정화되고])
+   ,ation : 1((elimin,elimination)[제거,정화되고])
+#,측정 : 2
+   ,ization : 1((local,localization)[위치,위치측정])
+   ,izing : 1((local,localizing)[위치,위치측정])
+#믹,미체 : 2
+   ,ic : 2((racem,racemic)[라세믹,라세미체])
+#학적,과학적 : 2
+   ,ic : 1((dermatolog,dermatologic)[피부학적,피부과학적])
+   ,ical : 1((dermatolog,dermatological)[피부학적,피부과학적])
+#감염,개시하였다 : 2
+   ,ion : 2((infect,infection)[감염,개시하였다])
+#철자,청량감 : 2
+   ,ing : 1((spell,spelling)[철자,청량감])
+   , : 1((spell,spell)[철자,청량감])
+#벌루션,볼루셔널 : 2
+   ,ional : 1((convolut,convolutional)[컨벌루션,컨볼루셔널])
+   ,ion : 1((convolut,convolution)[컨벌루션,컨볼루셔널])
+#능성,분화능 : 2
+   ,ent : 2((multipot,multipotent)[다능성,다분화능],(pluripot,pluripotent)[다능성,다분화능])
+#실화,시화방법 : 2
+   ,ation : 1((alkoxyl,alkoxylation)[알콕실화,알콕시화방법])
+   ,ated : 1((alkoxyl,alkoxylated)[알콕실화,알콕시화방법])
+#칩,치핑 : 2
+   , : 2((chip,chip)[칩,치핑])
+#각각,가산기 : 2
+   , : 2((adder,adder)[각각,가산기])
+#자,수분해 : 2
+   , : 2((factor,factor)[인자,인수분해])
+#,뒤 : 2
+   ,l : 2((firewal,firewall)[방화벽,방화벽뒤])
+#,c : 2
+   , : 2((TTSC,TTSC)[tts,ttsc],(bunker,bunker)[벙커,벙커c])
+#세구,소구체 : 2
+   ,e : 2((microspher,microsphere)[미세구,미소구체])
+#전,저닝 : 2
+   , : 2((version,version)[버전,버저닝])
+#용한,동통신 : 2
+   ,ication : 1((telecommun,telecommunication)[이용한,이동통신])
+   , : 1((mobil,mobil)[이용한,이동통신])
+#기,발기 : 2
+   , : 2((vapor,vapor)[증기,증발기])
+#방지막,반사방지 : 2
+   ,ive : 2((antireflect,antireflective)[방지막,반사방지])
+#테,렌즈 : 2
+   ,e : 2((spectacl,spectacle)[안경테,안경렌즈])
+#맷팅,르메이트 : 2
+   ,ting : 2((format,formatting)[포맷팅,포르메이트])
+#인사말,이동선반 : 2
+   ,ing : 2((greet,greeting)[인사말,이동선반])
+#,포머 : 2
+   ,er : 2((transform,transformer)[트랜스,트랜스포머])
+#제,정력 : 2
+   ,ent : 2((deterg,detergent)[세제,세정력])
+#,기능 : 2
+   ,ing : 1((diall,dialling)[다이얼링,다이얼링기능])
+   ,ation : 1((sanit,sanitation)[위생,위생기능])
+#가,개선된 : 2
+   ,ed : 2((improv,improved)[가,개선된])
+#치,칭된 : 2
+   , : 1((clutch,clutch)[클러치,클러칭된])
+   ,e : 1((clutch,clutche)[클러치,클러칭된])
+#부분,분획물 : 2
+   ,al : 2((fraction,fractional)[부분,분획물])
+#송신,전송들의 : 2
+   ,ion : 2((retransmiss,retransmission)[재송신,재전송들의])
+#라프트,래프트된 : 2
+   , : 1((graft,graft)[그라프트,그래프트된])
+   ,ed : 1((graft,grafted)[그라프트,그래프트된])
+#착,기증착물 : 2
+   ,able : 1((electrodeposit,electrodepositable)[전착,전기증착물])
+   ,ion : 1((electrodeposit,electrodeposition)[전착,전기증착물])
+#,시 : 2
+   ,e : 1((synthes,synthese)[합성,합성시])
+   ,izing : 1((synthes,synthesizing)[합성,합성시])
+#알림,안료류 : 2
+   ,ing : 1((notic,noticing)[알림,안료류])
+   ,e : 1((notic,notice)[알림,안료류])
+#화,록되지 : 2
+   ,ization : 1((equal,equalization)[등화,등록되지])
+   ,izing : 1((equal,equalizing)[등화,등록되지])
+#,조성물 : 2
+   ,ing : 1((bleach,bleaching)[표백,표백조성물])
+   , : 1((bleach,bleach)[표백,표백조성물])
+#적,리학적 : 2
+   ,ic : 1((patholog,pathologic)[병적,병리학적])
+   ,ical : 1((patholog,pathological)[병적,병리학적])
+#릿,레타이저 : 2
+   , : 2((pellet,pellet)[펠릿,펠레타이저])
+
+### NOW THE JOSA suffixes...
+#,가 : 0 /JOSA / bp
+#,같이 : 0 /JOSA / bp
+#,같이나 : 0 /JOSA / bp
+#,같이는 : 0 /JOSA / bp
+#,같이는야 : 0 /JOSA / bp
+#,같이는커녕 : 0 /JOSA / bp
+#,같이도 : 0 /JOSA / bp
+#,같이만 : 0 /JOSA / bp
+#,같인 : 0 /JOSA / bp
+#,고 : 0 /JOSA / bp
+#,과 : 0 /JOSA / bp
+#,과는 : 0 /JOSA / bp
+#,과는커녕 : 0 /JOSA / bp
+#,과도 : 0 /JOSA / bp
+#,과를 : 0 /JOSA / bp
+#,과만 : 0 /JOSA / bp
+#,과만은 : 0 /JOSA / bp
+#,과의 : 0 /JOSA / bp
+#,까지 : 0 /JOSA / bp
+#,까지가 : 0 /JOSA / bp
+#,까지나 : 0 /JOSA / bp
+#,까지나마 : 0 /JOSA / bp
+#,까지는 : 0 /JOSA / bp
+#,까지는야 : 0 /JOSA / bp
+#,까지는커녕 : 0 /JOSA / bp
+#,까지도 : 0 /JOSA / bp
+#,까지든지 : 0 /JOSA / bp
+#,까지라고 : 0 /JOSA / bp
+#,까지라고는 : 0 /JOSA / bp
+#,까지라고만은 : 0 /JOSA / bp
+#,까지라도 : 0 /JOSA / bp
+#,까지로 : 0 /JOSA / bp
+#,까지로나 : 0 /JOSA / bp
+#,까지로나마 : 0 /JOSA / bp
+#,까지로는 : 0 /JOSA / bp
+#,까지로는야 : 0 /JOSA / bp
+#,까지로는커녕 : 0 /JOSA / bp
+#,까지로도 : 0 /JOSA / bp
+#,까지로든 : 0 /JOSA / bp
+#,까지로든지 : 0 /JOSA / bp
+#,까지로라서 : 0 /JOSA / bp
+#,까지로라야 : 0 /JOSA / bp
+#,까지로만 : 0 /JOSA / bp
+#,까지로만은 : 0 /JOSA / bp
+#,까지로서 : 0 /JOSA / bp
+#,까지로써 : 0 /JOSA / bp
+#,까지를 : 0 /JOSA / bp
+#,까지만 : 0 /JOSA / bp
+#,까지만은 : 0 /JOSA / bp
+#,까지만이라도 : 0 /JOSA / bp
+#,까지야 : 0 /JOSA / bp
+#,까지야말로 : 0 /JOSA / bp
+#,까지에 : 0 /JOSA / bp
+#,까지와 : 0 /JOSA / bp
+#,까지의 : 0 /JOSA / bp
+#,까지조차 : 0 /JOSA / bp
+#,까지조차도 : 0 /JOSA / bp
+#,까진 : 0 /JOSA / bp
+#,께 : 0 /JOSA / bp
+#,께서 : 0 /JOSA / bp
+#,께옵서 : 0 /JOSA / bp
+#,께옵서는 : 0 /JOSA / bp
+#,께옵서는야 : 0 /JOSA / bp
+#,께옵서는커녕 : 0 /JOSA / bp
+#,께옵서도 : 0 /JOSA / bp
+#,께옵서만 : 0 /JOSA / bp
+#,께옵서만은 : 0 /JOSA / bp
+#,께옵서만이 : 0 /JOSA / bp
+#,께옵선 : 0 /JOSA / bp
+#,끼리 : 0 /JOSA / bp
+#,나 : 0 /JOSA / bp
+#,나마 : 0 /JOSA / bp
+#,는 : 0 /JOSA / bp
+#,는야 : 0 /JOSA / bp
+#,는커녕 : 0 /JOSA / bp
+#,니 : 0 /JOSA / bp
+#,다 : 0 /JOSA / bp
+#,다가 : 0 /JOSA / bp
+#,다가는 : 0 /JOSA / bp
+#,다가도 : 0 /JOSA / bp
+#,다간 : 0 /JOSA / bp
+#,대로 : 0 /JOSA / bp
+#,대로가 : 0 /JOSA / bp
+#,대로는 : 0 /JOSA / bp
+#,대로의 : 0 /JOSA / bp
+#,더러 : 0 /JOSA / bp
+#,더러는 : 0 /JOSA / bp
+#,더러만은 : 0 /JOSA / bp
+#,도 : 0 /JOSA / bp
+#,든 : 0 /JOSA / bp
+#,든지 : 0 /JOSA / bp
+#,라 : 0 /JOSA / bp
+#,라고 : 0 /JOSA / bp
+#,라고까지 : 0 /JOSA / bp
+#,라고까지는 : 0 /JOSA / bp
+#,라고는 : 0 /JOSA / bp
+#,라고만은 : 0 /JOSA / bp
+#,라곤 : 0 /JOSA / bp
+#,라는 : 0 /JOSA / bp
+#,라도 : 0 /JOSA / bp
+#,라든지 : 0 /JOSA / bp
+#,라서 : 0 /JOSA / bp
+#,라야 : 0 /JOSA / bp
+#,라야만 : 0 /JOSA / bp
+#,라오 : 0 /JOSA / bp
+#,라지 : 0 /JOSA / bp
+#,라지요 : 0 /JOSA / bp
+#,랑 : 0 /JOSA / bp
+#,랑은 : 0 /JOSA / bp
+#,로 : 0 /JOSA / bp
+#,로고 : 0 /JOSA / bp
+#,로구나 : 0 /JOSA / bp
+#,로구려 : 0 /JOSA / bp
+#,로구먼 : 0 /JOSA / bp
+#,로군 : 0 /JOSA / bp
+#,로군요 : 0 /JOSA / bp
+#,로는 : 0 /JOSA / bp
+#,로다 : 0 /JOSA / bp
+#,로되 : 0 /JOSA / bp
+#,로서 : 0 /JOSA / bp
+#,로서는 : 0 /JOSA / bp
+#,로세 : 0 /JOSA / bp
+#,를 : 0 /JOSA / bp
+#,마다 : 0 /JOSA / bp
+#,마다라도 : 0 /JOSA / bp
+#,마다를 : 0 /JOSA / bp
+#,마다에게 : 0 /JOSA / bp
+#,마다의 : 0 /JOSA / bp
+#,마따나 : 0 /JOSA / bp
+#,마저 : 0 /JOSA / bp
+#,마저나마라도 : 0 /JOSA / bp
+#,마저도 : 0 /JOSA / bp
+#,마저라도 : 0 /JOSA / bp
+#,마저야 : 0 /JOSA / bp
+#,만 : 0 /JOSA / bp
+#,만도 : 0 /JOSA / bp
+#,만에 : 0 /JOSA / bp
+#,만으로 : 0 /JOSA / bp
+#,만으로는 : 0 /JOSA / bp
+#,만으로도 : 0 /JOSA / bp
+#,만으로라도 : 0 /JOSA / bp
+#,만으로써 : 0 /JOSA / bp
+#,만으론 : 0 /JOSA / bp
+#,만은 : 0 /JOSA / bp
+#,만을 : 0 /JOSA / bp
+#,만의 : 0 /JOSA / bp
+#,만이 : 0 /JOSA / bp
+#,만이라도 : 0 /JOSA / bp
+#,만치 : 0 /JOSA / bp
+#,만큼 : 0 /JOSA / bp
+#,만큼도 : 0 /JOSA / bp
+#,만큼만 : 0 /JOSA / bp
+#,만큼씩 : 0 /JOSA / bp
+#,만큼은 : 0 /JOSA / bp
+#,만큼의 : 0 /JOSA / bp
+#,만큼이나 : 0 /JOSA / bp
+#,만큼이라도 : 0 /JOSA / bp
+#,만큼이야 : 0 /JOSA / bp
+#,말고 : 0 /JOSA / bp
+#,말고는 : 0 /JOSA / bp
+#,말고도 : 0 /JOSA / bp
+#,며 : 0 /JOSA / bp
+#,밖에 : 0 /JOSA / bp
+#,밖에는 : 0 /JOSA / bp
+#,밖에도 : 0 /JOSA / bp
+#,밖엔 : 0 /JOSA / bp
+#,보고 : 0 /JOSA / bp
+#,보고는 : 0 /JOSA / bp
+#,보고도 : 0 /JOSA / bp
+#,보고만 : 0 /JOSA / bp
+#,보고만은 : 0 /JOSA / bp
+#,보고만이라도 : 0 /JOSA / bp
+#,보곤 : 0 /JOSA / bp
+#,보다 : 0 /JOSA / bp
+#,보다는 : 0 /JOSA / bp
+#,보다는야 : 0 /JOSA / bp
+#,보다도 : 0 /JOSA / bp
+#,보다만 : 0 /JOSA / bp
+#,보다야 : 0 /JOSA / bp
+#,보단 : 0 /JOSA / bp
+#,부터 : 0 /JOSA / bp
+#,부터가 : 0 /JOSA / bp
+#,부터나마 : 0 /JOSA / bp
+#,부터는 : 0 /JOSA / bp
+#,부터도 : 0 /JOSA / bp
+#,부터라도 : 0 /JOSA / bp
+#,부터를 : 0 /JOSA / bp
+#,부터만 : 0 /JOSA / bp
+#,부터만은 : 0 /JOSA / bp
+#,부터서는 : 0 /JOSA / bp
+#,부터야말로 : 0 /JOSA / bp
+#,부터의 : 0 /JOSA / bp
+#,부턴 : 0 /JOSA / bp
+#,아 : 0 /JOSA / bp
+#,야 : 0 /JOSA / bp
+#,야말로 : 0 /JOSA / bp
+#,에 : 0 /JOSA / bp
+#,에게 : 0 /JOSA / bp
+#,에게가 : 0 /JOSA / bp
+#,에게까지 : 0 /JOSA / bp
+#,에게까지는 : 0 /JOSA / bp
+#,에게까지는커녕 : 0 /JOSA / bp
+#,에게까지도 : 0 /JOSA / bp
+#,에게까지만 : 0 /JOSA / bp
+#,에게까지만은 : 0 /JOSA / bp
+#,에게나 : 0 /JOSA / bp
+#,에게는 : 0 /JOSA / bp
+#,에게는커녕 : 0 /JOSA / bp
+#,에게다 : 0 /JOSA / bp
+#,에게도 : 0 /JOSA / bp
+#,에게든 : 0 /JOSA / bp
+#,에게든지 : 0 /JOSA / bp
+#,에게라도 : 0 /JOSA / bp
+#,에게로 : 0 /JOSA / bp
+#,에게로는 : 0 /JOSA / bp
+#,에게마다 : 0 /JOSA / bp
+#,에게만 : 0 /JOSA / bp
+#,에게며 : 0 /JOSA / bp
+#,에게보다 : 0 /JOSA / bp
+#,에게보다는 : 0 /JOSA / bp
+#,에게부터 : 0 /JOSA / bp
+#,에게서 : 0 /JOSA / bp
+#,에게서가 : 0 /JOSA / bp
+#,에게서까지 : 0 /JOSA / bp
+#,에게서나 : 0 /JOSA / bp
+#,에게서는 : 0 /JOSA / bp
+#,에게서도 : 0 /JOSA / bp
+#,에게서든지 : 0 /JOSA / bp
+#,에게서라도 : 0 /JOSA / bp
+#,에게서만 : 0 /JOSA / bp
+#,에게서보다 : 0 /JOSA / bp
+#,에게서부터 : 0 /JOSA / bp
+#,에게서야 : 0 /JOSA / bp
+#,에게서와 : 0 /JOSA / bp
+#,에게서의 : 0 /JOSA / bp
+#,에게서처럼 : 0 /JOSA / bp
+#,에게선 : 0 /JOSA / bp
+#,에게야 : 0 /JOSA / bp
+#,에게와 : 0 /JOSA / bp
+#,에게의 : 0 /JOSA / bp
+#,에게처럼 : 0 /JOSA / bp
+#,에게하고 : 0 /JOSA / bp
+#,에게하며 : 0 /JOSA / bp
+#,에겐 : 0 /JOSA / bp
+#,에까지 : 0 /JOSA / bp
+#,에까지는 : 0 /JOSA / bp
+#,에까지도 : 0 /JOSA / bp
+#,에까지든지 : 0 /JOSA / bp
+#,에까지라도 : 0 /JOSA / bp
+#,에까지만 : 0 /JOSA / bp
+#,에까지만은 : 0 /JOSA / bp
+#,에까진 : 0 /JOSA / bp
+#,에나 : 0 /JOSA / bp
+#,에는 : 0 /JOSA / bp
+#,에다 : 0 /JOSA / bp
+#,에다가 : 0 /JOSA / bp
+#,에다가는 : 0 /JOSA / bp
+#,에다간 : 0 /JOSA / bp
+#,에도 : 0 /JOSA / bp
+#,에든 : 0 /JOSA / bp
+#,에든지 : 0 /JOSA / bp
+#,에라도 : 0 /JOSA / bp
+#,에로 : 0 /JOSA / bp
+#,에로의 : 0 /JOSA / bp
+#,에를 : 0 /JOSA / bp
+#,에만 : 0 /JOSA / bp
+#,에만은 : 0 /JOSA / bp
+#,에부터 : 0 /JOSA / bp
+#,에서 : 0 /JOSA / bp
+#,에서가 : 0 /JOSA / bp
+#,에서까지 : 0 /JOSA / bp
+#,에서까지도 : 0 /JOSA / bp
+#,에서나 : 0 /JOSA / bp
+#,에서나마 : 0 /JOSA / bp
+#,에서는 : 0 /JOSA / bp
+#,에서도 : 0 /JOSA / bp
+#,에서든지 : 0 /JOSA / bp
+#,에서라도 : 0 /JOSA / bp
+#,에서만 : 0 /JOSA / bp
+#,에서만도 : 0 /JOSA / bp
+#,에서만이 : 0 /JOSA / bp
+#,에서만큼 : 0 /JOSA / bp
+#,에서만큼은 : 0 /JOSA / bp
+#,에서보다 : 0 /JOSA / bp
+#,에서부터 : 0 /JOSA / bp
+#,에서부터는 : 0 /JOSA / bp
+#,에서부터도 : 0 /JOSA / bp
+#,에서부터라도 : 0 /JOSA / bp
+#,에서부터만 : 0 /JOSA / bp
+#,에서부터만은 : 0 /JOSA / bp
+#,에서야 : 0 /JOSA / bp
+#,에서와 : 0 /JOSA / bp
+#,에서와는 : 0 /JOSA / bp
+#,에서와의 : 0 /JOSA / bp
+#,에서의 : 0 /JOSA / bp
+#,에서조차 : 0 /JOSA / bp
+#,에서처럼 : 0 /JOSA / bp
+#,에선 : 0 /JOSA / bp
+#,에야 : 0 /JOSA / bp
+#,에의 : 0 /JOSA / bp
+#,에조차도 : 0 /JOSA / bp
+#,에하며 : 0 /JOSA / bp
+#,엔 : 0 /JOSA / bp
+#,엔들 : 0 /JOSA / bp
+#,엘 : 0 /JOSA / bp
+#,엘랑 : 0 /JOSA / bp
+#,여 : 0 /JOSA / bp
+#,와 : 0 /JOSA / bp
+#,와는 : 0 /JOSA / bp
+#,와도 : 0 /JOSA / bp
+#,와라도 : 0 /JOSA / bp
+#,와를 : 0 /JOSA / bp
+#,와만 : 0 /JOSA / bp
+#,와만은 : 0 /JOSA / bp
+#,와에만 : 0 /JOSA / bp
+#,와의 : 0 /JOSA / bp
+#,와처럼 : 0 /JOSA / bp
+#,와한테 : 0 /JOSA / bp
+#,요 : 0 /JOSA / bp
+#,용 : 0 /JOSA / bp
+#,으로 : 0 /JOSA / bp
+#,으로가 : 0 /JOSA / bp
+#,으로까지 : 0 /JOSA / bp
+#,으로까지만은 : 0 /JOSA / bp
+#,으로나 : 0 /JOSA / bp
+#,으로나든지 : 0 /JOSA / bp
+#,으로는 : 0 /JOSA / bp
+#,으로도 : 0 /JOSA / bp
+#,으로든지 : 0 /JOSA / bp
+#,으로라도 : 0 /JOSA / bp
+#,으로랑 : 0 /JOSA / bp
+#,으로만 : 0 /JOSA / bp
+#,으로만은 : 0 /JOSA / bp
+#,으로부터 : 0 /JOSA / bp
+#,으로부터는 : 0 /JOSA / bp
+#,으로부터는커녕 : 0 /JOSA / bp
+#,으로부터도 : 0 /JOSA / bp
+#,으로부터만 : 0 /JOSA / bp
+#,으로부터만은 : 0 /JOSA / bp
+#,으로부터서는 : 0 /JOSA / bp
+#,으로부터서도 : 0 /JOSA / bp
+#,으로부터서만 : 0 /JOSA / bp
+#,으로부터의 : 0 /JOSA / bp
+#,으로서 : 0 /JOSA / bp
+#,으로서가 : 0 /JOSA / bp
+#,으로서나 : 0 /JOSA / bp
+#,으로서는 : 0 /JOSA / bp
+#,으로서도 : 0 /JOSA / bp
+#,으로서든지 : 0 /JOSA / bp
+#,으로서라도 : 0 /JOSA / bp
+#,으로서만 : 0 /JOSA / bp
+#,으로서만도 : 0 /JOSA / bp
+#,으로서만은 : 0 /JOSA / bp
+#,으로서야 : 0 /JOSA / bp
+#,으로서의 : 0 /JOSA / bp
+#,으로선 : 0 /JOSA / bp
+#,으로써 : 0 /JOSA / bp
+#,으로써나 : 0 /JOSA / bp
+#,으로써는 : 0 /JOSA / bp
+#,으로써라도 : 0 /JOSA / bp
+#,으로써만 : 0 /JOSA / bp
+#,으로써야 : 0 /JOSA / bp
+#,으로야 : 0 /JOSA / bp
+#,으로의 : 0 /JOSA / bp
+#,으론 : 0 /JOSA / bp
+#,은 : 0 /JOSA / bp
+#,은커녕 : 0 /JOSA / bp
+#,을 : 0 /JOSA / bp
+#,의 : 0 /JOSA / bp
+#,이 : 0 /JOSA //EXCEPTIONS: "고양이" 
+#,이고 : 0 /JOSA / bp
+#,이나 : 0 /JOSA / bp
+#,이나마 : 0 /JOSA / bp
+#,이니 : 0 /JOSA / bp
+#,이다 : 0 /JOSA / bp
+#,이든 : 0 /JOSA / bp
+#,이든지 : 0 /JOSA / bp
+#,이라 : 0 /JOSA / bp
+#,이라고 : 0 /JOSA / bp
+#,이라고는 : 0 /JOSA / bp
+#,이라고도 : 0 /JOSA / bp
+#,이라고만은 : 0 /JOSA / bp
+#,이라곤 : 0 /JOSA / bp
+#,이라는 : 0 /JOSA / bp
+#,이라도 : 0 /JOSA / bp
+#,이라든지 : 0 /JOSA / bp
+#,이라서 : 0 /JOSA / bp
+#,이라야 : 0 /JOSA / bp
+#,이라야만 : 0 /JOSA / bp
+#,이랑 : 0 /JOSA / bp
+#,이랑은 : 0 /JOSA / bp
+#,이며 : 0 /JOSA / bp
+#,이며에게 : 0 /JOSA / bp
+#,이며조차도 : 0 /JOSA / bp
+#,이야 : 0 /JOSA / bp
+#,이야말로 : 0 /JOSA / bp
+#,이여 : 0 /JOSA / bp
+#,인들 : 0 /JOSA / bp
+#,인즉 : 0 /JOSA / bp
+#,인즉슨 : 0 /JOSA / bp
+#,일랑 : 0 /JOSA / bp
+#,일랑은 : 0 /JOSA / bp
+#,조차 : 0 /JOSA / bp
+#,조차가 : 0 /JOSA / bp
+#,조차도 : 0 /JOSA / bp
+#,조차를 : 0 /JOSA / bp
+#,조차의 : 0 /JOSA / bp
+#,처럼 : 0 /JOSA / bp
+#,처럼과 : 0 /JOSA / bp
+#,처럼도 : 0 /JOSA / bp
+#,처럼만 : 0 /JOSA / bp
+#,처럼만은 : 0 /JOSA / bp
+#,처럼은 : 0 /JOSA / bp
+#,처럼이라도 : 0 /JOSA / bp
+#,처럼이야 : 0 /JOSA / bp
+#,치고 : 0 /JOSA / bp
+#,치고는 : 0 /JOSA / bp
+#,커녕 : 0 /JOSA / bp
+#,커녕은 : 0 /JOSA / bp
+#,커니와 : 0 /JOSA / bp
+#,토록 : 0 /JOSA / bp
+#,하고 : 0 /JOSA / bp
+#,하고가 : 0 /JOSA / bp
+#,하고는 : 0 /JOSA / bp
+#,하고는커녕 : 0 /JOSA / bp
+#,하고도 : 0 /JOSA / bp
+#,하고라도 : 0 /JOSA / bp
+#,하고마저 : 0 /JOSA / bp
+#,하고만 : 0 /JOSA / bp
+#,하고만은 : 0 /JOSA / bp
+#,하고야 : 0 /JOSA / bp
+#,하고에게 : 0 /JOSA / bp
+#,하고의 : 0 /JOSA / bp
+#,하고조차 : 0 /JOSA / bp
+#,하고조차도 : 0 /JOSA / bp
+#,하곤 : 0 /JOSA / bp

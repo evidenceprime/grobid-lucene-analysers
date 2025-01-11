@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic
+END
+total.dic
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic/total.dic
+END
+suffix.dic
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic/suffix.dic
+END
+compounds.dic
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic/compounds.dic
+END
+syllable.dic
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic/syllable.dic
+END
+eomi.dic
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic/eomi.dic
+END
+uncompounds.dic
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic/uncompounds.dic
+END
+extension.dic
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic/extension.dic
+END
+josa.dic
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic/josa.dic
+END
+prefix.dic
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/dic/prefix.dic
+END

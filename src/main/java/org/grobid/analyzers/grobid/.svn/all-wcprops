@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/grobid
+END
+GrobidJapaneseAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/grobid/GrobidJapaneseAnalyzer.java
+END
+GrobidChineseAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/grobid/GrobidChineseAnalyzer.java
+END
+GrobidFilterDeleteSpaceBetweenSameAlphabet.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/grobid/GrobidFilterDeleteSpaceBetweenSameAlphabet.java
+END
+GrobidKoreanAnalyzer.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/grobid/GrobidKoreanAnalyzer.java
+END

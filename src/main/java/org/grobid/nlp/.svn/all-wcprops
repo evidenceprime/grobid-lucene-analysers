@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/nlp
+END
+Language.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/nlp/Language.java
+END
+Config.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/nlp/Config.java
+END
+JTNLPUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/nlp/JTNLPUtils.java
+END
+NLPUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/nlp/NLPUtils.java
+END
+JTQuickTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/nlp/JTQuickTests.java
+END

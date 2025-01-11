@@ -1,0 +1,69 @@
+package org.wipo.analyzers;
+
+import junit.framework.TestCase;
+
+import org.wipo.nlp.textboundaries.ReTokenizer;
+import org.wipo.nlp.textboundaries.ReTokenizerFactory;
+
+
+public class JTGrobidAnalyzers extends TestCase {
+	
+	
+	String[][] t={
+			{"ja_g","また、繊維漂白の分野では、米国特許第３，７５６，７７４号に、酸性条件下でジシアノジアミド等の有機ニトリル化合物による活性化法が提案されている。"
+				,"また 、 繊維 漂白 の 分野 で は 、 米国 特許 第 3 , 756 , 774 号 に 、 酸性 条件下 で ジシアノジアミド 等 の 有機 ニトリル 化合 物 による 活性 化 法 が 提案 さ れ て いる 。"},
+			{"ko_g","제 4,665,918 호에 개시된 바와 같은 자체 팽창 헬릭스 (helix) 를 포함한다","제 4,665,918 호 −에 개시된 바 −와 같은 자체 팽창 헬릭스 ( helix ) 를 포함한다"},
+			{"zh_g", "Byrne等在美国专利4,571,430蝇描述了含N 2S 2，高半胱氨酸的Tc-99m螯合剂。", "Byrne 等 在 美国 专利 4 , 571 , 430 蝇 描述 了 含 N 2 S 2 ， 高 半 胱 氨 酸 的 Tc - 99 m 螯 合剂 。"},
+
+			
+			{"zh_g","Davison等在1981年Inorg.Chem.20：1629-1632中公开了氧锝螯合 的复合物。","Davison 等 在 1981 年 Inorg . Chem . 20 ： 1629 - 1632 中 公开 了 氧 锝 螯 合 的 复合物 。"},
+			
+			{"zh_g","本ｕｓ１２１２１２领域 。","本 us 121212 领域 。"},
+			{"zh_g","本发明涉及纤维用活性染料的领域。纤维用活性染料的黑色染色混合物见诸于US 5445654和5611821及韩国专利申请94-2560。深黑色染料熟知于例如日本专利申请Sho-58-160362，其基于海军蓝双偶氮染料和橙色单偶氦染料"
+				,"本 发明 涉及 纤维 用 活性染料 的 领域 。 纤维 用 活性染料 的 黑色 染色 混合物 见 诸 于 US 5445654 和 5611821 及 韩国 专利 申请 94 - 2560 。 深 黑色 染料 熟知 于 例如 日本 专利 申请 Sho - 58 - 160362 ， 其 基于 海军蓝 双 偶氮染料 和 橙色 单 偶 氦 染料"},
+
+				{"ko_g","동적 ＤＣＣＨ/ＦＣＨ 스위칭 방법","동적 DCCH / FCH 스위칭 방법"},
+
+				
+			{"zh_g","其它a/987类型", "其它 a / 987 类型"},
+			{"zh_g","３７５６７７４","3756774"},
+			
+			{"ko_g","일본 특허공개 2009-43719 호 공보","일본 특허공개 2009-43719 호 공보"},
+			{"ja_g","Ｄｅｖｉｃｅ  Ｄｅｓｃｒｉｐｔｉｏｎヒドロキシプロピルトリモニウム塩化物Ｏｕｔ－ｏｆ－Ｏｒｄｅｒ",
+				    "Device Description ヒドロキシプロピルトリモニウム 塩化 物 Out - o f - Order"},
+			{"ja_g","EL表示パネル１０は、EL基板１１とCF１２とを対向配置させ、EL基板１１とCF１２との間に樹脂１２１を充填してなる",
+				"EL 表示 パネル 10 は 、 EL 基板 11 と CF 12 と を 対向 配置 さ せ 、 EL 基板 11 と CF 12 と の 間 に 樹脂 121 を 充填 し て なる"},
+			{"ja_g","各テープ１２、１２･･･",
+					"各 テープ 12 、 12 ･･･"},
+						{"zh_g","其它类型的过滤器使用了非均匀的电磁场与中性粒子的磁/或电偶极矩之 间的相互作用，其中存在强的场梯度。这种方法使这些粒子从其原轨迹偏转(US 6,251,282)。",
+				"其它 类型 的 过滤器 使用 了 非 均匀 的 电磁场 与 中性 粒子 的 磁 / 或 电 偶 极 矩 之间 的 相互作用 ， 其中 存在 强 的 场 梯度 。 这种 方法 使 这些 粒子 从 其 原 轨迹 偏转 ( US 6 , 251 , 282 ) 。"},
+	};
+
+	
+	
+
+			
+	public void testTerm() throws Exception {
+
+		for (String[] test:t) {
+			
+			String lg=test[0];
+			
+			String text=test[1];
+			String expected=test[2];
+			System.out.println(" test"+lg);
+			ReTokenizer o=null;
+			o=ReTokenizerFactory.create(lg);
+			assertNotNull(o);
+		
+			System.err.println("Tokenize: ("+lg+") '"+text+"'");
+			String tokenized = o.tokenizeWithSpaces(text);
+			System.err.println("Tokenized string is '"+tokenized+"'");
+			
+			assertEquals("ERRO "+lg+":"+text+" ('"+o.tokenizeWithSpaces(text, true)+"')",expected,tokenized);
+		}
+		
+	}
+
+	
+}

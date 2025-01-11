@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers
+END
+WipoToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/WipoToken.java
+END
+MyKoreanPositionFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/MyKoreanPositionFilter.java
+END
+FilterDeleteSpaceBetweenDigits.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/FilterDeleteSpaceBetweenDigits.java
+END
+MyJapanesePOSFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/MyJapanesePOSFilter.java
+END
+FilterDeleteSpaceBetweenSameAlphabet.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/FilterDeleteSpaceBetweenSameAlphabet.java
+END
+FilterSeparateHyphen.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/FilterSeparateHyphen.java
+END
+FilterSeparateNumberAndChars.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/FilterSeparateNumberAndChars.java
+END
+ChineseFilterAndOr.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/ChineseFilterAndOr.java
+END
+FilterAddSpaceBetweenDifferentAlphabet.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/FilterAddSpaceBetweenDifferentAlphabet.java
+END
+MyJapanesePunctuationFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/MyJapanesePunctuationFilter.java
+END
+LowerCaseButAccroFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/LowerCaseButAccroFilter.java
+END
+JTGrobidAnalyzers.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/JTGrobidAnalyzers.java
+END
+MyJapaneseFilterOrdinals.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/MyJapaneseFilterOrdinals.java
+END
+WipoFilterTwoBytesLatinChars.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/WipoFilterTwoBytesLatinChars.java
+END

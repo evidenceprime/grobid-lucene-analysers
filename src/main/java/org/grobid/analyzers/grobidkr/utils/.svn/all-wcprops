@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils
+END
+Trie.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/Trie.java
+END
+DictionaryUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/DictionaryUtil.java
+END
+StringUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/StringUtil.java
+END
+SyllableUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/SyllableUtil.java
+END
+JarResources.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/JarResources.java
+END
+UnmodifiableIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/UnmodifiableIterator.java
+END
+Utilities.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/Utilities.java
+END
+NounUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/NounUtil.java
+END
+FileUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/FileUtil.java
+END
+ConstraintUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/ConstraintUtil.java
+END
+MorphUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/MorphUtil.java
+END
+EomiUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/EomiUtil.java
+END
+KoreanEnv.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/KoreanEnv.java
+END
+IrregularUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/IrregularUtil.java
+END
+VerbUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/utils/VerbUtil.java
+END

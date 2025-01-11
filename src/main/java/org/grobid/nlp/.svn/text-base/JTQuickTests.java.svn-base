@@ -1,0 +1,16 @@
+package org.wipo.nlp;
+
+import junit.framework.Test;
+import junit.framework.TestSuite;
+
+public class JTQuickTests {
+
+        public static Test suite() {
+                TestSuite suite = new TestSuite("Test for org.wipo.nlp for Grobid");
+            	System.setProperty("TranslationSystem", "Sr");  
+                suite.addTestSuite(org.wipo.analyzers.JTGrobidAnalyzers.class);
+                suite.addTestSuite(org.wipo.nlp.JTNLPUtils.class);
+                return suite;
+        }
+
+}

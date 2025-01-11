@@ -1,0 +1,10 @@
+syllable.dic = org/wipo/analyzers/wipokr/dic/syllable.dic
+josa.dic = org/wipo/analyzers/wipokr/dic/josa.dic
+eomi.dic = org/wipo/analyzers/wipokr/dic/eomi.dic
+dictionary.dic = org/wipo/analyzers/wipokr/dic/total.dic
+extension.dic = org/wipo/analyzers/wipokr/dic/extension.dic
+prefix.dic = org/wipo/analyzers/wipokr/dic/prefix.dic
+suffix.dic = org/wipo/analyzers/wipokr/dic/suffix.dic
+compounds.dic = org/wipo/analyzers/wipokr/dic/compounds.dic
+tagger.dic = org/wipo/analyzers/wipokr/dic/occurrence.dic
+cj.dic = org/wipo/analyzers/wipokr/dic/cj.dic

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr
+END
+KoreanTokenizerImpl.jflex
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/KoreanTokenizerImpl.jflex
+END
+KoreanFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/KoreanFilter.java
+END
+KoreanTokenizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/KoreanTokenizer.java
+END
+korean.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/korean.properties
+END
+koreanStemmingRulesOnlyJosa.txt
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/koreanStemmingRulesOnlyJosa.txt
+END
+KoreanTokenizerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/KoreanTokenizerImpl.java
+END
+koreanStemmingRules.txt
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/koreanStemmingRules.txt
+END
+koreanStemmingRulesWithoutJosa.txt
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/GDS/!svn/ver/468/Grobid/grobid/trunk/GrobidWipo/src/org/wipo/analyzers/wipokr/koreanStemmingRulesWithoutJosa.txt
+END
