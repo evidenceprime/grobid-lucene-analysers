@@ -8,7 +8,7 @@
 	<groupId>org.grobid.analysers</groupId>
 	<artifactId>grobid-lucene-analysers</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	
 	<name>grobid-lucene-analysers</name>
 	<description>Grobid custom analyzers based on Lucene analyzers</description>
@@ -40,15 +40,6 @@
 			<url>http://download.java.net/maven/2/</url>
 			<layout>default</layout>
 		</repository>
-		<repository>
-	        <releases />
-	        <snapshots>
-	            <enabled>false</enabled>
-	        </snapshots>
-	        <id>mygrid-repository</id>
-	        <name>myGrid Repository</name>
-	        <url>http://www.mygrid.org.uk/maven/repository</url>
-	    </repository>
 	</repositories>
 		
 
@@ -91,7 +82,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.2.4</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -149,7 +140,7 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.6</version>
+			<version>3.18.0</version>
 		</dependency>
 		
 		<dependency>
